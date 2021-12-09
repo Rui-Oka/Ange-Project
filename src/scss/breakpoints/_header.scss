@@ -1,0 +1,124 @@
+@import 'variable';
+// -------------------------------------
+// ヘッダー部分
+// -------------------------------------
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    z-index: 999;
+  
+    .header__logo {
+      width: 157px;
+    }
+  
+    .header__nav {
+      display: flex;
+      align-items: center;
+    }
+  
+    .header__nav-list {
+      text-align: center;
+      margin-right: 76px;
+  
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        display: block;
+        font-size: 2rem;
+        letter-spacing: 0.15em;
+        font-family: $font-family-eb;
+        color: #fff;
+      }
+  
+    }
+  
+    .header__contact {
+      width: 167px;
+      text-align: center;
+      line-height: 2;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.25);
+    }
+  }
+  
+  .nav__accordion {
+    position: relative;
+    margin-top: 17px;
+  
+    &:hover {
+      .nav__accordion-item {
+        height: auto;
+        padding: 6px 0;
+      }
+      .header__nav-txt {
+        &:before {
+          transform: rotate(0);
+        }
+        &:after {
+          transform: rotate(0);
+        }
+      }
+    }
+    .header__nav-txt {
+      position: relative;
+      padding-bottom: 16.5px;
+      font-size: 2rem;
+      font-family: $font-family-eb;
+      color: #fff;
+      transition:all .5s ease-out;
+  
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 30%;
+        width: 14px;
+        height: 1px;
+        background: #fff;
+        transform: rotate(45deg);
+        transition:all 0.3s ease-in-out;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 43%;
+        width: 14px;
+        height: 1px;
+        background: #fff;
+        transform: rotate(-45deg);
+        transition:all 0.3s ease-in-out;
+      }
+    }
+  
+    .nav__accordion-item {
+      width: 73px;
+      height: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      text-align: center;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.25);
+      transition:all .5s ease-out;
+  
+      &:not(:last-of-type) {
+        margin-bottom: 9.6px;
+      }
+    }
+  
+    .nav__accordion-list {
+      position: absolute;
+      top: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }

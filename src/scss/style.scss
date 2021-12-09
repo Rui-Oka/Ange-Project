@@ -1,4 +1,9 @@
+/* A Modern CSS Reset */
+*:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)){all:unset;display:revert}*,*::before,*::after{box-sizing:border-box}ol,ul{list-style:none}img{max-width:100%}table{border-collapse:collapse}textarea{white-space:revert}
+
 @import "breakpoints/base";
+@import "breakpoints/header";
+@import "breakpoints/footer";
 
 @media (min-width: 480px) {
   @import "breakpoints/480up";
@@ -23,4 +28,11 @@
 
 @media print {
   @import "breakpoints/print";
+}
+
+$color-primary: #36e8ff;
+
+.heading {
+  color: #ffffff;
+  background: $color-primary;
 }

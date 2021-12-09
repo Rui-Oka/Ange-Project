@@ -1,0 +1,79 @@
+@import 'variable';
+// -------------------------------------
+// フッター部分
+// -------------------------------------
+.footer {
+    padding-bottom: 17px;
+    text-align: center;
+    background: rgb(247,170,117);
+    background: linear-gradient(180deg, rgba(247,170,117,1) 0%, rgba(247,170,117,1) 25%, rgba(255,255,255,1) 100%);
+    small {
+      font-size: 14px;
+      color: #F5C1A5;
+    }
+  }
+  .footer__group {
+    padding: 161px 0 84.9px;
+    max-width: 1221px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    .footer__group-wrap {
+      position: relative;
+      border: solid 2px #fff;
+    }
+  
+    .footer__noren {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 146px;
+      background: #f8aa75;
+    }
+  }
+  
+  .footer__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+    .footer__contact-item {
+      margin:103px 0 118px;
+    }
+    .footer__contact-icon {
+      display: block;
+      width: 67px;
+      height: 67px;
+      margin: auto;
+      padding: 17px;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+  
+  .footer__policy {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 147px;
+    font-size: 15px;
+    color: #F4AE88;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 51%;
+      transform: translateX(-50%);
+      width: 5px;
+      height: 14px;
+      background: url(/dist/img/footer_tag.png) no-repeat center;
+      background-size: contain;
+    }
+    li {
+      &:first-of-type {
+        margin-right: 96px;
+      }
+    }
+  }

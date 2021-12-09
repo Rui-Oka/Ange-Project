@@ -4,17 +4,147 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Ange</title>
+    <title>NOREN ANGE｜ニューボンフォトフィルム</title>
     <meta name="description" content="This site is a test site.">
     <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="/dist/css/style.css" />
   </head>
   <body>
-    <header class="header"></header>
+    <!-- header -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="/">
+          <picture><img src="/dist/img/ange_logo.svg" alt=""></picture>
+        </a>  
+      </h1>
+      <ul class="header__nav">
+        <li class="header__nav-list"><a href="/about/">About</a></li>
+        <li class="header__nav-list"><a href="/gallery/">Gallery</a></li>
+        <li class="header__nav-list"><a href="/price_plan/">Price Plan</a></li>
+        <li class="header__nav-list nav__accordion">
+          <a class="header__nav-txt">Studio</a>
+           <ul class="nav__accordion-list">
+            <li class="nav__accordion-item"><a href="/studio/tokyo.html">東京</a></li>
+            <li class="nav__accordion-item"><a href="/studio/okinawa.html">沖縄</a></li>
+          </ul>
+        </li>
+        <li class="header__nav-list header__contact">
+          <a href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </header>
+    <!-- /header -->
+    <div class="fv">
+      <h2 class="fv__ttl"><picture><img src="/dist/img/ange_logo.svg" alt=""></picture></h2>
+      <img src="/dist/img/fv_hoge.jpg" alt="">
+    </div>
     <main class="main">
-      <p>テスト</p>
+      <section>
+        <div class="top__about">
+          <h2 class="top__about-ttl">小さな手が、幸せをつないでいる。</h2>
+          <p class="top__about-link">
+            <a href="#">About</a>
+          </p>
+        </div>
+
+        <ul class="top__info">
+          <li class="top__info-item">
+            <a href="#">
+              <h3 class="top__info-ttl">
+                <span class="top__info-ttl-small">作品集</span><br>
+                Gallery
+              </h3>
+            </a>
+          </li>
+          <li class="top__info-item top__price">
+            <a href="#">
+              <h3 class="top__info-ttl">
+                <span class="top__info-ttl-small">料金プラン</span><br>
+                Price Plan
+              </h3>
+            </a>
+          </li>
+        </ul>
+        <p class="top__info-txt">
+          ANGE（アンジュ）は、<br>
+          東京都世田谷区と沖縄県恩納村のアトリエで、<br>
+          新生児の映像と写真を撮影制作している、<br>
+          ニューボーンフィルムハウスです。
+        </p>
+
+        <ul class="top__studio">
+          <li class="top__studio-item">
+            <a class="top__studio-link" href="#">
+              <div class="top__studio-group">
+                <p class="top__studio-txt">
+                  Studio
+                </p>
+                <p class="top__studio-address">
+                  TOKYO
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="top__studio-item">
+            <a class="top__studio-link" href="#">
+              <div class="top__studio-group">
+                <p class="top__studio-txt">
+                  Studio
+                </p>
+                <p class="top__studio-address">
+                  OKINAWA
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="top__contact">
+          <h3 class="top__contact-ttl">Contact</h3>
+          <p class="top__contact-txt">
+            撮影のお問い合わせは、LINEにてお願いいたします。<br>
+            下記のボタンからANGE公式LINEアカウントを<br>
+            友達登録しトークにてご質問内容をお送りください。
+          </p>
+          <div class="top__contact-line">
+            <a class="line-btn" href="#">LINE 友達追加</a>
+          </div>
+        </div>
+
+      </section>
     </main>
-    <footer class="footer"></footer>    
+    <footer class="footer">
+      <div class="footer__group">
+        <div class="footer__group-wrap">
+          <picture class="footer__noren">
+            <img src="/dist/img/noren_logo.svg" alt="">
+          </picture>
+          <ul class="footer__contact">
+            <li class="footer__contact-item">
+              <picture>
+                <img src="/dist/img/muse_logo.svg" alt="">
+              </picture>
+              <a class="footer__contact-icon" href="#">
+                <img src="/dist/img/inst_icon.png" alt="">
+              </a>
+            </li>
+            <li class="footer__contact-item">
+              <picture>
+                <img src="/dist/img/ange_logo.svg" alt="">
+              </picture>
+              <a class="footer__contact-icon" href="#">
+                <img src="/dist/img/inst_icon.png" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="footer__policy">
+        <li><a href="/privacy_policy/">privacy policy</a></li>
+        <li><a href="/user_policy/">user policy</a></li>
+      </ul>
+      <small>&copy; NOREN, Inc.</small>
+    </footer>    
     <script src="scripts/main.js"></script>
   </body>
 </html>
