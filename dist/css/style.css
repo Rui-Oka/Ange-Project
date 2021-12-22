@@ -161,11 +161,15 @@ a {
     overflow: unset;
   }
 }
+.fv .fv__movie video {
+  width: 100%;
+}
 @media screen and (max-width: 767px) {
   .fv .fv__movie video {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    width: auto;
     height: 100vh;
   }
 }

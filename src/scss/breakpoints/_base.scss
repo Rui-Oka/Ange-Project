@@ -102,10 +102,12 @@ a {
       overflow: unset;
     }
     video {
+      width: 100%;
       @include mq(max, md) {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        width: auto;
         height: 100vh;
       }
     }
