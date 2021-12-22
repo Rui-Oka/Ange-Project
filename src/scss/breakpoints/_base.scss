@@ -21,13 +21,31 @@ html {
 a {
   cursor: pointer;
 }
-
+// * {
+//   border: solid 1px red;
+// }
 // -------------------------------------
 // 共通部分
 // -------------------------------------
+.v-pc {
+  @include mq(max, md) {
+      display: none;
+  }
+}
+.v-sp {
+  display: none;
+  @include mq(max, md) {
+      display: block;
+  }
+}
+
 .fv {
   position: relative;
   line-height: 0;
+  @include mq(max, md) {
+    height: 100vh;
+    overflow: hidden;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -37,6 +55,13 @@ a {
     width: 1px;
     height: 174px;
     background: #fff;
+    z-index: 2;
+    @include mq(max, md) {
+      bottom: -15vw;
+      left: 47.75%;
+      width: 0.5vw;
+      height: 25vw;
+    }
   }
   &:after {
     content: "";
@@ -47,6 +72,13 @@ a {
     width: 1px;
     height: 163px;
     background: #fff;
+    z-index: 2;
+    @include mq(max, md) {
+      bottom: -4vw;
+      left: 50.25%;
+      width: 0.5vw;
+      height: 20vw;
+    }
   }
   .fv__ttl {
     position: absolute;
@@ -57,9 +89,22 @@ a {
     letter-spacing: 0.1em;
     font-family: $font-family-eb;
     color: #fff;
+    z-index: 2;
   }
   img {
     width: 100%;
+  }
+
+  .fv__movie {
+    position: relative;
+    video {
+      @include mq(max, md) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100vh;
+      }
+    }
   }
 }
 
@@ -377,6 +422,9 @@ a {
     letter-spacing: 0.15em;
     background: url(/dist/img/top_address.png) no-repeat center;
     background-size: contain;
+    @include mq(max, md) {
+      width: 100%;
+    }
   }
 }
 

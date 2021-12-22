@@ -1,124 +1,248 @@
-@import 'variable';
+@import "variable";
 // -------------------------------------
 // ヘッダー部分
 // -------------------------------------
 .header {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 1400px;
-    margin: auto;
-    z-index: 999;
-  
-    .header__logo {
-      width: 157px;
-    }
-  
-    .header__nav {
-      display: flex;
-      align-items: center;
-    }
-  
-    .header__nav-list {
-      text-align: center;
-      margin-right: 76px;
-  
-      &:last-of-type {
-        margin-right: 0;
-      }
-      a {
-        display: block;
-        font-size: 2rem;
-        letter-spacing: 0.15em;
-        font-family: $font-family-eb;
-        color: #fff;
-      }
-  
-    }
-  
-    .header__contact {
-      width: 167px;
-      text-align: center;
-      line-height: 2;
-      border-radius: 5px;
-      background: rgba(255, 255, 255, 0.25);
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  z-index: 999;
+  @include mq(max, md) {
+    position: fixed;
+    width: 100%;
+  }
+
+  .header__logo {
+    width: 157px;
+    @include mq(max, md) {
+      width: 24vw;
+      margin-left: 5vw;
     }
   }
-  
-  .nav__accordion {
-    position: relative;
-    margin-top: 17px;
-  
-    &:hover {
-      .nav__accordion-item {
-        height: auto;
-        padding: 6px 0;
-      }
-      .header__nav-txt {
-        &:before {
-          transform: rotate(0);
-        }
-        &:after {
-          transform: rotate(0);
-        }
-      }
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+    @include mq(max, md) {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      padding: 30vw 0 0;
+      position: fixed;
+      top: 0;
+      left: 100%; /* メニューを画面の外に飛ばす */
+      box-sizing: border-box;
+      z-index: 99;
+      background: #fff;
+      transition: 0.5s;
     }
-    .header__nav-txt {
-      position: relative;
-      padding-bottom: 16.5px;
+  }
+
+  .header__nav-list {
+    text-align: center;
+    margin-right: 76px;
+    @include mq(max, md) {
+      margin: 0 auto 5vw;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+    a {
+      display: block;
       font-size: 2rem;
+      letter-spacing: 0.15em;
       font-family: $font-family-eb;
       color: #fff;
-      transition:all .5s ease-out;
-  
-      &:before {
-        content: "";
-        position: absolute;
-        bottom: 5px;
-        left: 30%;
-        width: 14px;
-        height: 1px;
-        background: #fff;
-        transform: rotate(45deg);
-        transition:all 0.3s ease-in-out;
+      @include mq(max, md) {
+        display: inline-block;
+        font-size: 7vw;
+        color: $col-black;
       }
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: 5px;
-        left: 43%;
-        width: 14px;
-        height: 1px;
-        background: #fff;
-        transform: rotate(-45deg);
-        transition:all 0.3s ease-in-out;
-      }
-    }
-  
-    .nav__accordion-item {
-      width: 73px;
-      height: 0;
-      padding: 0;
-      font-size: 1.5rem;
-      text-align: center;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.25);
-      transition:all .5s ease-out;
-  
-      &:not(:last-of-type) {
-        margin-bottom: 9.6px;
-      }
-    }
-  
-    .nav__accordion-list {
-      position: absolute;
-      top: 48px;
-      left: 50%;
-      transform: translateX(-50%);
     }
   }
+
+  .header__contact {
+    width: 167px;
+    text-align: center;
+    line-height: 2;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.25);
+    @include mq(max, md) {
+      width: 100%;
+    }
+  }
+  //SP用ハンバーガーメニュー
+  .header__nav-hidden {
+    display: none;
+  }
+
+  .header__nav-icon {
+    @include mq(max, md) {
+      display: flex;
+      height: 10vw;
+      width: 10vw;
+      margin-right: 5vw;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 100; /* 重なり順を一番上にする */
+      cursor: pointer;
+    }
+  }
+  .header__nav-open {
+    content: "";
+    display: block;
+    height: 0.25vw;
+    width: 10vw;
+    border-radius: 3px;
+    background: #fff;
+    transition: 0.5s;
+    position: absolute;
+    &:before {
+      @extend .header__nav-open;
+      bottom: 2vw;
+    }
+    &:after {
+      @extend .header__nav-open;
+      top: 2vw;
+    }
+  }
+
+  .header__nav-list--small {
+    a {
+      font-size: 4vw;
+    }
+  }
+}
+
+.nav__accordion {
+  position: relative;
+  margin-top: 17px;
+
+  &:hover {
+    .nav__accordion-item {
+      height: auto;
+      padding: 6px 0;
+    }
+    .header__nav-txt {
+      &:before {
+        transform: rotate(0);
+      }
+      &:after {
+        transform: rotate(0);
+      }
+    }
+  }
+  .header__nav-txt {
+    position: relative;
+    padding-bottom: 16.5px;
+    font-size: 2rem;
+    font-family: $font-family-eb;
+    color: #fff;
+    transition: all 0.5s ease-out;
+    @include mq(max, md) {
+      display: none;
+      width: 40%;
+      padding-bottom: 0;
+      color: #7b7b7b !important;
+      background: #fff;
+      z-index: 2;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 30%;
+      transform: rotate(45deg);
+      width: 14px;
+      height: 1px;
+      background: #fff;
+      transition: all 0.3s ease-in-out;
+      @include mq(max, md) {
+        display: none;
+        bottom: 5vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 160%;
+        height: 0.25vw;
+        background: #7b7b7b;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 43%;
+      width: 14px;
+      height: 1px;
+      background: #fff;
+      transform: rotate(-45deg);
+      transition: all 0.3s ease-in-out;
+      @include mq(max, md) {
+        bottom: -24vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 160%;
+        height: 0.25vw;
+        background: #7b7b7b;
+      }
+    }
+  }
+
+  .nav__accordion-item {
+    width: 73px;
+    height: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.25);
+    transition: all 0.5s ease-out;
+    @include mq(max, md) {
+      width: auto;
+      height: auto;
+      background: none;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 9.6px;
+    }
+  }
+
+  .nav__accordion-list {
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq(max, md) {
+      position: unset;
+      transform: none;
+    }
+  }
+}
+
+#drawer_input:checked ~ .drawer_open {
+  background: rgba(255, 255, 255, 0);
+}
+
+#drawer_input:checked ~ .drawer_open::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#drawer_input:checked ~ .header__nav {
+  overflow-x:unset;
+  left: 0; /* メニューを画面に入れる */
+}
