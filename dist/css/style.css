@@ -154,6 +154,12 @@ a {
 }
 .fv .fv__movie {
   position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .fv .fv__movie {
+    overflow: unset;
+  }
 }
 @media screen and (max-width: 767px) {
   .fv .fv__movie video {
@@ -224,6 +230,11 @@ a {
   padding: 517px 0 324px 262px;
   background: url(/dist/img/top_about_bg.png) no-repeat center;
   background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  .top__about {
+    padding: 0;
+  }
 }
 .top__about .top__about-ttl {
   margin-bottom: 132px;

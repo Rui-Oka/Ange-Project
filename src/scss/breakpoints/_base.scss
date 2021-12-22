@@ -97,6 +97,10 @@ a {
 
   .fv__movie {
     position: relative;
+    overflow: hidden;
+    @include mq(max, md) {
+      overflow: unset;
+    }
     video {
       @include mq(max, md) {
         position: absolute;
@@ -177,7 +181,9 @@ a {
   padding: 517px 0 324px 262px;
   background: url(/dist/img/top_about_bg.png) no-repeat center;
   background-size: cover;
-
+  @include mq(max, md) {
+    padding: 0;
+  }
   .top__about-ttl {
     margin-bottom: 132px;
     font-size: 4.5rem;
