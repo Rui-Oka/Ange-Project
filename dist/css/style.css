@@ -1392,18 +1392,16 @@ a {
   }
 }
 
-#drawer_input:checked ~ .drawer_open {
-  background: rgba(255, 255, 255, 0);
-}
-
-#drawer_input:checked ~ .drawer_open::before {
+#drawer_input:checked ~ .header__nav-icon .header__nav-open::before {
   bottom: 0;
   transform: rotate(45deg);
+  background: #434343;
 }
 
-#drawer_input:checked ~ .drawer_open::after {
+#drawer_input:checked ~ .header__nav-icon .header__nav-open::after {
   top: 0;
   transform: rotate(-45deg);
+  background: #434343;
 }
 
 #drawer_input:checked ~ .header__nav {
