@@ -18,9 +18,39 @@
     width: 90%;
     margin: auto;
     text-align: center;
+    @include mq(max, md) {
+      padding: 37vw 0 22vw;
+    }
     .footer__group-wrap {
       position: relative;
       border: solid 2px #fff;
+      @include mq(max, md) {
+        border: none;
+      }
+      &:before {
+        @include mq(max, md) {
+          content: "";
+          position: absolute;
+          top: 03vw;
+          left: 50%;
+          transform:translateX(-50%);
+          width: 60vw;
+          height: 0.25vw;
+          background: #fff;
+        }
+      }
+      &:after {
+        @include mq(max, md) {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform:translateX(-50%);
+          width: 60vw;
+          height: 0.25vw;
+          background: #fff;
+        }
+      }
     }
   
     .footer__noren {
@@ -30,6 +60,10 @@
       transform: translateX(-50%);
       padding: 0 146px;
       background: #f8aa75;
+      @include mq(max, md) {
+       top: -9vw;
+       padding: 0;
+      }
     }
   }
   
@@ -40,6 +74,10 @@
   
     .footer__contact-item {
       margin:103px 0 118px;
+      @include mq(max, md) {
+        width: 35%;
+        margin: 20vw 0 17vw;
+      }
     }
     .footer__contact-icon {
       display: block;
@@ -49,6 +87,11 @@
       padding: 17px;
       border-radius: 50%;
       background: #fff;
+      @include mq(max, md) {
+        width: 8vw;
+        height: 8vw;
+        padding: 2vw;
+      }
     }
   }
   
@@ -59,7 +102,11 @@
     margin-bottom: 147px;
     font-size: 15px;
     color: #F4AE88;
-  
+    @include mq(max, md) {
+      display: block;
+      margin-bottom: 20vw;
+      font-size: calc-size(13);
+    }
     &:before {
       content: "";
       position: absolute;
@@ -70,10 +117,17 @@
       height: 14px;
       background: url(/dist/img/footer_tag.png) no-repeat center;
       background-size: contain;
+      @include mq(max, md) {
+        display: none;
+      }
     }
     li {
       &:first-of-type {
         margin-right: 96px;
+        @include mq(max, md) {
+          margin-right: 0;
+          margin-bottom: 5vw;
+        }
       }
     }
   }

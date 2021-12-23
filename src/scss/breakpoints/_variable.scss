@@ -37,3 +37,7 @@ $breakpoints: (
         }
     }
 }
+
+@function calc-size($size, $width: 428) {
+    @return calc( #{$size} * (100vw / #{$width}))
+}

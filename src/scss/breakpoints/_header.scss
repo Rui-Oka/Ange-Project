@@ -5,22 +5,27 @@
 .header {
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1400px;
-  margin: auto;
+  width: 100%;
+  // padding: 0 0 0 178px;
+  transition: all 1s ease-out;
   z-index: 999;
   @include mq(max, md) {
     position: fixed;
+    justify-content: space-between;
     width: 100%;
   }
 
+  &.fix {
+    position: fixed;
+    background: #D6AB8C;
+  }
   .header__logo {
-    width: 157px;
+    width: 120px;
     @include mq(max, md) {
       width: 24vw;
       margin-left: 5vw;
@@ -130,13 +135,16 @@
   &:hover {
     .nav__accordion-item {
       height: auto;
-      padding: 6px 0;
+      padding: 6px 0 0;
     }
     .header__nav-txt {
       &:before {
+        left: 12%;
+        width: 25px;
         transform: rotate(0);
       }
       &:after {
+        width: 25px;
         transform: rotate(0);
       }
     }
@@ -218,7 +226,7 @@
 
   .nav__accordion-list {
     position: absolute;
-    top: 48px;
+    top: 44px;
     left: 50%;
     transform: translateX(-50%);
     @include mq(max, md) {
@@ -230,13 +238,13 @@
 
 #drawer_input:checked ~ .header__nav-icon .header__nav-open::before {
   bottom: 0;
-  transform: rotate(45deg);
+  transform: rotate(19deg);
   background: $col-black;
 }
 
 #drawer_input:checked ~ .header__nav-icon .header__nav-open::after {
   top: 0;
-  transform: rotate(-45deg);
+  transform: rotate(-19deg);
   background: $col-black;
 }
 

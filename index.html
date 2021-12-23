@@ -52,7 +52,7 @@
       </div>
       
     </div>
-    <main class="main">
+    <main id="contents" class="main">
       <section>
         <div class="top__about">
           <h2 class="top__about-ttl">小さな手が、幸せをつないでいる。</h2>
@@ -63,7 +63,7 @@
 
         <ul class="top__info">
           <li class="top__info-item">
-            <a href="#">
+            <a href="/gallery/">
               <h3 class="top__info-ttl">
                 <span class="top__info-ttl-small">作品集</span><br>
                 Gallery
@@ -71,7 +71,7 @@
             </a>
           </li>
           <li class="top__info-item top__price">
-            <a href="#">
+            <a href="/price_plan/">
               <h3 class="top__info-ttl">
                 <span class="top__info-ttl-small">料金プラン</span><br>
                 Price Plan
@@ -88,7 +88,7 @@
 
         <ul class="top__studio">
           <li class="top__studio-item">
-            <a class="top__studio-link" href="#">
+            <a class="top__studio-link" href="/studio/tokyo.html">
               <div class="top__studio-group">
                 <p class="top__studio-txt">
                   Studio
@@ -100,7 +100,7 @@
             </a>
           </li>
           <li class="top__studio-item">
-            <a class="top__studio-link" href="#">
+            <a class="top__studio-link" href="/studio/okinawa.html">
               <div class="top__studio-group">
                 <p class="top__studio-txt">
                   Studio
@@ -130,9 +130,17 @@
     <footer class="footer">
       <div class="footer__group">
         <div class="footer__group-wrap">
-          <picture class="footer__noren">
-            <img src="/dist/img/noren_logo.svg" alt="">
-          </picture>
+          <div class="footer__noren">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="125" height="18" viewBox="0 0 125 18">
+              <defs>
+                <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 200 29">
+                  <image width="200" height="29" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAdCAYAAADvqyMCAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAyKADAAQAAAABAAAAHQAAAAD5hu+GAAAFp0lEQVR4Ae2cz2tdRRTHjQQkCJouXHQVCmmhu9qFICqpWlzHdhECYmkb91WE4qoLQSku2j+gKgWxBPzRbX+IqRR0IdriogsD2o1FXJiFGITK8/t59L6+TGbunXvn3PtefHPg9N05c37MPTPf+fVeM9X7d7P3yFaivCxe3SquXVqTxYJjdUPlQ44spfiFjF8UPymeSnHk2G6o/LX4iCNPKZ6S8bkUBx7bTcn+EX8mfsNTnyKivWfEbeR2V0LD1mTrjqt1yfYm+CxMe8VD8flo8TD0yUD7RDw3JBu3R9r2t/hV8azYEhxy1/eJb2KMcx5mHrR1RZ+/ia3ofTkCzG3k1qqNw37mVfhyWGD17AMIvqfFd8TjOjguqm0MjraJGMTaCbRbjWRgW9DbFk469rGoeBesY4YAQhwGxy3rgEb+njPyE+Omy1gx7SnTOVZWWaOOCXIn0kk12mqS6L9/GUBQYIn9ua85Pv+wqnXZgcQa15XU7RX6K5WWUh2M2P604pu9Q8xAm1dAQGJxCLLIHWcDH73pE9aULUifpdolYp53hUblJuenU4r9gdjtP4ttJ1s1H5HftnLgi9dURj4vPTBebeqksHMTXMjdT0DC/m7FrRijslXnLY7RO4Wawru+Ln46pDDhckDysfg78d2UXFRtsYZ9s78zPwQNB8jPtTJwpZb25CmzmiZfNIUA0gvkE5CY7e8CMbI4LgO/x6lNhFZovAKSWykZCAFkucQp+7sMkpIE5arOM/CNIt4LRJ2VvPFFUwggHG4+DAQsDkHPB+qzOGdgFBl4VkE3A4E5QzcCSQggxOFAfpkHDwGSq+I5T10WdZOBxW7CDKK8p6c/I/iHgUW3DxzG94vvB8IWF02Bar+4DCBYcL257jftf5GYfAgK+M7i8gwwMT1TrmJey36e7UoV7zGPHO8QkLwmDp1Jal80VQGEpvH9R2h/R9Kuo5SpcQbozLr8q2zIvUuh2dPV+z+XV/VynKHLQBJ9ho4BCMlsZX+H40ymGfjL1NvOdQZIPippfvRFUyxAiv1d2SGolV9TlrxkrtqegdvbRRMr4QydfNE0XSN9gOS4GPRNeew4NF4Q07BM3WeAyetYi2Evy/eNCP+h7XiEqbkKY3FBPO/xzBjmomm/+K6nvi+qAxAMWLqgEEg4BP0hfgelTJ1lYEORDoiDHW3QEsBx3sBP1y44Q3PF6wPJjORcNAVBErvFko8BAZKy/d1p1S8NtPNDVQaYyVwObQ04eL7g0d8lWZvgkPsdTYfVelZYHwGS4EVTE4AQZEUc6kQ6mxVmnzhTswyQ3x89puQ2f//kSUyFiMmDVSIEElYX7xeJTQFCe0KdSB0duZuHTI0zcFCWvg5lxvu2sdfJNQQkr4hD17+AZBulAARndOL6Nq9ZYJUBZj1fhzL5rFkFmSA/N/Wuy2JfTr1pSAUITjkE+WY6b8AsrJUBZr23AhYLknNrmKleBlalfjbWZDpWsUKPme6OeKZCr81qfieUSo+lOmjBnpsjwLDo8X1CsmtiOr1t4rdYZ4yCcKkwSuKW9Skxt66lZAWQ4hD0i6Jx/miTGDDnPAFmPTIr0fdWjhr64TdxvqtKcs2FSPL/nItoF5PfKCfAiCbWUlmR9ryYySdIFluswjkgqbW/KwwbfHa5pbuv9t1s0EZrk8Ny6HtvQMLqnal+Bg7JpPQMbQkQmsdSH9ozU29Fn1o5ivBzMUKnCxUmoOPinicYM7v3mtKjm0VbM8AZemOr6GHJGiB4ZgsU+o7kYeS0J5bHUuSnuR9Y39PTu4PS6B+YgM4GmsF2If8eLpCcCvEB1ftW5/6fjfF9IVXhr7KaAQwqX3I0rzvllCLIXxIfFTM4LAnwfS5mQFrRT3JkkevigMkVu0tzErws/sqtqFG2ameNkLVUGUNPOBap44rVeY+Yv3H8+LDv/wC92NdmMnJ7QwAAAABJRU5ErkJggg=="/>
+                </pattern>
+              </defs>
+              <rect id="NOREN_logo" width="125" height="18" fill="url(#pattern)"/>
+            </svg>
+          </div>
+          
           <ul class="footer__contact">
             <li class="footer__contact-item">
               <picture>
@@ -159,6 +167,7 @@
       </ul>
       <small>&copy; NOREN, Inc.</small>
     </footer>    
-    <script src="scripts/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/dist/js/index.js"></script>
   </body>
 </html>

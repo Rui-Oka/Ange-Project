@@ -58,7 +58,7 @@ a {
     z-index: 2;
     @include mq(max, md) {
       bottom: -15vw;
-      left: 47.75%;
+      left: 48.75%;
       width: 0.5vw;
       height: 25vw;
     }
@@ -67,7 +67,7 @@ a {
     content: "";
     position: absolute;
     bottom: -60px;
-    left: 50.25%;
+    left: 51.25%;
     transform: translateX(-50%);
     width: 1px;
     height: 163px;
@@ -120,6 +120,13 @@ a {
   border-radius: 10px;
   color: #fff;
   background: #53b535;
+  @include mq(max, md) {
+    padding: 1vw 3vw;
+    font-size: calc-size(11);
+  }
+  &:hover {
+    opacity: .7;
+  }
 }
 
 .common-btn {
@@ -184,12 +191,18 @@ a {
   background: url(/dist/img/top_about_bg.png) no-repeat center;
   background-size: cover;
   @include mq(max, md) {
-    padding: 0;
+    padding: 59vw 0 59vw 13.5vw;
+    background: url(/dist/img/top_about_bg_sp.jpg) no-repeat center;
   }
   .top__about-ttl {
     margin-bottom: 132px;
     font-size: 4.5rem;
     color: $col-black;
+    @include mq(max, md) {
+      margin-bottom: 8vw;
+      font-size: calc-size(17);
+      letter-spacing: 00.15em;
+    }
   }
 
   .top__about-link {
@@ -245,12 +258,20 @@ a {
 
 .top__info {
   display: flex;
+  @include mq(max, md) {
+    display: block;
+    margin-top: 5vw;
+  }
   .top__info-item {
     position: relative;
     width: 50%;
     overflow: hidden;
     background: url(/dist/img/top_gallery_bg.png) no-repeat center;
     background-size: cover;
+    @include mq(max, md) {
+      width: 70%;
+      overflow: unset;
+    }
     &:last-of-type {
       background: url(/dist/img/top_priceplan_bg.png) no-repeat center;
       background-size: cover;
@@ -259,16 +280,12 @@ a {
       display: block;
       padding: 50%;
       width: 100%;
+      @include mq(max, md) {
+        padding: 43%;
+      }
       &:before {
         content: "";
         position: absolute;
-        // bottom: -11vw;
-        // left: -10vw;
-        // width: 64vw;
-        // height: 1px;
-        // padding: 60% 0 0;
-        // background: rgba(255, 255, 255, 0.8);
-        // transform: rotate(15deg);
         top: 0;
         left: 0;
         width: 100%;
@@ -283,6 +300,14 @@ a {
         );
         opacity: 0;
         transition: all 1.5s ease;
+        @include mq(max, md) {
+          top: 20vw;
+          left: 29vw;
+          width: 62vw;
+          height: 51vw;
+          background: #fff;
+          opacity: .9;
+        }
       }
       &:hover {
         &:before {
@@ -305,10 +330,21 @@ a {
       font-family: $font-family-eb;
       opacity: 0;
       transition: all 1.5s ease;
-
+      @include mq(max, md) {
+        left: 43%;
+        bottom: -16%;
+        width: 90%;
+        padding: 14vw 5vw 21vw;
+        font-size: calc-size(24);
+        // background: #fff;
+        opacity: 1;
+      }
       .top__info-ttl-small {
         font-size: 1.5rem;
         font-family: $font-family;
+        @include mq(max, md) {
+          font-size: calc-size(11);
+        }
       }
       &:before {
         content: "";
@@ -318,6 +354,11 @@ a {
         width: 48px;
         height: 1px;
         background: $col-black;
+        @include mq(max, md) {
+          top: 65.75%;
+          left: 45%;
+          width: calc-size(21);
+        }
       }
       &:after {
         content: "";
@@ -328,10 +369,18 @@ a {
         height: 10px;
         border-right: solid 1px $col-black;
         transform: rotate(-45deg);
+        @include mq(max, md) {
+          top: 62.5%;
+          left: 49%;
+        }
       }
     }
   }
   .top__price {
+    @include mq(max, md) {
+      width: 76%;
+      margin: 35vw 0 0 auto;
+    }
     a {
       &:before {
         background: rgb(255, 255, 255);
@@ -342,12 +391,33 @@ a {
           rgba(255, 255, 255, 0) 40%,
           rgba(255, 255, 255, 0) 100%
         );
+        @include mq(max, md) {
+          top: 29vw;
+          left: -17vw;
+          width: 62vw;
+          height: 51vw;
+          background: #fff;
+        }
       }
     }
     .top__info-ttl {
       left: 40%;
+      @include mq(max, md) {
+        left: -25%;
+        padding: 14vw 0vw 18vw;
+      }
       &:before {
         left: 39%;
+        @include mq(max, md) {
+          top: 72%;
+          left: 44%;
+        }
+      }
+      &:after {
+        @include mq(max, md) {
+          top: 69.75%;
+          left: 48%;
+        }
       }
     }
   }
@@ -359,6 +429,11 @@ a {
   line-height: 4;
   text-align: center;
   background: $col-white;
+  @include mq(max, md) {
+    padding: 31vw 0 15vw;
+    font-size: calc-size(13);
+    line-height: 3.25;
+  }
 }
 
 .top__studio {
@@ -378,7 +453,9 @@ a {
   .top__studio-link {
     display: block;
     height: 25vw;
-
+    @include mq(max, md) {
+      height: 69.5vw;
+    }
     &:hover {
       .top__studio-group {
         &:before {
@@ -406,22 +483,33 @@ a {
       width: 71px;
       height: 1px;
       background: #fff;
+      @include mq(max, md) {
+        width: 10vw;
+      }
     }
     &:after {
       content: "";
       position: absolute;
-      bottom: -3%;
+      bottom: -5%;
       left: 53%;
       width: 14px;
       height: 14px;
       border-right: solid 1px #fff;
       transform: rotate(-45deg);
+      @include mq(max, md) {
+        bottom: -6vw;
+        left: 51vw;
+      }
     }
   }
   .top__studio-txt {
     margin-bottom: 13px;
     font-size: 2rem;
     letter-spacing: 0.15em;
+    @include mq(max, md) {
+      margin-bottom: 0;
+      font-size: calc-size(13);
+    }
   }
   .top__studio-address {
     width: 682px;
@@ -431,7 +519,10 @@ a {
     background: url(/dist/img/top_address.png) no-repeat center;
     background-size: contain;
     @include mq(max, md) {
-      width: 100%;
+      width: 75vw;
+      padding: 4vw 0;
+      font-size: calc-size(20);
+      background: url(/dist/img/top_address_sp.png) no-repeat center;
     }
   }
 }
@@ -441,7 +532,10 @@ a {
   text-align: center;
   background: url(/dist/img/top_contact_bg.png) no-repeat center;
   background-color: $col-white;
-
+  @include mq(max, md) {
+    padding: 30vw 0;
+    background: url(/dist/img/top_contact_bg_sp.png) no-repeat center;
+  }
   .top__contact-ttl {
     width: 304px;
     margin: 0 auto 135px;
@@ -456,12 +550,21 @@ a {
       rgba(255, 255, 255, 0) 35%,
       rgba(255, 255, 255, 0) 100%
     );
+    @include mq(max, md) {
+      margin: 0 auto 7vw;
+      width: 30vw;
+      font-size: calc-size(25);
+    }
   }
 
   .top__contact-txt {
     margin-bottom: 112px;
     font-size: 2.2rem;
     line-height: 3.5;
+    @include mq(max, md) {
+      margin: 0 auto 7vw;
+      font-size: calc-size(13);
+    }
   }
 
   .top__contact-line {

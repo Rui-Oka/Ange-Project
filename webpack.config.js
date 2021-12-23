@@ -6,11 +6,14 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 module.exports = {
 	mode: 'development',
 	//エントリポイント（デフォルトと同じなので省略可）
-	entry: './src/scss/style.scss',
+	entry: {
+		'index': path.resolve(__dirname, "./src/js/index.js"),
+        'index.css': path.resolve(__dirname, './src/scss/style.scss')
+	},
 	//出力先（デフォルトと同じなので省略可）
 	output: { 
-	  filename: 'js/main.js',
-	  path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, './dist/'), // 出力先フォルダを絶対パスで指定
+        filename: 'js/[name].js' // [name]にはentry:で指定したキーが入る
 	},
 	module: {
 	  rules: [
