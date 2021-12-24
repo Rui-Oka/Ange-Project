@@ -11,41 +11,44 @@
   </head>
   <body>
  <!-- header -->
-<header class="header">
-      <h1 class="header__logo">
-        <a href="/">
-          <picture><img src="/dist/img/ange_logo.svg" alt=""></picture>
-        </a>  
-      </h1>
-      <div class="header__nav-box">
-         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-         <input id="drawer_input" class="header__nav-hidden v-sp" type="checkbox">
-         <label for="drawer_input" class="header__nav-icon v-sp"><span class="header__nav-open"></span></label>
-         <ul class="header__nav">
-          <li class="header__nav-list v-sp"><a href="/">TOP</a></li>
-          <li class="header__nav-list"><a href="/about/">About</a></li>
-          <li class="header__nav-list"><a href="/gallery/">Gallery</a></li>
-          <li class="header__nav-list"><a href="/price_plan/">Price Plan</a></li>
-          <li class="header__nav-list v-sp"><a href="/contact/">Contact</a></li>
-          <li class="header__nav-list nav__accordion">
-            <a class="header__nav-txt">Studio</a>
-             <ul class="nav__accordion-list">
-              <li class="nav__accordion-item"><a href="/studio/tokyo.html">東京</a></li>
-              <li class="nav__accordion-item"><a href="/studio/okinawa.html">沖縄</a></li>
-            </ul>
-          </li>
-          <li class="header__nav-list header__contact v-pc">
-            <a href="/contact/">Contact</a>
-          </li>
-          <li class="header__nav-list header__nav-list--small v-sp"><a href="/privacy_policy/">privacy policy</a></li>
-          <li class="header__nav-list header__nav-list--small v-sp"><a href="/user_policy/">user policy</a></li>
-        </ul>
-      </div>
-    </header>
+  <header class="header">
+    <h1 class="header__logo">
+      <a href="/">
+        <picture><img src="/dist/img/ange_logo.svg" alt=""></picture>
+      </a>  
+    </h1>
+    <div class="header__nav-box">
+      <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+      <input id="drawer_input" class="header__nav-hidden v-sp" type="checkbox">
+      <label for="drawer_input" class="header__nav-icon v-sp"><span class="header__nav-open"></span></label>
+      <ul class="header__nav">
+        <li class="header__nav-list v-sp"><a href="/">TOP</a></li>
+        <li class="header__nav-list"><a href="/about/">About</a></li>
+        <li class="header__nav-list"><a href="/gallery/">Gallery</a></li>
+        <li class="header__nav-list"><a href="/price_plan/">Price Plan</a></li>
+        <li class="header__nav-list v-sp"><a href="/contact/">Contact</a></li>
+        <li class="header__nav-list nav__accordion">
+          <a class="header__nav-txt">Studio</a>
+          <ul class="nav__accordion-list">
+            <li class="nav__accordion-item"><a href="/studio/tokyo.html">東京</a></li>
+            <li class="nav__accordion-item"><a href="/studio/okinawa.html">沖縄</a></li>
+          </ul>
+        </li>
+        <li class="header__nav-list header__contact v-pc">
+          <a href="/contact/">Contact</a>
+        </li>
+        <li class="header__nav-list header__nav-list--small v-sp"><a href="/privacy_policy/">privacy policy</a></li>
+        <li class="header__nav-list header__nav-list--small v-sp"><a href="/user_policy/">user policy</a></li>
+      </ul>
+    </div>
+  </header>
     <!-- /header -->
     <div class="fv">
       <h2 class="fv__ttl">Price Plan</h2>
-      <img src="/dist/img/about_fv.png" alt="" />
+      <picture class="fv__img">
+        <img class="v-pc" src="/dist/img/about_fv.png" alt="" />
+        <img class="v-sp" src="/dist/img/about_fv_sp.jpg" alt="" />
+      </picture>
     </div>
     <main class="main">
       <section class="plan">
@@ -94,11 +97,11 @@
               映像<br>
              <span>約1分〜1分半程度</span>
             </li>
-            <li class="plan__info-item plan__info-plus">
+            <li class="plan__info-item">
              写真<br>
             <span>撮影データ30枚</span>
            </li>
-           <li class="plan__info-item">
+           <li class="plan__info-item plan__info-plus">
              フラワーアレンジメント<br>
             <span>ドライフラワーの装飾</span>
            </li>
@@ -130,7 +133,7 @@
               映像<br>
              <span>約1分〜1分半程度</span>
             </li>
-            <li class="plan__info-item plan__info-plus">
+            <li class="plan__info-item">
              写真<br>
             <span>撮影データ30枚</span>
            </li>
@@ -138,7 +141,7 @@
              フラワーアレンジメント<br>
             <span>ドライフラワーの装飾</span>
            </li>
-           <li class="plan__info-item">
+           <li class="plan__info-item plan__info-plus">
              アルバム<br>
             <span>
               サイズ：210cm×252cm<br>
@@ -165,17 +168,17 @@
        <ul class="plan__announce">
          <li class="plan__announce-txt">
           <span>※</span>撮影時間について<br>
-          当日の撮影時間は、基本的にはご来店からお帰りまで3時間程度でご案内させていただいております。<br>
+          当日の撮影時間は、基本的にはご来店からお帰りまで<br class="v-sp">3時間程度でご案内させていただいております。<br>
           赤ちゃんのその日の機嫌やコンディションもあるかと思われますので、<br>
           ご来店後30分~1時間程休憩(授乳,おむつ替え)をしていただき、<br>
-          その後赤ちゃんのコンディションを最優先して1時間〜1時間半程撮影を行わせていただきます。
+          その後赤ちゃんのコンディションを最優先して<br class="v-sp">1時間〜1時間半程撮影を行わせていただきます。
          </li>
          <li class="plan__announce-txt">
           <span>※</span>出張料、宿泊交通費、車両費について<br>
-          撮影地に関しては基本的に、弊社所有のアトリエにて撮影を行なっております。<br>
+          撮影地に関しては基本的に、弊社所有のアトリエにて<br class="v-sp">撮影を行なっております。<br>
           ご自宅での撮影をご希望の場合、出張料金と交通費を別途頂戴致します。<br>
           出張料は撮影地やスケジュールにより変動がございます。<br>
-          <span>→</span>関東圏内(都内から車で2時間程度)の場合¥25,000/それ以外の撮影地の場合は事前にご相談の上ご請求させて頂きます。<br>
+          <span>→</span>関東圏内(都内から車で2時間程度)の場合¥25,000/<br class="v-sp">それ以外の撮影地の場合は事前にご相談の上ご請求させて頂きます。<br>
           (車両移動費として一律で¥15,000別途頂戴しております。)<br>
          </li>
          <li class="plan__announce-txt">
@@ -184,8 +187,7 @@
          </li>
          <li class="plan__announce-txt">
             <span>※</span>音源指定料について<br>
-            映像に使用する音源は、原則弊社が著作権・著作隣接権に関する手続き済みの<br>
-            ロイヤリティフリーの音源を使用させていただいております。<br>
+            映像に使用する音源は、原則弊社が著作権・著作隣接権に関する<br class="v-sp">手続き済みの<br class="v-pc">ロイヤリティフリーの音源を使用させていただいております。<br>
             ご希望の音源がある場合には、 ¥10,000で制作可能でございます。<br>
             (著作権や著作隣接権等の責任は、一切負いません)
          </li>
@@ -199,12 +201,12 @@
           24時間以内:撮影料金 100% 
          </p>
          <p class="cancel__sub-txt">
-          ※撮影の延期に関しましては、追加料金は一切頂かず撮影させていただきますのでご安心ください。
+          ※撮影の延期に関しましては、追加料金は一切頂かず<br class="v-sp">撮影させていただきますのでご安心ください。
          </p>
        </div>
        <div class="plan__btn-box">
         <p class="plan__btn-txt">LINE友達追加して問い合わせる</p>
-        <a class="plan__btn common-btn" href="#"><span>VIEW MORE</span></a>
+        <a class="plan__btn common-btn" href="#"><span>Contact</span></a>
       </div>
       </section>
     </main>

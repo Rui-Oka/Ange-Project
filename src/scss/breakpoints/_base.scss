@@ -1116,6 +1116,18 @@ a {
     border: solid 1px $col-pink;
     border-radius: 15px;
     background: #fff;
+    @include mq(max, md) {
+      width: 100%;
+      margin: 8vw 0 13vw;
+      padding-bottom: 10vw;
+      border-radius: 9vw;
+    }
+
+    &:last-of-type {
+      @include mq(max, md) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .plan__ttl {
@@ -1133,8 +1145,21 @@ a {
     outline: 1px solid rgb(255, 255, 255);
     outline-offset: -8px;
     background: $col-pink;
+    box-sizing: border-box;
+
+    @include mq(max, md) {
+      top: -7vw;
+      width: 19vw;
+      height: 19vw;
+      padding: 2vw 0;
+      font-size: calc-size(28);
+      font-weight:bold;
+    }
     span {
       font-size: 2rem;
+      @include mq(max, md) {
+        font-size: calc-size(10);
+      }
     }
   }
 
@@ -1148,10 +1173,23 @@ a {
     background: url(/dist/img/price_bg.png) no-repeat;
     background-size: 100%;
     background-position: center 10%;
+    @include mq(max, md) {
+      display: block;
+      width: 85%;
+      margin: 0 auto 9vw;
+      padding: 8vw 0 0;
+    } 
   }
   .plan__info-list {
     height: 506px;
     margin: 146px 0 38px;
+    @include mq(max, md) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      height: auto;
+      margin: 16vw auto 3vw;
+    }
   }
 
   .plan__info-item {
@@ -1164,11 +1202,31 @@ a {
     border: solid 1px $col-pink;
     border-radius: 15px;
 
+    @include mq(max, md) {
+      width: 46%;
+      margin: 0 auto;
+      padding: 2.5vw 0;
+      line-height: 1.75;
+      font-size: calc-size(15);
+    }
     &:not(:first-of-type) {
       margin-bottom: 52px;
+      @include mq(max, md) {
+        margin-bottom: 0;
+      }
+    }
+    &:nth-child( n+3 ) {
+      @include mq(max, md) {
+        width: 95%;
+        margin-top: 7vw;
+        line-height: 1.25;
+      }
     }
     span {
       font-size: 1.5rem;
+      @include mq(max, md) {
+        font-size: calc-size(11);
+      }
     }
 
     &.plan__info-plus {
@@ -1177,22 +1235,31 @@ a {
       &::before {
         content: "";
         position: absolute;
-        bottom: -30px;
+        top: -30px;
         left: 50%;
         transform: translateX(-50%);
         width: 30px;
         height: 4px;
         background: $col-black;
+        @include mq(max, md) {
+          top: -4.25vw;
+          width: 4vw;
+          height: 0.4vw;
+        }
       }
       &::after {
         content: "";
         position: absolute;
-        bottom: -45px;
+        top: -42px;
         left: 50%;
-        transform: translateX(-50%);
         width: 4px;
         height: 30px;
         background: $col-black;
+        @include mq(max, md) {
+          top: -6vw;
+          width: 0.4vw;
+          height: 4vw;
+        }
       }
     }
   }
@@ -1201,6 +1268,9 @@ a {
     position: relative;
     margin-bottom: 52px;
     height: 90px;
+    @include mq(max, md) {
+      display: none;
+    }
     picture {
       position: absolute;
       top: 50%;
@@ -1216,14 +1286,32 @@ a {
     text-align: center;
     border-radius: 50px;
     background: $col-pink;
+    @include mq(max, md) {
+      width: 50%;
+      margin: 0 auto 4vw;
+      padding: 2vw 0;
+      font-size: calc-size(17);
+    }
   }
 
   .plan__img {
     text-align: center;
+    @include mq(max, md) {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin: auto;
+    }
     picture {
       display: block;
+      @include mq(max, md) {
+        width: 32%;
+      }
       &:not(:last-of-type) {
         margin-bottom: 20px;
+        @include mq(max, md) {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -1234,12 +1322,25 @@ a {
     max-width: 1271px;
     margin: 0 auto 176px;
     font-size: 2rem;
+    @include mq(max, md) {
+      width: 90%;
+      margin: 0 auto 14vw ;
+      font-size: calc-size(11);
+    }
   }
 
   .plan__announce-txt {
     margin-bottom: 25px;
+    @include mq(max, md) {
+      margin-bottom: 6vw;
+      line-height: 1.8;
+      letter-spacing: -0.01em;
+    }
     span {
       margin-left: -2rem;
+      @include mq(max, md) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -1250,6 +1351,11 @@ a {
     padding: 68px 0 71px;
     border-radius: 15px;
     background: #fff;
+    @include mq(max, md) {
+      width: 88%;
+      margin: 0 auto 5vw;
+      padding: 5vw 0 ;
+    }
   }
 
   .cancel__ttl {
@@ -1267,6 +1373,11 @@ a {
       rgba(255, 255, 255, 0) 35%,
       rgba(255, 255, 255, 0) 100%
     );
+    @include mq(max, md) {
+      width: 33%;
+      margin: 0 auto 5vw;
+      font-size: calc-size(10);
+    }
   }
 
   .cancel__txt {
@@ -1274,22 +1385,40 @@ a {
     font-size: 2.3rem;
     line-height: 2;
     text-align: center;
+    @include mq(max, md) {
+      margin-bottom: 4vw;
+      font-size: calc-size(12);
+      letter-spacing: 0;
+    }
   }
 
   .cancel__sub-txt {
     font-size: 1.8rem;
     text-align: center;
+    @include mq(max, md) {
+      font-size: calc-size(10);
+      letter-spacing: 0;
+    }
   }
 
   .plan__btn-box {
     padding: 153px 0 300px;
     background: url(/dist/img/common_tag.png) no-repeat center top;
+    @include mq(max, md) {
+      padding: 56vw 0 30vw;
+      background-size: 1%;
+      background-position: center 23%;
+    }
   }
 
   .plan__btn-txt {
     margin-bottom: 5px;
     font-size: 2rem;
     text-align: center;
+    @include mq(max, md) {
+      margin-bottom: 2vw;
+      font-size: calc-size(12);
+    }
   }
 
   .plan__btn {
@@ -1298,6 +1427,10 @@ a {
     margin: auto;
     padding: 20px 0;
     text-align: center;
+    @include mq(max, md) {
+      width: 41%;
+      padding: 2vw 0;
+    }
   }
 }
 // -------------------------------------
