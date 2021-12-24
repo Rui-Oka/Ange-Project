@@ -11,27 +11,36 @@
   </head>
   <body>
  <!-- header -->
-    <header class="header">
+<header class="header">
       <h1 class="header__logo">
         <a href="/">
           <picture><img src="/dist/img/ange_logo.svg" alt=""></picture>
         </a>  
       </h1>
-      <ul class="header__nav">
-        <li class="header__nav-list"><a href="/about/">About</a></li>
-        <li class="header__nav-list"><a href="/gallery/">Gallery</a></li>
-        <li class="header__nav-list"><a href="/price_plan/">Price Plan</a></li>
-        <li class="header__nav-list nav__accordion">
-          <a class="header__nav-txt">Studio</a>
-          <ul class="nav__accordion-list">
-            <li class="nav__accordion-item"><a href="/studio/tokyo.html">東京</a></li>
-            <li class="nav__accordion-item"><a href="/studio/okinawa.html">沖縄</a></li>
-          </ul>
-        </li>
-        <li class="header__nav-list header__contact">
-          <a href="/contact/">Contact</a>
-        </li>
-      </ul>
+      <div class="header__nav-box">
+         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+         <input id="drawer_input" class="header__nav-hidden v-sp" type="checkbox">
+         <label for="drawer_input" class="header__nav-icon v-sp"><span class="header__nav-open"></span></label>
+         <ul class="header__nav">
+          <li class="header__nav-list v-sp"><a href="/">TOP</a></li>
+          <li class="header__nav-list"><a href="/about/">About</a></li>
+          <li class="header__nav-list"><a href="/gallery/">Gallery</a></li>
+          <li class="header__nav-list"><a href="/price_plan/">Price Plan</a></li>
+          <li class="header__nav-list v-sp"><a href="/contact/">Contact</a></li>
+          <li class="header__nav-list nav__accordion">
+            <a class="header__nav-txt">Studio</a>
+             <ul class="nav__accordion-list">
+              <li class="nav__accordion-item"><a href="/studio/tokyo.html">東京</a></li>
+              <li class="nav__accordion-item"><a href="/studio/okinawa.html">沖縄</a></li>
+            </ul>
+          </li>
+          <li class="header__nav-list header__contact v-pc">
+            <a href="/contact/">Contact</a>
+          </li>
+          <li class="header__nav-list header__nav-list--small v-sp"><a href="/privacy_policy/">privacy policy</a></li>
+          <li class="header__nav-list header__nav-list--small v-sp"><a href="/user_policy/">user policy</a></li>
+        </ul>
+      </div>
     </header>
     <!-- /header -->
     <div class="fv">

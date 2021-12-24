@@ -57,8 +57,8 @@ a {
     background: #fff;
     z-index: 2;
     @include mq(max, md) {
-      bottom: -15vw;
-      left: 48.75%;
+      bottom: 27%;
+      left: 50%;
       width: 0.5vw;
       height: 25vw;
     }
@@ -74,10 +74,7 @@ a {
     background: #fff;
     z-index: 2;
     @include mq(max, md) {
-      bottom: -4vw;
-      left: 50.25%;
-      width: 0.5vw;
-      height: 20vw;
+      display: none;
     }
   }
   .fv__ttl {
@@ -90,6 +87,10 @@ a {
     font-family: $font-family-eb;
     color: #fff;
     z-index: 2;
+    @include mq(max, md) {
+      top: 48%;
+      font-size: calc-size(30);
+    }
   }
   img {
     width: 100%;
@@ -134,6 +135,11 @@ a {
   font-size: 2rem;
   letter-spacing: 0.15em;
   border: solid 1px #707070;
+  @include mq(max, md) {
+   font-size: calc-size(16);
+   letter-spacing: 0.075em;
+   border: solid 0.25vw #707070;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -143,6 +149,11 @@ a {
     width: 71px;
     height: 1px;
     background: #000;
+    @include mq(max, md) {
+      right: -7%;
+      width: 6vw;
+      height: 0.25vw;
+     }
   }
   &:after {
     content: "";
@@ -154,6 +165,11 @@ a {
     height: 14px;
     border-right: solid 1px #000;
     transform: rotate(-45deg);
+    @include mq(max, md) {
+      right: -6%;
+      width: 1.5vw;
+      height: 1.5vw;
+     }
   }
   &:hover {
     &:before {
@@ -186,6 +202,24 @@ a {
 // -------------------------------------
 // TOPページ部分
 // -------------------------------------
+.top__fv {
+  &:before {
+    @include mq(max, md) {
+      bottom: -15vw;
+      left: 48.75%;
+      width: 0.5vw;
+      height: 25vw;
+    }
+  }
+  &:after {
+    @include mq(max, md) {
+      bottom: -4vw;
+      left: 50.25%;
+      width: 0.5vw;
+      height: 20vw;
+    }
+  }
+}
 .top__about {
   padding: 517px 0 324px 262px;
   background: url(/dist/img/top_about_bg.png) no-repeat center;
@@ -577,34 +611,63 @@ a {
 // -------------------------------------
 .about {
   padding: 343px 0 300px;
+  @include mq(max, md) {
+    padding: 34vw 0 30vw;
+  }
   .about__group {
     width: 80%;
     max-width: 629px;
     margin: auto;
+    @include mq(max, md) {
+      margin-left: 14vw;
+     }
   }
   .about__txt {
     font-size: 2.5rem;
     line-height: 3.5;
     &:last-of-type {
       margin-bottom: 455px;
+      @include mq(max, md) {
+        margin-bottom: 26vw;
+      }
+    }
+    @include mq(max, md) {
+      margin-bottom: 14vw;
+      font-size: calc-size(14);
+      letter-spacing: 0.05em;
+      line-height: 3.25;
     }
   }
 
   .about__btn {
     display: flex;
     justify-content: center;
+    @include mq(max, md) {
+      display: block;
+      text-align: center;
+    }
     .about__btn-item {
       padding: 20px 0;
+      @include mq(max, md) {
+        padding: 0;
+      }
       &:not(:last-of-type) {
         margin-right: 61px;
+        @include mq(max, md) {
+          margin: 0 0 12vw 0;
+        }
       }
     }
     .about__btn-link {
       position: relative;
       padding: 20px 107px;
-      font-size: 2rem;
-      letter-spacing: 0.15em;
-      border: solid 1px #707070;
+      @include mq(max, md) {
+        display: block;
+        width: 41vw;
+        margin-left:28vw;
+        padding: 1.5vw 0;
+        box-sizing: border-box;
+      }
     }
   }
 }
@@ -617,30 +680,55 @@ a {
   background: url(/dist/img/gallery_bg.png) no-repeat;
   background-position: center 10%;
   background-size: 100%;
+  @include mq(max, md) {
+    padding: 40vw 0 30vw;
+    background: url(/dist/img/gallery_bg_sp.png) no-repeat center;
+  }
 
   .gallery__group {
     width: 80%;
     max-width: 1388px;
     margin: 0 auto 157px;
+    @include mq(max, md) {
+      width: 69.5%;
+      margin: 0 0 43vw 17vw;
+    }
   }
 
   .gallery__item {
     display: flex;
+    @include mq(max, md) {
+      flex-wrap: wrap;
+    }
     &:not(:last-of-type) {
       margin-bottom: 300px;
+      @include mq(max, md) {
+        margin-bottom: 28.5vw;
+      }
     }
 
     &:nth-of-type(even) {
       justify-content: end;
+      @include mq(max, md) {
+        flex-direction: column-reverse;
+      }
       .gallery__txt {
         margin-left: 0;
         margin-right: 42px;
         text-align: right;
+        @include mq(max, md) {
+          margin-left: 1.5vw;
+          margin-right: 0;
+          text-align: left;
+        }
       }
 
       .gallery__img {
         &:before {
           left: 35px;
+          @include mq(max, md) {
+            left: -3vw;
+          }
         }
       }
     }
@@ -650,7 +738,9 @@ a {
     position: relative;
     width: 50%;
     max-width: 711px;
-
+    @include mq(max, md) {
+      width: 100%;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -659,6 +749,12 @@ a {
       width: 100%;
       height: 100%;
       background: #fff;
+      @include mq(max, md) {
+        top: 5vw;
+        right: 13vw;
+        width: 60vw;
+        height: 44vw;
+      }
     }
     img {
       position: relative;
@@ -667,21 +763,43 @@ a {
 
   .gallery__txt {
     margin-left: 42px;
+    @include mq(max, md) {
+      margin-top: 5vw;
+      margin-left: 1.5vw;
+    }
     .gallery__plan {
       margin-bottom: 27px;
       font-size: 2rem;
+      @include mq(max, md) {
+        margin-bottom: 1vw;
+        font-size: calc-size(13);
+        line-height: 1;
+      }
     }
     .gallery__tag {
       margin-bottom: 31px;
       font-size: 2rem;
+      @include mq(max, md) {
+        margin-bottom: 1vw;
+        font-size: calc-size(13);
+        line-height: 1;
+      }
     }
 
     .gallery__studio {
       margin-bottom: 28px;
       font-size: 2rem;
+      @include mq(max, md) {
+        margin-bottom: 0.5vw;
+        font-size: calc-size(13);
+        line-height: 1;
+      }
     }
     .gallery__born {
       font-size: 2rem;
+      @include mq(max, md) {
+        font-size: calc-size(13);
+      }
     }
   }
 
@@ -689,10 +807,18 @@ a {
     padding-top: 119px;
     text-align: center;
     background: url(/dist/img/common_tag.png) no-repeat top center;
+    @include mq(max, md) {
+      padding-top: 0;
+      background: none;
+    }
 
     .gallery__inst-txt {
       margin-bottom: 15px;
       font-size: 2rem;
+      @include mq(max, md) {
+        margin-bottom: 2vw;
+        font-size: calc-size(12);
+      }
     }
 
     .gallery__inst-btn {
@@ -702,6 +828,12 @@ a {
       padding: 20px 0;
       background: url(/dist/img/gallery_btn-tag.png) no-repeat;
       background-position: 14% 50%;
+      @include mq(max, md) {
+        width: 46vw;
+        margin: 0 0 0 26vw;
+        padding: 1vw 0;
+        background-position: 10% 45%;
+      }
     }
   }
 }
