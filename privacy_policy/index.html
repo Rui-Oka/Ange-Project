@@ -22,7 +22,7 @@
          <input id="drawer_input" class="header__nav-hidden v-sp" type="checkbox">
          <label for="drawer_input" class="header__nav-icon v-sp"><span class="header__nav-open"></span></label>
          <ul class="header__nav">
-          <li class="header__nav-list v-sp"><a href="/">TOP</a></li>
+          <li class="header__nav-list v-sp"><a href="/">Top</a></li>
           <li class="header__nav-list"><a href="/about/">About</a></li>
           <li class="header__nav-list"><a href="/gallery/">Gallery</a></li>
           <li class="header__nav-list"><a href="/price_plan/">Price Plan</a></li>
@@ -30,8 +30,14 @@
           <li class="header__nav-list nav__accordion">
             <a class="header__nav-txt">Studio</a>
              <ul class="nav__accordion-list">
-              <li class="nav__accordion-item"><a href="/studio/tokyo.html">東京</a></li>
-              <li class="nav__accordion-item"><a href="/studio/okinawa.html">沖縄</a></li>
+              <li class="nav__accordion-item"><a href="/studio/tokyo.html">
+                <span class="v-pc">東京</span>
+                <span class="v-sp">TOKYO</span>
+              </a></li>
+              <li class="nav__accordion-item"><a href="/studio/okinawa.html">
+                <span class="v-pc">沖縄</span>
+                <span class="v-sp">OKINAWA</span>
+              </a></li>
             </ul>
           </li>
           <li class="header__nav-list header__contact v-pc">
@@ -45,7 +51,10 @@
     <!-- /header -->
     <div class="fv">
       <h2 class="fv__ttl">Privacy policy</h2>
-      <img src="/dist/img/privacy_policy_fv.png" alt="" />
+      <picture class="fv__img">
+        <img class="v-pc" src="/dist/img/privacy_policy_f.png" alt="" />
+        <img class="v-sp" src="/dist/img/privacy_policy_f_sp.jpg" alt="" />
+      </picture>
     </div>
     <main class="main">
       <section class="privacy">

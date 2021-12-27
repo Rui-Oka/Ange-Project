@@ -39,13 +39,13 @@
       display: block;
       width: 100%;
       height: 100vh;
-      padding: 30vw 0 0;
+      padding: 25vw 0 0;
       position: fixed;
       top: 0;
       left: 100%; /* メニューを画面の外に飛ばす */
       box-sizing: border-box;
       z-index: 99;
-      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
       transition: 0.5s;
     }
   }
@@ -54,7 +54,7 @@
     text-align: center;
     margin-right: 76px;
     @include mq(max, md) {
-      margin: 0 auto 5vw;
+      margin: 0 auto 6vw;
     }
 
     &:last-of-type {
@@ -68,7 +68,7 @@
       color: #fff;
       @include mq(max, md) {
         display: inline-block;
-        font-size: 7vw;
+        font-size: calc-size(30);
         color: $col-black;
       }
     }
@@ -122,116 +122,149 @@
   }
 
   .header__nav-list--small {
+    margin-bottom: 2vw;
     a {
       font-size: 4vw;
     }
   }
-}
-
-.nav__accordion {
-  position: relative;
-  margin-top: 17px;
-
-  &:hover {
-    .nav__accordion-item {
-      height: auto;
-      padding: 6px 0 0;
-    }
-    .header__nav-txt {
-      &:before {
-        left: 12%;
-        width: 25px;
-        transform: rotate(0);
-      }
-      &:after {
-        width: 25px;
-        transform: rotate(0);
-      }
-    }
-  }
-  .header__nav-txt {
+  
+  .nav__accordion {
     position: relative;
-    padding-bottom: 16.5px;
-    font-size: 2rem;
-    font-family: $font-family-eb;
-    color: #fff;
-    transition: all 0.5s ease-out;
+    margin-top: 17px;
     @include mq(max, md) {
-      display: none;
-      width: 40%;
-      padding-bottom: 0;
-      color: #7b7b7b !important;
-      background: #fff;
-      z-index: 2;
-    }
-    &:before {
-      content: "";
-      position: absolute;
-      bottom: 5px;
-      left: 30%;
-      transform: rotate(45deg);
-      width: 14px;
-      height: 1px;
-      background: #fff;
-      transition: all 0.3s ease-in-out;
-      @include mq(max, md) {
-        display: none;
-        bottom: 5vw;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 160%;
-        height: 0.25vw;
-        background: #7b7b7b;
-      }
+      margin-bottom: 10vw;
+      padding-bottom: 10vw;
     }
     &:after {
-      content: "";
-      position: absolute;
-      bottom: 5px;
-      left: 43%;
-      width: 14px;
-      height: 1px;
-      background: #fff;
-      transform: rotate(-45deg);
-      transition: all 0.3s ease-in-out;
       @include mq(max, md) {
-        bottom: -24vw;
+        content: "";
+        position: absolute;
+        bottom:0;
         left: 50%;
         transform: translateX(-50%);
-        width: 160%;
+        width: 60vw;
         height: 0.25vw;
         background: #7b7b7b;
       }
     }
-  }
-
-  .nav__accordion-item {
-    width: 73px;
-    height: 0;
-    padding: 0;
-    font-size: 1.5rem;
-    text-align: center;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.25);
-    transition: all 0.5s ease-out;
-    @include mq(max, md) {
-      width: auto;
-      height: auto;
-      background: none;
+    &:hover {
+      .nav__accordion-item {
+        height: auto;
+        padding: 6px 0 0;
+        @include mq(max, md) {
+          padding: 0;
+        }
+      }
+      .header__nav-txt {
+        &:before {
+          left: 12%;
+          width: 25px;
+          transform: rotate(0);
+          @include mq(max, md) {
+            width: 10vw;
+            left: 0;
+          }
+        }
+        &:after {
+          width: 25px;
+          transform: rotate(0);
+          @include mq(max, md) {
+            width: 10vw;
+          }
+        }
+      }
     }
-    &:not(:last-of-type) {
-      margin-bottom: 9.6px;
+    .header__nav-txt {
+      position: relative;
+      padding-bottom: 16.5px;
+      font-size: 2rem;
+      font-family: $font-family-eb;
+      color: #fff;
+      transition: all 0.5s ease-out;
+      @include mq(max, md) {
+        width: 60vw;
+        padding-bottom: 7vw;
+        font-size: calc-size(25)!important;
+        color: #7b7b7b !important;
+        z-index: 2;
+        pointer-events:none;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 30%;
+        transform: rotate(45deg);
+        width: 14px;
+        height: 1px;
+        background: #fff;
+        transition: all 0.3s ease-in-out;
+        @include mq(max, md) {
+          left: 0;
+          bottom: 10vw;
+          width: 10vw;
+          height: 0.25vw;
+          transform: rotate(0);
+          background: #7b7b7b;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 43%;
+        width: 14px;
+        height: 1px;
+        background: #fff;
+        transform: rotate(-45deg);
+        transition: all 0.3s ease-in-out;
+        @include mq(max, md) {
+          bottom: 10vw;
+          left: 50vw;
+          width: 10vw;
+          height: 0.25vw;
+          transform: rotate(0);
+          background: #7b7b7b;
+        }
+      }
     }
-  }
-
-  .nav__accordion-list {
-    position: absolute;
-    top: 44px;
-    left: 50%;
-    transform: translateX(-50%);
-    @include mq(max, md) {
-      position: unset;
-      transform: none;
+  
+    .nav__accordion-item {
+      width: 73px;
+      height: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      text-align: center;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.25);
+      transition: all 0.5s ease-out;
+      @include mq(max, md) {
+        width: auto;
+        height: auto;
+        background: none;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 9.6px;
+        @include mq(max, md) {
+          margin-bottom: 8vw;
+        }
+      }
+    }
+  
+    .nav__accordion-list {
+      position: absolute;
+      top: 44px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include mq(max, md) {
+        position: unset;
+        transform: none;
+      }
+      a {
+        @include mq(max, md) {
+          font-size: calc-size(25);
+        }
+      }
     }
   }
 }

@@ -1031,6 +1031,9 @@ a {
 // -------------------------------------
 .privacy {
   padding: 284px 0 300px;
+  @include mq(max, md) {
+    padding: 27vw 0 30vw;
+  }
   .privacy__ttl {
     width: 377px;
     margin: 0 auto 125px;
@@ -1044,6 +1047,11 @@ a {
       rgba(255, 255, 255, 0) 35%,
       rgba(255, 255, 255, 0) 100%
     );
+    @include mq(max, md) {
+      width: 36vw;
+      margin: 0 auto 9vw;
+      font-size: calc-size(13);
+    }
   }
 
   .privacy__group {
@@ -1054,6 +1062,12 @@ a {
     font-size: 2rem;
     border-radius: 15px;
     background: #fff;
+    @include mq(max, md) {
+      width: 95%;
+      padding: 16vw 3vw;
+      font-size: calc-size(11);
+      border-radius: 12vw;
+    }
   }
 
   .privacy__item {
@@ -1061,6 +1075,9 @@ a {
     text-align: justify;
     &:not(:last-of-type) {
       margin-bottom: 35px;
+      @include mq(max, md) {
+        margin-bottom: 5vw;
+      }
     }
   }
 }
@@ -1070,6 +1087,9 @@ a {
 // -------------------------------------
 .user {
   padding: 302px 0 300px;
+  @include mq(max, md) {
+    padding: 27vw 0 30vw;
+  }
   .user__ttl {
     width: 164px;
     margin: 0 auto 125px;
@@ -1083,6 +1103,11 @@ a {
       rgba(255, 255, 255, 0) 35%,
       rgba(255, 255, 255, 0) 100%
     );
+    @include mq(max, md) {
+      width: 18vw;
+      margin: 0 auto 9vw;
+      font-size: calc-size(13);
+    }
   }
 
   .user__group {
@@ -1093,6 +1118,12 @@ a {
     font-size: 2rem;
     border-radius: 15px;
     background: #fff;
+    @include mq(max, md) {
+      width: 95%;
+      padding: 11vw 9.25vw;
+      font-size: calc-size(11);
+      border-radius: 12vw;
+    }
   }
 
   .user__item {
@@ -1100,6 +1131,9 @@ a {
     text-align: justify;
     &:not(:last-of-type) {
       margin-bottom: 35px;
+      @include mq(max, md) {
+        margin-bottom: 6.5vw;
+      }
     }
   }
 }
@@ -1443,10 +1477,18 @@ a {
     line-height: 3.5;
     text-align: center;
     background: #fff;
+    @include mq(max, md) {
+      padding: 23vw 0 17vw;
+      font-size: calc-size(13);
+      line-height: 3;
+    }
   }
   .studio__group {
     padding: 84.5px 0 155px;
     background: $col-white;
+    @include mq(max, md) {
+      padding: 13vw 0 22vw;
+    }
   }
   .studio__ttl {
     position: relative;
@@ -1455,7 +1497,10 @@ a {
     font-size: 6.5rem;
     text-align: center;
     font-family: $font-family-dancing;
-
+    @include mq(max, md) {
+      width: 70%;
+      font-size: calc-size(23);
+    }
     &:before {
       content: "";
       position: absolute;
@@ -1465,6 +1510,9 @@ a {
       width: 122px;
       height: 1px;
       background: $col-brown;
+      @include mq(max, md) {
+        width: 25%;
+      }
     }
     &:after {
       content: "";
@@ -1475,6 +1523,9 @@ a {
       width: 122px;
       height: 1px;
       background: $col-brown;
+      @include mq(max, md) {
+        width: 25%;
+      }
     }
   }
 
@@ -1482,26 +1533,52 @@ a {
     background: #fff;
    .studio__ttl {
      width: 738px;
-   } 
+     @include mq(max, md) {
+      width: 68%;
+    }
+   }
+   .studio__ttl-sub {
+      @include mq(max, md) {
+        margin-bottom: 5vw;
+      }
+    }
   }
   .studio__ttl-sub {
     margin-bottom: 98.7px;
     font-size: 1.2rem;
     text-align: center;
+    @include mq(max, md) {
+      margin-bottom: 10vw;
+    }
   }
 
   .studio__list {
     max-width: 1077px;
     width: 80%;
     margin: auto;
+    @include mq(max, md) {
+      width: 57%;
+    }
+  }
+
+  .studio__item-img {
+    @include mq(max, md) {
+      margin-bottom: 2vw;
+    }
   }
 
   .studio__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mq(max, md) {
+      flex-wrap: wrap;
+    }
     &:not(:last-of-type) {
       margin-bottom: 78px;
+      @include mq(max, md) {
+        margin-bottom: 11vw;
+      }
     }
   }
 
@@ -1509,6 +1586,10 @@ a {
     width: 526px;
     font-size: 2rem;
     line-height: 3.5;
+    @include mq(max, md) {
+      font-size: calc-size(12);
+      line-height: 2;
+    }
   }
 
   .studio__days {
@@ -1516,30 +1597,66 @@ a {
     font-size: 2.5rem;
     line-height: 3;
     text-align: center;
+    @include mq(max, md) {
+      margin-bottom: 11vw;
+      font-size: calc-size(15);
+      line-height: 2;
+    }
   }
 
   .studio__days-txt {
     font-size: 1.5rem;
     line-height: 2;
     text-align: center;
+    @include mq(max, md) {
+      width: 80%;
+      margin: auto;
+      font-size: calc-size(12);
+      text-align: left;
+      letter-spacing: 0.08em;
+    }
   }
   .access {
    .studio__ttl {
      width: 586px;
+     @include mq(max, md) {
+      width: 64%;
+    }
    } 
+   .studio__ttl-sub {
+    @include mq(max, md) {
+      margin-bottom: 5vw;
+    }
+   }
   }
 
   .studio__address {
     width: 80%;
     max-width: 1088px;
     margin: 0 auto 94px;
+    @include mq(max, md) {
+      margin: 0 auto 10vw;
+    }
   }
-
+  .studio__address-map {
+    text-align: center;
+    iframe {
+      @include mq(max, md) {
+        width: 90%;
+        height: 40vw;
+      }
+    }
+  }
   .studio__address-ttl {
     position: relative;
     margin-bottom: 18px;
     padding: 5px 0 5px 20px;
     font-size: 2.5rem;
+    @include mq(max, md) {
+      margin-bottom: 0;
+      padding: 2vw 0vw 0 6vw;
+      font-size: calc-size(12);
+    }
     &:before {
       content: "";
       position: absolute;
@@ -1548,18 +1665,32 @@ a {
       width: 7px;
       height: 100%;
       background: $col-pink;
+      @include mq(max, md) {
+        top: 2.5vw;
+         left: 5vw;
+        width: 0.5vw;
+        height: 50%;
+      }
     }
   }
 
   .studio__address-txt {
     margin:0 0 34px 25px;
     font-size: 2.5rem;
+    @include mq(max, md) {
+      margin: 0 0vw 5vw 6vw;
+      font-size: calc-size(13);
+      letter-spacing: 0.08em;
+    }
   }
 
   .studio__moving {
     width: 80%;
     max-width: 1088px;
     margin: auto;
+    @include mq(max, md) {
+      width: 70%;
+    }
   }
   .studio__moving-ttl {
     margin-bottom: 36px;
@@ -1567,16 +1698,31 @@ a {
     font-size: 2.5rem;
     border-radius: 10px;
     background: #fff;
+    @include mq(max, md) {
+      margin-bottom: 2vw;
+      padding: 1vw 0 1vw 4vw;
+      font-size: calc-size(11);
+    }
   }
 
   .studio__moving-txt {
     margin-left: 76px;
     font-size: 2.5rem;
     line-height: 2;
+    @include mq(max, md) {
+      margin-left: 4vw;
+      font-size: calc-size(12);
+      letter-spacing: 0;
+      line-height: 1.75;
+    }
     &.icon {
       position: relative;
       padding-left: 30px;
       margin-bottom: 43px;
+      @include mq(max, md) {
+        padding-left: 0;
+        margin-bottom: 4vw;
+      }
       &:before {
         content: "";
         position: absolute;
@@ -1585,6 +1731,13 @@ a {
         width: 20px;
         height: 20px;
         background: url(/dist/img/studio_icon.png) no-repeat center;
+        @include mq(max, md) {
+          width: 2vw;
+          height: 2vw;
+          top: 1.5vw;
+          left: -2vw;
+          background-size: contain;
+        }
       }
     }
   }
@@ -1592,6 +1745,9 @@ a {
   .studio__moving-item {
     &:not(:last-of-type) {
       margin-bottom: 92px;
+      @include mq(max, md) {
+        margin-bottom: 9vw;
+      }
     }
   }
 
@@ -1599,12 +1755,19 @@ a {
     margin-left: 76px;
     font-size: 1.8rem;
     line-height: 1.5;
+    @include mq(max, md) {
+      margin-left: 0;
+      font-size: calc-size(12);
+    }
   }
 
   .process {
     background: #fff;
    .studio__ttl {
      width: 586px;
+     @include mq(max, md) {
+      width: 70%;
+    }
    } 
   }
 
@@ -1612,34 +1775,61 @@ a {
     width: 80%;
     max-width: 928px;
     margin: auto;
+    @include mq(max, md) {
+      width: 95%;
+      margin:0 0 0 5%;
+    }
   }
 
   .studio__process-item {
     margin-right: 150px;
     padding-left: 136px;
 
+    @include mq(max, md) {
+      margin-right: 0;
+      padding-left: 11%;
+    }
     &:not(:last-of-type) {
       margin-bottom: 65px;
+      
+    @include mq(max, md) {
+     margin-bottom: 5vw;
+    }
     }
     
     &.one {
       background: url(/dist/img/process_1.png) no-repeat center left;
+      @include mq(max, md) {
+      background: url(/dist/img/process_1_sp.png) no-repeat center left;
+      }
     }
     
     &.two {
       background: url(/dist/img/process_2.png) no-repeat center left;
+      @include mq(max, md) {
+        background: url(/dist/img/process_2_sp.png) no-repeat center left;
+        }
     }
     
     &.three {
       background: url(/dist/img/process_3.png) no-repeat center left;
+      @include mq(max, md) {
+        background: url(/dist/img/process_3_sp.png) no-repeat center left;
+        }
     }
     
     &.four {
       background: url(/dist/img/process_4.png) no-repeat center left;
+      @include mq(max, md) {
+        background: url(/dist/img/process_4_sp.png) no-repeat center left;
+        }
     }
     
     &.five {
       background: url(/dist/img/process_5.png) no-repeat center left;
+      @include mq(max, md) {
+        background: url(/dist/img/process_5_sp.png) no-repeat center left;
+        }
       .studio__process-txt {
         border-bottom: none;
       }
@@ -1649,11 +1839,22 @@ a {
   .studio__process-ttl {
     font-size: 3rem;
     font-weight: bold;
+    @include mq(max, md) {
+      margin-bottom: 1vw;
+      font-size: calc-size(15);
+    }
   }
   .studio__process-txt {
     padding-bottom: 32px;
     font-size: 2.5rem;
     border-bottom: solid 1px $col-pink;
+    @include mq(max, md) {
+      padding-bottom: 4vw;
+      font-size: calc-size(12);
+    }
+    a {
+      text-decoration: underline;
+    }
   }
 
   .studio__price-txt {
@@ -1661,6 +1862,10 @@ a {
     line-height: 2;
     font-size: 2.5rem;
     text-align: center;
+    @include mq(max, md) {
+      margin-bottom: 16vw;
+      font-size: calc-size(13);
+    }
   }
 
   .studio__btn {
@@ -1670,6 +1875,10 @@ a {
     padding: 20px 0;
     text-align: center;
     z-index: 1;
+    @include mq(max, md) {
+      width: 43%;
+      padding: 2vw 0;
+    }
   }
 }
 
