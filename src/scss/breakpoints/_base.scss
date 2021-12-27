@@ -861,12 +861,20 @@ a {
         rgba(255, 255, 255, 0) 35%,
         rgba(255, 255, 255, 0) 100%
       );
+      @include mq(max, md) {
+        width: 70%;
+        font-size: calc-size(25);
+      }
     }
 
     .contact__line-txt {
       margin-bottom: 110px;
       font-size: 2.2rem;
       line-height: 3.5;
+      @include mq(max, md) {
+        margin-bottom: 5vw;
+        font-size: calc-size(13);
+      }
     }
     .contact__line-btn {
       padding-bottom: 178px;
@@ -879,6 +887,9 @@ a {
     text-align: center;
     font-size: 3.0rem;
     background: #fff;
+    @include mq(max, md) {
+      font-size: calc-size(16);
+    }
   }
 
   .faq__inquiry {
@@ -893,12 +904,18 @@ a {
     margin-bottom: 47.6px;
     font-size: 3rem;
     text-align: center;
+    @include mq(max, md) {
+      font-size: calc-size(13);
+    }
   }
 
   .faq__inquiry-list {
     width: 80%;
     max-width: 1026px;
     margin: auto;
+    @include mq(max, md) {
+      width: 90%;
+    }
   }
 
   .faq__inquiry-item {
@@ -916,6 +933,10 @@ a {
     border-radius: 15px;
     background: #fff;
     cursor: pointer;
+    @include mq(max, md) {
+      padding: 2vw 15vw 2vw 15vw;
+      font-size: calc-size(11);
+    }
 
     span {
       position: absolute;
@@ -930,6 +951,11 @@ a {
       border-radius: 15px 35px 35px 15px;
       color: #fff;
       background: $col-pink;
+      @include mq(max, md) {
+        width: 10vw;
+        font-size: calc-size(23);
+        border-radius: 5px 10px 10px 5px;
+      }
     }
 
     &:before {
