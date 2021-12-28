@@ -214,32 +214,15 @@ a {
   right: -12%;
   transform: translateY(-50%);
   width: 71px;
-  height: 1px;
-  background: #000;
+  height: 22px;
+  background: url(/dist/img/common_arrow.png) no-repeat;
+  background-size: contain;
 }
 @media screen and (max-width: 767px) {
   .common-btn:before {
     right: -7%;
-    width: 6vw;
-    height: 0.25vw;
-  }
-}
-.common-btn:after {
-  content: "";
-  position: absolute;
-  top: 39%;
-  right: -11%;
-  transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
-  border-right: solid 1px #000;
-  transform: rotate(-45deg);
-}
-@media screen and (max-width: 767px) {
-  .common-btn:after {
-    right: -6%;
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 7vw;
+    height: 3vw;
   }
 }
 .common-btn:hover:before {
@@ -273,6 +256,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .top__fv:after {
+    display: block;
     bottom: -4vw;
     left: 50.25%;
     width: 0.5vw;
@@ -328,24 +312,12 @@ a {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  width: 24px;
-  height: 1px;
-  background: #434343;
-}
-.top__about .top__about-link a:after {
-  content: "";
-  position: absolute;
-  top: 9.75px;
-  right: 1px;
-  width: 10px;
-  height: 10px;
-  border-right: solid 1px #434343;
-  transform: rotate(-45deg);
+  width: 28px;
+  height: 13px;
+  background: url(/dist/img/common_arrow.png) no-repeat;
+  background-size: contain;
 }
 .top__about .top__about-link a:hover:before {
-  right: -5px;
-}
-.top__about .top__about-link a:hover:after {
   right: -5px;
 }
 
@@ -450,30 +422,16 @@ a {
   top: 89.75%;
   left: 32%;
   width: 48px;
-  height: 1px;
-  background: #434343;
+  height: 11px;
+  background: url(/dist/img/common_arrow.png) no-repeat;
+  background-size: contain;
 }
 @media screen and (max-width: 767px) {
   .top__info .top__info-item .top__info-ttl:before {
-    top: 65.75%;
+    top: 64%;
     left: 45%;
-    width: calc( 21 * (100vw / 428));
-  }
-}
-.top__info .top__info-item .top__info-ttl:after {
-  content: "";
-  position: absolute;
-  top: 85.5%;
-  left: 57%;
-  width: 10px;
-  height: 10px;
-  border-right: solid 1px #434343;
-  transform: rotate(-45deg);
-}
-@media screen and (max-width: 767px) {
-  .top__info .top__info-item .top__info-ttl:after {
-    top: 62.5%;
-    left: 49%;
+    width: 6vw;
+    height: 2vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -509,14 +467,8 @@ a {
 }
 @media screen and (max-width: 767px) {
   .top__info .top__price .top__info-ttl:before {
-    top: 72%;
+    top: 70%;
     left: 44%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .top__info .top__price .top__info-ttl:after {
-    top: 69.75%;
-    left: 48%;
   }
 }
 
@@ -559,9 +511,6 @@ a {
 .top__studio .top__studio-link:hover .top__studio-group:before {
   left: 53%;
 }
-.top__studio .top__studio-link:hover .top__studio-group:after {
-  left: 56%;
-}
 .top__studio .top__studio-group {
   position: absolute;
   top: 50%;
@@ -576,28 +525,14 @@ a {
   left: 50%;
   transform: translateX(-50%);
   width: 71px;
-  height: 1px;
-  background: #fff;
+  height: 16px;
+  background: url(/dist/img/common_arrow_w.png) no-repeat;
+  background-size: contain;
 }
 @media screen and (max-width: 767px) {
   .top__studio .top__studio-group:before {
     width: 10vw;
-  }
-}
-.top__studio .top__studio-group:after {
-  content: "";
-  position: absolute;
-  bottom: -5%;
-  left: 53%;
-  width: 14px;
-  height: 14px;
-  border-right: solid 1px #fff;
-  transform: rotate(-45deg);
-}
-@media screen and (max-width: 767px) {
-  .top__studio .top__studio-group:after {
-    bottom: -6vw;
-    left: 51vw;
+    height: 2.5vw;
   }
 }
 .top__studio .top__studio-txt {
@@ -937,11 +872,24 @@ a {
 .contact {
   padding: 348px 0 300px;
 }
+@media screen and (max-width: 767px) {
+  .contact {
+    padding: 0 0 30vw;
+  }
+}
 .contact .contact__group {
   margin-bottom: 367px;
   text-align: center;
   background: url(/dist/img/contact_bg.png) no-repeat center;
   background-size: 100%;
+}
+@media screen and (max-width: 767px) {
+  .contact .contact__group {
+    padding-top: 30vw;
+    margin-bottom: 0;
+    background: url(/dist/img/contact_bg_sp.png) no-repeat;
+    background-position: center 30%;
+  }
 }
 .contact .contact__group .contact__line-ttl {
   width: 433px;
@@ -952,7 +900,8 @@ a {
 }
 @media screen and (max-width: 767px) {
   .contact .contact__group .contact__line-ttl {
-    width: 70%;
+    width: 31%;
+    margin-bottom: 8vw;
     font-size: calc( 25 * (100vw / 428));
   }
 }
@@ -963,13 +912,20 @@ a {
 }
 @media screen and (max-width: 767px) {
   .contact .contact__group .contact__line-txt {
-    margin-bottom: 5vw;
+    margin-bottom: 7vw;
     font-size: calc( 13 * (100vw / 428));
   }
 }
 .contact .contact__group .contact__line-btn {
   padding-bottom: 178px;
   background: url(/dist/img/common_tag.png) no-repeat center bottom;
+}
+@media screen and (max-width: 767px) {
+  .contact .contact__group .contact__line-btn {
+    padding-bottom: 40vw;
+    background-size: 1vw;
+    background-position: center 69%;
+  }
 }
 .contact .faq__ttl {
   padding: 29.7px 0;
@@ -979,14 +935,25 @@ a {
 }
 @media screen and (max-width: 767px) {
   .contact .faq__ttl {
+    padding: 2vw 0;
     font-size: calc( 16 * (100vw / 428));
   }
 }
 .contact .faq__inquiry {
   padding-top: 80px;
 }
+@media screen and (max-width: 767px) {
+  .contact .faq__inquiry {
+    padding-top: 18vw;
+  }
+}
 .contact .faq__inquiry:not(:first-of-type) {
   padding-top: 71.5px;
+}
+@media screen and (max-width: 767px) {
+  .contact .faq__inquiry:not(:first-of-type) {
+    padding-top: 12vw;
+  }
 }
 .contact .faq__inquiry-ttl {
   margin-bottom: 47.6px;
@@ -995,6 +962,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .contact .faq__inquiry-ttl {
+    margin-bottom: 3vw;
     font-size: calc( 13 * (100vw / 428));
   }
 }
@@ -1011,6 +979,11 @@ a {
 .contact .faq__inquiry-item:not(:last-of-type) {
   margin-bottom: 35px;
 }
+@media screen and (max-width: 767px) {
+  .contact .faq__inquiry-item:not(:last-of-type) {
+    margin-bottom: 3vw;
+  }
+}
 .contact .faq__inquiry-query {
   position: relative;
   display: block;
@@ -1023,8 +996,9 @@ a {
 }
 @media screen and (max-width: 767px) {
   .contact .faq__inquiry-query {
-    padding: 2vw 15vw 2vw 15vw;
+    padding: 1vw 16vw 1vw 19vw;
     font-size: calc( 11 * (100vw / 428));
+    border-radius: 5vw;
   }
 }
 .contact .faq__inquiry-query span {
@@ -1043,9 +1017,10 @@ a {
 }
 @media screen and (max-width: 767px) {
   .contact .faq__inquiry-query span {
-    width: 10vw;
+    width: 14vw;
     font-size: calc( 23 * (100vw / 428));
-    border-radius: 5px 10px 10px 5px;
+    border-radius: 2vw 4vw 4vw 2vw;
+    line-height: 2;
   }
 }
 .contact .faq__inquiry-query:before {
@@ -1063,6 +1038,12 @@ a {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
 }
+@media screen and (max-width: 767px) {
+  .contact .faq__inquiry-query:before {
+    width: 4vw;
+    height: 0.5vw;
+  }
+}
 .contact .faq__inquiry-query:after {
   display: block;
   content: "";
@@ -1075,6 +1056,12 @@ a {
   height: 5px;
   background-color: #EBD6CC;
   transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .contact .faq__inquiry-query:after {
+    width: 4vw;
+    height: 0.5vw;
+  }
 }
 .contact .faq__inquiry-query.active:before {
   transform: rotate(0deg);
@@ -1099,10 +1086,23 @@ a {
   font-weight: 500;
   color: #EBD6CC;
 }
+@media screen and (max-width: 767px) {
+  .contact .faq__inquiry-answer span {
+    top: 3vw;
+    left: 5vw;
+    font-size: calc( 23 * (100vw / 428));
+  }
+}
 .contact .faq__inquiry-answer-txt {
   padding: 0 25px 0 135px;
   font-size: 2rem;
   font-feature-settings: "palt";
+}
+@media screen and (max-width: 767px) {
+  .contact .faq__inquiry-answer-txt {
+    padding: 0 16vw 0 19vw;
+    font-size: calc( 11 * (100vw / 428));
+  }
 }
 .contact .faq__inquiry-answer-txt a {
   color: #fff;
@@ -1130,6 +1130,11 @@ a {
   padding: 30px 0 30px;
   opacity: 1;
   border: solid 1px #EBD6CC;
+}
+@media screen and (max-width: 767px) {
+  .contact .faq__inquiry-check:checked ~ .faq__inquiry-answer {
+    padding: 3vw 0;
+  }
 }
 
 .privacy {
@@ -2085,7 +2090,7 @@ a {
     display: block;
     width: 100%;
     height: 100vh;
-    padding: 25vw 0 0;
+    padding: 20vw 0 0;
     position: fixed;
     top: 0;
     left: 100%;
