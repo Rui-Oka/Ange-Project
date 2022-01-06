@@ -5,9 +5,14 @@ $col-brown: #391D0A;
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@font-face {
+	font-family: 'Prata';
+	src: url('/dist/font/Prata-Regular.ttf');
+}
 $font-family: 'YuMincho', '游明朝体', 'Yu Mincho', '游明朝','Hiragino Mincho ProN','ヒラギノ明朝 ProN','Hiragino Mincho Pro','ヒラギノ明朝 Pro', 'ＭＳ ゴシック', sans-serif;
-$font-family-eb:'EB Garamond', serif;
-$font-family-dancing:'Dancing Script', cursive;
+$font-family-eb:'EB Garamond','YuMincho', '游明朝体', 'Yu Mincho', '游明朝', serif;
+$font-family-dancing:'Dancing Script','YuMincho', '游明朝体', 'Yu Mincho', '游明朝', cursive;
+$font-family-Prata: Prata,'YuMincho', '游明朝体', 'Yu Mincho', '游明朝', cursive;
 
 
 //ブレイクポイント

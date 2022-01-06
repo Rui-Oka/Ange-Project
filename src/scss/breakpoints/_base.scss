@@ -92,6 +92,17 @@ a {
       font-size: calc-size(30);
     }
   }
+
+  .fv__txt {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX( -50%);
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    color: #fff;
+    z-index: 2;
+  }
   img {
     width: 100%;
   }
@@ -205,6 +216,13 @@ a {
       width: 0.5vw;
       height: 20vw;
     }
+  }
+
+  .fv__ttl {
+    top: 40%;
+    font-size: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
   }
 }
 .top__about {
@@ -1160,7 +1178,8 @@ a {
 .plan {
   .plan__item {
     position: relative;
-    width: 430px;
+    max-width: 430px;
+    width: 32%;
     margin-top: 90px;
     padding-bottom: 55px;
     border: solid 1px $col-pink;
@@ -1243,7 +1262,8 @@ a {
   }
 
   .plan__info-item {
-    width: 345px;
+    max-width: 345px;
+    width: 85%;
     margin: 0 auto 24px;
     padding: 18px 0;
     font-size: 2.5rem;
@@ -1302,6 +1322,7 @@ a {
         position: absolute;
         top: -42px;
         left: 50%;
+        transform: translateX(-50%);
         width: 4px;
         height: 30px;
         background: $col-black;
@@ -1329,7 +1350,8 @@ a {
     }
   }
   .plan__price {
-    width: 313px;
+    width: 85%;
+    max-width: 313px;
     margin: 0 auto 54px;
     padding: 30px 0;
     font-size: 2.5rem;
@@ -1345,7 +1367,10 @@ a {
   }
 
   .plan__img {
+    width: 90%;
+    margin: auto;
     text-align: center;
+
     @include mq(max, md) {
       display: flex;
       justify-content: space-between;

@@ -23,9 +23,16 @@
   &.fix {
     position: fixed;
     background: #D6AB8C;
+    .nav__accordion-item {
+      a {
+        color: #D6AB8C;
+      }
+    }
   }
   .header__logo {
-    width: 120px;
+    font-size: 24px;
+    font-family: $font-family-Prata;
+    color: #fff;
     @include mq(max, md) {
       width: 24vw;
       margin-left: 5vw;

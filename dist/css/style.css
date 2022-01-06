@@ -52,6 +52,10 @@ textarea {
   white-space: revert;
 }
 
+@font-face {
+  font-family: "Prata";
+  src: url("/dist/font/Prata-Regular.ttf");
+}
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -142,7 +146,7 @@ a {
   transform: translate(-50%, -50%);
   font-size: 50px;
   letter-spacing: 0.1em;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
   z-index: 2;
 }
@@ -151,6 +155,16 @@ a {
     top: 48%;
     font-size: calc( 30 * (100vw / 428));
   }
+}
+.fv .fv__txt {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  letter-spacing: 0.5em;
+  color: #fff;
+  z-index: 2;
 }
 .fv img {
   width: 100%;
@@ -263,6 +277,12 @@ a {
     height: 20vw;
   }
 }
+.top__fv .fv__ttl {
+  top: 40%;
+  font-size: 10px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
 
 .top__about {
   padding: 517px 0 324px 262px;
@@ -303,7 +323,7 @@ a {
   display: block;
   padding-bottom: 7px;
   font-size: 1.7rem;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   letter-spacing: 0.15em;
 }
 .top__about .top__about-link a:before {
@@ -393,7 +413,7 @@ a {
   font-size: 4rem;
   letter-spacing: 0.125em;
   text-align: center;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   opacity: 0;
   transition: all 1.5s ease;
 }
@@ -490,7 +510,7 @@ a {
 .top__studio .top__studio-item {
   position: relative;
   text-align: center;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
   background: url(/dist/img/top_tokyo_bg.png) no-repeat center;
   background-size: cover;
@@ -579,7 +599,7 @@ a {
   width: 304px;
   margin: 0 auto 135px;
   font-size: 4.5rem;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   letter-spacing: 0.15em;
   background: #ebd6cc;
   background: linear-gradient(0deg, #ebd6cc 0%, #ebd6cc 35%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 100%);
@@ -1247,7 +1267,8 @@ a {
 
 .plan .plan__item {
   position: relative;
-  width: 430px;
+  max-width: 430px;
+  width: 32%;
   margin-top: 90px;
   padding-bottom: 55px;
   border: solid 1px #EBD6CC;
@@ -1335,7 +1356,8 @@ a {
   }
 }
 .plan .plan__info-item {
-  width: 345px;
+  max-width: 345px;
+  width: 85%;
   margin: 0 auto 24px;
   padding: 18px 0;
   font-size: 2.5rem;
@@ -1401,6 +1423,7 @@ a {
   position: absolute;
   top: -42px;
   left: 50%;
+  transform: translateX(-50%);
   width: 4px;
   height: 30px;
   background: #434343;
@@ -1429,7 +1452,8 @@ a {
   transform: translate(-50%, -50%);
 }
 .plan .plan__price {
-  width: 313px;
+  width: 85%;
+  max-width: 313px;
   margin: 0 auto 54px;
   padding: 30px 0;
   font-size: 2.5rem;
@@ -1446,6 +1470,8 @@ a {
   }
 }
 .plan .plan__img {
+  width: 90%;
+  margin: auto;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
@@ -1523,7 +1549,7 @@ a {
   width: 338px;
   margin: 0 auto 76px;
   font-size: 3rem;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   text-align: center;
   letter-spacing: 0.15em;
   background: #ebd6cc;
@@ -1624,7 +1650,7 @@ a {
   margin: auto;
   font-size: 6.5rem;
   text-align: center;
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
 }
 @media screen and (max-width: 767px) {
   .studio .studio__ttl {
@@ -2051,6 +2077,10 @@ a {
   }
 }
 
+@font-face {
+  font-family: "Prata";
+  src: url("/dist/font/Prata-Regular.ttf");
+}
 .header {
   position: absolute;
   display: flex;
@@ -2074,8 +2104,13 @@ a {
   position: fixed;
   background: #D6AB8C;
 }
+.header.fix .nav__accordion-item a {
+  color: #D6AB8C;
+}
 .header .header__logo {
-  width: 120px;
+  font-size: 24px;
+  font-family: Prata, "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
+  color: #fff;
 }
 @media screen and (max-width: 767px) {
   .header .header__logo {
@@ -2119,7 +2154,7 @@ a {
   display: block;
   font-size: 2rem;
   letter-spacing: 0.15em;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
 }
 @media screen and (max-width: 767px) {
@@ -2235,7 +2270,7 @@ a {
   position: relative;
   padding-bottom: 16.5px;
   font-size: 2rem;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
   transition: all 0.5s ease-out;
 }
@@ -2352,6 +2387,10 @@ a {
   /* メニューを画面に入れる */
 }
 
+@font-face {
+  font-family: "Prata";
+  src: url("/dist/font/Prata-Regular.ttf");
+}
 .footer {
   padding-bottom: 17px;
   text-align: center;
