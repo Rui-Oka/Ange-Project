@@ -122,7 +122,7 @@ a {
   color: #fff;
   background: #53b535;
   @include mq(max, md) {
-    padding: 1vw 3vw;
+    padding: 1.25vw 4.5vw;
     font-size: calc-size(11);
   }
   &:hover {
@@ -576,8 +576,8 @@ a {
     }
     @include mq(max, md) {
       margin-bottom: 14vw;
-      font-size: calc-size(14);
-      letter-spacing: 0.05em;
+      font-size: calc-size(13);
+      letter-spacing: 0;
       line-height: 3.25;
     }
   }
@@ -1080,6 +1080,7 @@ a {
       width: 95%;
       padding: 16vw 3vw;
       font-size: calc-size(11);
+      letter-spacing: 0;
       border-radius: 12vw;
     }
   }
@@ -1136,6 +1137,7 @@ a {
       width: 95%;
       padding: 11vw 9.25vw;
       font-size: calc-size(11);
+      letter-spacing: 0;
       border-radius: 12vw;
     }
   }

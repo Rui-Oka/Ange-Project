@@ -186,7 +186,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .line-btn {
-    padding: 1vw 3vw;
+    padding: 1.25vw 4.5vw;
     font-size: calc( 11 * (100vw / 428));
   }
 }
@@ -639,8 +639,8 @@ a {
 @media screen and (max-width: 767px) {
   .about .about__txt {
     margin-bottom: 14vw;
-    font-size: calc( 14 * (100vw / 428));
-    letter-spacing: 0.05em;
+    font-size: calc( 13 * (100vw / 428));
+    letter-spacing: 0;
     line-height: 3.25;
   }
 }
@@ -1174,6 +1174,7 @@ a {
     width: 95%;
     padding: 16vw 3vw;
     font-size: calc( 11 * (100vw / 428));
+    letter-spacing: 0;
     border-radius: 12vw;
   }
 }
@@ -1227,6 +1228,7 @@ a {
     width: 95%;
     padding: 11vw 9.25vw;
     font-size: calc( 11 * (100vw / 428));
+    letter-spacing: 0;
     border-radius: 12vw;
   }
 }
