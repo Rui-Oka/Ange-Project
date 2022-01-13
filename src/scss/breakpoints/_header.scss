@@ -30,7 +30,7 @@
     }
   }
   .header__logo {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-family: $font-family-Prata;
     color: #fff;
     @include mq(max, md) {
@@ -199,7 +199,7 @@
       &:before {
         content: "";
         position: absolute;
-        bottom: 5px;
+        bottom: 7.5px;
         left: 30%;
         transform: rotate(45deg);
         width: 14px;
@@ -218,7 +218,7 @@
       &:after {
         content: "";
         position: absolute;
-        bottom: 5px;
+        bottom: 7.5px;
         left: 43%;
         width: 14px;
         height: 1px;

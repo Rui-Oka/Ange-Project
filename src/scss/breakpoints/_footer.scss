@@ -73,6 +73,7 @@
     justify-content: space-around;
   
     .footer__contact-item {
+      width: 295px;
       margin:103px 0 118px;
       @include mq(max, md) {
         width: 35%;
@@ -95,6 +96,17 @@
     }
   }
   
+  .footer__ange {
+    height: 176px;
+    font-size: 4.5rem;
+    letter-spacing: 0.15em;
+    font-family: $font-family-Prata;
+    color: #fff;
+    a {
+      line-height: 176px;
+    }
+  }
+
   .footer__policy {
     position: relative;
     display: flex;

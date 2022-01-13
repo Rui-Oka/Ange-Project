@@ -72,7 +72,6 @@ html *,
 html *:before,
 html *:after {
   box-sizing: border-box;
-  transition: all 0.5s ease-out;
 }
 
 a {
@@ -2108,7 +2107,7 @@ a {
   color: #D6AB8C;
 }
 .header .header__logo {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-family: Prata, "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
   color: #fff;
 }
@@ -2287,7 +2286,7 @@ a {
 .header .nav__accordion .header__nav-txt:before {
   content: "";
   position: absolute;
-  bottom: 5px;
+  bottom: 7.5px;
   left: 30%;
   transform: rotate(45deg);
   width: 14px;
@@ -2308,7 +2307,7 @@ a {
 .header .nav__accordion .header__nav-txt:after {
   content: "";
   position: absolute;
-  bottom: 5px;
+  bottom: 7.5px;
   left: 43%;
   width: 14px;
   height: 1px;
@@ -2468,6 +2467,7 @@ a {
   justify-content: space-around;
 }
 .footer__contact .footer__contact-item {
+  width: 295px;
   margin: 103px 0 118px;
 }
 @media screen and (max-width: 767px) {
@@ -2491,6 +2491,17 @@ a {
     height: 8vw;
     padding: 2vw;
   }
+}
+
+.footer__ange {
+  height: 176px;
+  font-size: 4.5rem;
+  letter-spacing: 0.15em;
+  font-family: Prata, "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
+  color: #fff;
+}
+.footer__ange a {
+  line-height: 176px;
 }
 
 .footer__policy {
