@@ -43,7 +43,6 @@ a {
   line-height: 0;
   @include mq(max, md) {
     height: 100vh;
-    overflow: hidden;
   }
   &:before {
     content: "";
@@ -101,6 +100,10 @@ a {
     letter-spacing: 0.5em;
     color: #fff;
     z-index: 2;
+    @include mq(max, md) {
+      width: 100%;
+      text-align: center;
+    }
   }
   img {
     width: 100%;
@@ -110,7 +113,7 @@ a {
     position: relative;
     overflow: hidden;
     @include mq(max, md) {
-      overflow: unset;
+      height: 100vh;
     }
     video {
       width: 100%;
@@ -145,6 +148,7 @@ a {
   font-size: 2rem;
   letter-spacing: 0.15em;
   border: solid 1px #707070;
+  transition: all 0.5s ease-out;
   @include mq(max, md) {
    font-size: calc-size(16);
    letter-spacing: 0.075em;
@@ -160,6 +164,7 @@ a {
     height: 22px;
     background: url(/dist/img/common_arrow.png) no-repeat;
     background-size: contain;
+    transition: all 0.5s ease-out;
     @include mq(max, md) {
       right: -7%;
       width: 7vw;
@@ -192,6 +197,7 @@ a {
       width: 0;
       background-color: $col-pink;
       z-index: -1;
+      transition: all 0.5s ease-out;
     }
   }
 }
@@ -234,7 +240,7 @@ a {
   }
   .top__about-ttl {
     margin-bottom: 132px;
-    font-size: 4.5rem;
+    font-size: 3rem;
     color: $col-black;
     @include mq(max, md) {
       margin-bottom: 8vw;
@@ -583,7 +589,7 @@ a {
      }
   }
   .about__txt {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     line-height: 3.5;
     &:last-of-type {
       margin-bottom: 455px;

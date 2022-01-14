@@ -100,7 +100,6 @@ a {
 @media screen and (max-width: 767px) {
   .fv {
     height: 100vh;
-    overflow: hidden;
   }
 }
 .fv:before {
@@ -165,6 +164,12 @@ a {
   color: #fff;
   z-index: 2;
 }
+@media screen and (max-width: 767px) {
+  .fv .fv__txt {
+    width: 100%;
+    text-align: center;
+  }
+}
 .fv img {
   width: 100%;
 }
@@ -174,7 +179,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .fv .fv__movie {
-    overflow: unset;
+    height: 100vh;
   }
 }
 .fv .fv__movie video {
@@ -212,6 +217,7 @@ a {
   font-size: 2rem;
   letter-spacing: 0.15em;
   border: solid 1px #707070;
+  transition: all 0.5s ease-out;
 }
 @media screen and (max-width: 767px) {
   .common-btn {
@@ -230,6 +236,7 @@ a {
   height: 22px;
   background: url(/dist/img/common_arrow.png) no-repeat;
   background-size: contain;
+  transition: all 0.5s ease-out;
 }
 @media screen and (max-width: 767px) {
   .common-btn:before {
@@ -257,6 +264,7 @@ a {
   width: 0;
   background-color: #EBD6CC;
   z-index: -1;
+  transition: all 0.5s ease-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -296,7 +304,7 @@ a {
 }
 .top__about .top__about-ttl {
   margin-bottom: 132px;
-  font-size: 4.5rem;
+  font-size: 3rem;
   color: #434343;
 }
 @media screen and (max-width: 767px) {
@@ -644,7 +652,7 @@ a {
   }
 }
 .about .about__txt {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   line-height: 3.5;
 }
 .about .about__txt:last-of-type {
@@ -2106,6 +2114,11 @@ a {
 .header.fix .nav__accordion-item a {
   color: #D6AB8C;
 }
+@media screen and (max-width: 767px) {
+  .header.fix .nav__accordion-item a {
+    color: #434343;
+  }
+}
 .header .header__logo {
   font-size: 2.4rem;
   font-family: Prata, "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
@@ -2126,7 +2139,7 @@ a {
     display: block;
     width: 100%;
     height: 100vh;
-    padding: 20vw 0 0;
+    padding: 36vw 0 0;
     position: fixed;
     top: 0;
     left: 100%;
@@ -2143,11 +2156,16 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header .header__nav-list {
-    margin: 0 auto 6vw;
+    margin: 0 auto 5.5vw;
   }
 }
 .header .header__nav-list:last-of-type {
   margin-right: 0;
+}
+@media screen and (max-width: 767px) {
+  .header .header__nav-list:last-of-type {
+    margin: auto;
+  }
 }
 .header .header__nav-list a {
   display: block;
@@ -2160,6 +2178,7 @@ a {
   .header .header__nav-list a {
     display: inline-block;
     font-size: calc( 30 * (100vw / 428));
+    letter-spacing: 0;
     color: #434343;
   }
 }
@@ -2211,8 +2230,28 @@ a {
 .header .header__nav-list--small {
   margin-bottom: 2vw;
 }
+@media screen and (max-width: 767px) {
+  .header .header__nav-list--small {
+    margin-bottom: 6vw;
+  }
+}
 .header .header__nav-list--small a {
-  font-size: 4vw;
+  font-size: 6vw;
+}
+@media screen and (max-width: 767px) {
+  .header .header__nav-list--small a {
+    font-size: calc( 19 * (100vw / 428));
+  }
+}
+.header .header__nav-list--inst {
+  width: 11vw;
+  height: 11vw;
+  padding: 1.5vw;
+  border-radius: 50%;
+  background: #fff;
+}
+.header .header__nav-list--inst img {
+  width: 70%;
 }
 .header .nav__accordion {
   position: relative;
@@ -2220,20 +2259,12 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion {
-    margin-bottom: 10vw;
-    padding-bottom: 10vw;
-  }
-}
-@media screen and (max-width: 767px) {
-  .header .nav__accordion:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60vw;
-    height: 0.25vw;
-    background: #7b7b7b;
+    width: 76%;
+    margin: 8vw auto 10vw;
+    padding: 10vw 0 6vw;
+    border-left: solid 0.25vw #e0d9d9;
+    border-bottom: solid 0.25vw #e0d9d9;
+    border-right: solid 0.25vw #e0d9d9;
   }
 }
 .header .nav__accordion:hover .nav__accordion-item {
@@ -2275,10 +2306,14 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion .header__nav-txt {
-    width: 60vw;
-    padding-bottom: 7vw;
+    position: absolute;
+    top: -4.25vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding-bottom: 0;
     font-size: calc( 25 * (100vw / 428)) !important;
-    color: #7b7b7b !important;
+    color: #e0d9d9 !important;
     z-index: 2;
     pointer-events: none;
   }
@@ -2286,7 +2321,7 @@ a {
 .header .nav__accordion .header__nav-txt:before {
   content: "";
   position: absolute;
-  bottom: 7.5px;
+  bottom: 10.5px;
   left: 30%;
   transform: rotate(45deg);
   width: 14px;
@@ -2297,17 +2332,17 @@ a {
 @media screen and (max-width: 767px) {
   .header .nav__accordion .header__nav-txt:before {
     left: 0;
-    bottom: 10vw;
+    bottom: 3vw;
     width: 10vw;
     height: 0.25vw;
     transform: rotate(0);
-    background: #7b7b7b;
+    background: #e0d9d9;
   }
 }
 .header .nav__accordion .header__nav-txt:after {
   content: "";
   position: absolute;
-  bottom: 7.5px;
+  bottom: 10.5px;
   left: 43%;
   width: 14px;
   height: 1px;
@@ -2317,12 +2352,12 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion .header__nav-txt:after {
-    bottom: 10vw;
-    left: 50vw;
+    bottom: 3vw;
+    left: 87%;
     width: 10vw;
     height: 0.25vw;
     transform: rotate(0);
-    background: #7b7b7b;
+    background: #e0d9d9;
   }
 }
 .header .nav__accordion .nav__accordion-item {
@@ -2347,7 +2382,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion .nav__accordion-item:not(:last-of-type) {
-    margin-bottom: 8vw;
+    margin-bottom: 6vw;
   }
 }
 .header .nav__accordion .nav__accordion-list {
@@ -2500,8 +2535,19 @@ a {
   font-family: Prata, "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
   color: #fff;
 }
+@media screen and (max-width: 767px) {
+  .footer__ange {
+    height: 19.5vw;
+    font-size: calc( 20 * (100vw / 428));
+  }
+}
 .footer__ange a {
   line-height: 176px;
+}
+@media screen and (max-width: 767px) {
+  .footer__ange a {
+    line-height: 19.5vw;
+  }
 }
 
 .footer__policy {
