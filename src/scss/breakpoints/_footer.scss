@@ -102,8 +102,15 @@
     letter-spacing: 0.15em;
     font-family: $font-family-Prata;
     color: #fff;
+    @include mq(max, md) {
+      height: 19.5vw;
+      font-size: calc-size(20);
+    }
     a {
       line-height: 176px;
+      @include mq(max, md) {
+       line-height: 19.5vw;
+      }
     }
   }
 
