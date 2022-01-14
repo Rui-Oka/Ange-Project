@@ -26,6 +26,9 @@
     .nav__accordion-item {
       a {
         color: #D6AB8C;
+        @include mq(max, md) {
+         color: $col-black ;
+        }
       }
     }
   }
@@ -46,7 +49,7 @@
       display: block;
       width: 100%;
       height: 100vh;
-      padding: 20vw 0 0;
+      padding: 36vw 0 0;
       position: fixed;
       top: 0;
       left: 100%; /* メニューを画面の外に飛ばす */
@@ -61,11 +64,14 @@
     text-align: center;
     margin-right: 76px;
     @include mq(max, md) {
-      margin: 0 auto 6vw;
+      margin: 0 auto 5.5vw;
     }
 
     &:last-of-type {
       margin-right: 0;
+      @include mq(max, md) {
+        margin: auto;
+      }
     }
     a {
       display: block;
@@ -76,6 +82,7 @@
       @include mq(max, md) {
         display: inline-block;
         font-size: calc-size(30);
+        letter-spacing: 0;
         color: $col-black;
       }
     }
@@ -130,30 +137,40 @@
 
   .header__nav-list--small {
     margin-bottom: 2vw;
+    @include mq(max, md) {
+      margin-bottom: 6vw;
+    }
     a {
-      font-size: 4vw;
+      font-size: 6vw;
+      @include mq(max, md) {
+        font-size: calc-size(19);
+      }
     }
   }
   
+  .header__nav-list--inst {
+    width: 11vw;
+    height: 11vw;
+    padding: 1.5vw;
+    border-radius: 50%;
+    background: #fff;
+    img {
+      width: 70%;
+    }
+  }
+
   .nav__accordion {
     position: relative;
     margin-top: 17px;
     @include mq(max, md) {
-      margin-bottom: 10vw;
-      padding-bottom: 10vw;
+      width: 76%;
+      margin: 8vw auto 10vw;
+      padding: 10vw 0 6vw;
+      border-left: solid 0.25vw #e0d9d9;
+      border-bottom: solid 0.25vw #e0d9d9;
+      border-right: solid 0.25vw #e0d9d9;
     }
-    &:after {
-      @include mq(max, md) {
-        content: "";
-        position: absolute;
-        bottom:0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60vw;
-        height: 0.25vw;
-        background: #7b7b7b;
-      }
-    }
+
     &:hover {
       .nav__accordion-item {
         height: auto;
@@ -189,17 +206,21 @@
       color: #fff;
       transition: all 0.5s ease-out;
       @include mq(max, md) {
-        width: 60vw;
-        padding-bottom: 7vw;
+        position: absolute;
+        top: -4.25vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding-bottom: 0;
         font-size: calc-size(25)!important;
-        color: #7b7b7b !important;
+        color: #e0d9d9 !important;
         z-index: 2;
         pointer-events:none;
       }
       &:before {
         content: "";
         position: absolute;
-        bottom: 7.5px;
+        bottom: 10.5px;
         left: 30%;
         transform: rotate(45deg);
         width: 14px;
@@ -208,17 +229,17 @@
         transition: all 0.3s ease-in-out;
         @include mq(max, md) {
           left: 0;
-          bottom: 10vw;
+          bottom: 3vw;
           width: 10vw;
           height: 0.25vw;
           transform: rotate(0);
-          background: #7b7b7b;
+          background: #e0d9d9;
         }
       }
       &:after {
         content: "";
         position: absolute;
-        bottom: 7.5px;
+        bottom: 10.5px;
         left: 43%;
         width: 14px;
         height: 1px;
@@ -226,12 +247,12 @@
         transform: rotate(-45deg);
         transition: all 0.3s ease-in-out;
         @include mq(max, md) {
-          bottom: 10vw;
-          left: 50vw;
+          bottom: 3vw;
+          left: 87%;
           width: 10vw;
           height: 0.25vw;
           transform: rotate(0);
-          background: #7b7b7b;
+          background: #e0d9d9;
         }
       }
     }
@@ -253,7 +274,7 @@
       &:not(:last-of-type) {
         margin-bottom: 9.6px;
         @include mq(max, md) {
-          margin-bottom: 8vw;
+          margin-bottom: 6vw;
         }
       }
     }
