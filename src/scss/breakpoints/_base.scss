@@ -43,6 +43,7 @@ a {
   line-height: 0;
   @include mq(max, md) {
     height: 100vh;
+    overflow: hidden;
   }
   &:before {
     content: "";
@@ -96,12 +97,13 @@ a {
     top: 60%;
     left: 50%;
     transform: translateX( -50%);
-    font-size: 10px;
+    font-size: 0.73vw;
     letter-spacing: 0.5em;
     color: #fff;
     z-index: 2;
     @include mq(max, md) {
       width: 100%;
+      font-size: 10px;
       text-align: center;
     }
   }
@@ -143,6 +145,7 @@ a {
   }
 }
 
+// 共通のボタンCSS
 .common-btn {
   position: relative;
   font-size: 2rem;
@@ -205,6 +208,9 @@ a {
 // TOPページ部分
 // -------------------------------------
 .top__fv {
+  @include mq(max, md) {
+    overflow: unset;
+  }
   &:before {
     @include mq(max, md) {
       bottom: -15vw;
@@ -225,9 +231,12 @@ a {
 
   .fv__ttl {
     top: 40%;
-    font-size: 10px;
+    font-size: 0.73vw;
     writing-mode: vertical-rl;
     text-orientation: upright;
+    @include mq(max, md) {
+      font-size: 10px;
+    }
   }
 }
 .top__about {
@@ -240,7 +249,7 @@ a {
   }
   .top__about-ttl {
     margin-bottom: 132px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: $col-black;
     @include mq(max, md) {
       margin-bottom: 8vw;
@@ -260,6 +269,7 @@ a {
       width: 105px;
       height: 1px;
       background: $col-black;
+      transition: all 0.5s ease-out;
     }
     a {
       display: block;
@@ -277,6 +287,7 @@ a {
         height: 13px;
         background: url(/dist/img/common_arrow.png) no-repeat;
         background-size: contain;
+        transition: all 0.5s ease-out;
       }
 
       &:hover {
@@ -495,6 +506,7 @@ a {
       height: 16px;
       background: url(/dist/img/common_arrow_w.png) no-repeat ;
       background-size: contain;
+      transition: all 0.5s ease-out;
       @include mq(max, md) {
         width: 10vw;
         height: 2.5vw;
@@ -542,14 +554,7 @@ a {
     font-size: 4.5rem;
     font-family: $font-family-eb;
     letter-spacing: 0.15em;
-    background: rgb(235, 214, 204);
-    background: linear-gradient(
-      0deg,
-      rgba(235, 214, 204, 1) 0%,
-      rgba(235, 214, 204, 1) 35%,
-      rgba(255, 255, 255, 0) 35%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background:linear-gradient(transparent 70%, #ebd6cc 70%);
     @include mq(max, md) {
       margin: 0 auto 7vw;
       width: 30vw;
@@ -794,11 +799,13 @@ a {
       padding: 20px 0;
       background: url(/dist/img/gallery_btn-tag.png) no-repeat;
       background-position: 14% 50%;
+      background-size: 20px;
       @include mq(max, md) {
         width: 46vw;
         margin: 0 0 0 26vw;
-        padding: 1vw 0;
-        background-position: 10% 45%;
+        padding: 2vw 0;
+        background-position: 10% 50%;
+        background-size: 3.5vw;
       }
     }
   }
@@ -828,13 +835,7 @@ a {
       margin: 0 auto 125px;
       font-size: 3rem;
       background: rgb(235, 214, 204);
-      background: linear-gradient(
-        0deg,
-        rgba(235, 214, 204, 1) 0%,
-        rgba(235, 214, 204, 1) 35%,
-        rgba(255, 255, 255, 0) 35%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background:linear-gradient(transparent 70%, #ebd6cc 70%);
       @include mq(max, md) {
         width: 31%;
         margin-bottom: 8vw;
@@ -1076,14 +1077,7 @@ a {
     margin: 0 auto 125px;
     font-size: 3rem;
     text-align: center;
-    background: rgb(235, 214, 204);
-    background: linear-gradient(
-      0deg,
-      rgba(235, 214, 204, 1) 0%,
-      rgba(235, 214, 204, 1) 35%,
-      rgba(255, 255, 255, 0) 35%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background:linear-gradient(transparent 70%, #ebd6cc 70%);
     @include mq(max, md) {
       width: 36vw;
       margin: 0 auto 9vw;
@@ -1133,14 +1127,7 @@ a {
     margin: 0 auto 125px;
     font-size: 3rem;
     text-align: center;
-    background: rgb(235, 214, 204);
-    background: linear-gradient(
-      0deg,
-      rgba(235, 214, 204, 1) 0%,
-      rgba(235, 214, 204, 1) 35%,
-      rgba(255, 255, 255, 0) 35%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background:linear-gradient(transparent 70%, #ebd6cc 70%);
     @include mq(max, md) {
       width: 18vw;
       margin: 0 auto 9vw;
@@ -1192,7 +1179,7 @@ a {
     background: #fff;
     @include mq(max, md) {
       width: 100%;
-      margin: 8vw 0 13vw;
+      margin: 8vw auto 13vw;
       padding-bottom: 10vw;
       border-radius: 9vw;
     }
