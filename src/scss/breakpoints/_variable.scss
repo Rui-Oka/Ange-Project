@@ -22,6 +22,7 @@ $breakpoints: (
     lg: 992px,
     xl: 1200px,
 ) !default;
+
 @mixin mq($type, $bp1, $bp2:0) {
     @if ($type == min) {
         @media screen and (min-width: #{map-get($breakpoints, $bp1)}) {
@@ -45,4 +46,10 @@ $breakpoints: (
 
 @function calc-size($size, $width: 428) {
     @return calc( #{$size} * (100vw / #{$width}))
+}
+
+@keyframes skewanime {
+	100% {
+		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+	}
 }

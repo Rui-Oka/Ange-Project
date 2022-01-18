@@ -133,7 +133,7 @@ a {
 .line-btn {
   padding: 10px 53.5px;
   font-size: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   color: #fff;
   background: #53b535;
   @include mq(max, md) {
@@ -204,6 +204,29 @@ a {
     }
   }
 }
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: $col-white;
+  transition: 1s;
+}
+
+.linearbg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  background:linear-gradient(180deg, #f7aa75 0%, #f7aa75 25%, white 100%);
+  transition: 1s;
+}
 // -------------------------------------
 // TOPページ部分
 // -------------------------------------
@@ -246,6 +269,9 @@ a {
   @include mq(max, md) {
     padding: 59vw 0 59vw 13.5vw;
     background: url(/dist/img/top_about_bg_sp.jpg) no-repeat center;
+  }
+  @include mq(max, lg) {
+    padding: 59vw 0 59vw 13.5vw;
   }
   .top__about-ttl {
     margin-bottom: 132px;
@@ -351,6 +377,9 @@ a {
           background: #fff;
           opacity: .9;
         }
+        @include mq(max, lg) {
+          opacity: 1;
+        }
       }
       &:hover {
         &:before {
@@ -379,9 +408,14 @@ a {
         width: 90%;
         padding: 14vw 5vw 21vw;
         font-size: calc-size(24);
-        // background: #fff;
         opacity: 1;
       }
+
+      @include mq(max, lg) {
+        bottom: 5%;
+        opacity: 1;
+      }
+
       .top__info-ttl-small {
         font-size: 1.5rem;
         font-family: $font-family;
@@ -453,11 +487,14 @@ a {
   font-size: 2.5rem;
   line-height: 4;
   text-align: center;
-  background: $col-white;
   @include mq(max, md) {
     padding: 31vw 0 15vw;
     font-size: calc-size(13);
     line-height: 3.25;
+  }
+
+  @include mq(max, lg) {
+    font-size: 2rem;
   }
 }
 
@@ -511,6 +548,10 @@ a {
         width: 10vw;
         height: 2.5vw;
       }
+
+      @include mq(max, lg) {
+        width: 54px;
+      }
     }
     
   }
@@ -536,6 +577,11 @@ a {
       font-size: calc-size(20);
       background: url(/dist/img/top_address_sp.png) no-repeat center;
     }
+
+    @include mq(max, lg) {
+      padding: 20px 0;
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -543,7 +589,6 @@ a {
   padding: 282px 0 300px;
   text-align: center;
   background: url(/dist/img/top_contact_bg.png) no-repeat center;
-  background-color: $col-white;
   @include mq(max, md) {
     padding: 30vw 0;
     background: url(/dist/img/top_contact_bg_sp.png) no-repeat center;
@@ -569,6 +614,10 @@ a {
     @include mq(max, md) {
       margin: 0 auto 7vw;
       font-size: calc-size(13);
+    }
+
+    @include mq(max, lg) {
+      font-size: 2rem;
     }
   }
 
@@ -924,6 +973,10 @@ a {
     border-radius: 15px;
     background: #fff;
     cursor: pointer;
+
+    @include mq(max, lg) {
+      padding-right: 90px;
+    }
     @include mq(max, md) {
       padding: 1vw 16vw 1vw 19vw;
       font-size: calc-size(11);
@@ -943,6 +996,10 @@ a {
       border-radius: 15px 35px 35px 15px;
       color: #fff;
       background: $col-pink;
+      @include mq(max, lg) {
+        line-height: 3;
+      }
+
       @include mq(max, md) {
         width: 14vw;
         font-size: calc-size(23);
@@ -1177,8 +1234,9 @@ a {
     border: solid 1px $col-pink;
     border-radius: 15px;
     background: #fff;
-    @include mq(max, md) {
+    @include mq(max, lg) {
       width: 100%;
+      max-width: none;
       margin: 8vw auto 13vw;
       padding-bottom: 10vw;
       border-radius: 9vw;
@@ -1208,7 +1266,7 @@ a {
     background: $col-pink;
     box-sizing: border-box;
 
-    @include mq(max, md) {
+    @include mq(max, lg) {
       top: -7vw;
       width: 19vw;
       height: 19vw;
@@ -1218,7 +1276,7 @@ a {
     }
     span {
       font-size: 2rem;
-      @include mq(max, md) {
+      @include mq(max, lg) {
         font-size: calc-size(10);
       }
     }
@@ -1234,17 +1292,20 @@ a {
     background: url(/dist/img/price_bg.png) no-repeat;
     background-size: 100%;
     background-position: center 10%;
-    @include mq(max, md) {
+    @include mq(max, lg) {
       display: block;
       width: 85%;
       margin: 0 auto 9vw;
+      padding: 15vw 0 0;
+    } 
+    @include mq(max, md) {
       padding: 8vw 0 0;
     } 
   }
   .plan__info-list {
     height: 506px;
     margin: 146px 0 38px;
-    @include mq(max, md) {
+    @include mq(max, lg) {
       display: flex;
       flex-wrap: wrap;
       width: 90%;
@@ -1264,7 +1325,7 @@ a {
     border: solid 1px $col-pink;
     border-radius: 15px;
 
-    @include mq(max, md) {
+    @include mq(max, lg) {
       width: 46%;
       margin: 0 auto;
       padding: 2.5vw 0;
@@ -1273,12 +1334,12 @@ a {
     }
     &:not(:first-of-type) {
       margin-bottom: 52px;
-      @include mq(max, md) {
+      @include mq(max, lg) {
         margin-bottom: 0;
       }
     }
     &:nth-child( n+3 ) {
-      @include mq(max, md) {
+      @include mq(max, lg) {
         width: 95%;
         margin-top: 7vw;
         line-height: 1.25;
@@ -1286,7 +1347,7 @@ a {
     }
     span {
       font-size: 1.5rem;
-      @include mq(max, md) {
+      @include mq(max, lg) {
         font-size: calc-size(11);
       }
     }
@@ -1303,7 +1364,7 @@ a {
         width: 30px;
         height: 4px;
         background: $col-black;
-        @include mq(max, md) {
+        @include mq(max, lg) {
           top: -4.25vw;
           width: 4vw;
           height: 0.4vw;
@@ -1318,7 +1379,7 @@ a {
         width: 4px;
         height: 30px;
         background: $col-black;
-        @include mq(max, md) {
+        @include mq(max, lg) {
           top: -6vw;
           width: 0.4vw;
           height: 4vw;
@@ -1363,7 +1424,7 @@ a {
     margin: auto;
     text-align: center;
 
-    @include mq(max, md) {
+    @include mq(max, lg) {
       display: flex;
       justify-content: space-between;
       width: 90%;
@@ -1371,7 +1432,7 @@ a {
     }
     picture {
       display: block;
-      @include mq(max, md) {
+      @include mq(max, lg) {
         width: 32%;
       }
       &:not(:last-of-type) {
@@ -1510,6 +1571,9 @@ a {
     line-height: 3.5;
     text-align: center;
     background: #fff;
+    @include mq(max, lg) {
+      font-size: 2rem;
+    }
     @include mq(max, md) {
       padding: 23vw 0 17vw;
       font-size: calc-size(13);
@@ -1518,7 +1582,6 @@ a {
   }
   .studio__group {
     padding: 84.5px 0 155px;
-    background: $col-white;
     @include mq(max, md) {
       padding: 13vw 0 22vw;
     }
@@ -1619,6 +1682,9 @@ a {
     width: 526px;
     font-size: 2rem;
     line-height: 3.5;
+    @include mq(max, lg) {
+      font-size: 1.5rem;
+    }
     @include mq(max, md) {
       font-size: calc-size(12);
       line-height: 2;
@@ -1630,6 +1696,9 @@ a {
     font-size: 2.5rem;
     line-height: 3;
     text-align: center;
+    @include mq(max, lg) {
+      font-size: 2rem;
+    }
     @include mq(max, md) {
       margin-bottom: 11vw;
       font-size: calc-size(15);
@@ -1674,6 +1743,9 @@ a {
   .studio__address-map {
     text-align: center;
     iframe {
+      @include mq(max, lg) {
+        width: 100%;
+      }
       @include mq(max, md) {
         width: 90%;
         height: 40vw;
@@ -1685,6 +1757,9 @@ a {
     margin-bottom: 18px;
     padding: 5px 0 5px 20px;
     font-size: 2.5rem;
+    @include mq(max, lg) {
+      font-size: 2rem;
+    }
     @include mq(max, md) {
       margin-bottom: 0;
       padding: 2vw 0vw 0 6vw;
@@ -1710,6 +1785,9 @@ a {
   .studio__address-txt {
     margin:0 0 34px 25px;
     font-size: 2.5rem;
+    @include mq(max, lg) {
+      font-size: 2rem;
+    }
     @include mq(max, md) {
       margin: 0 0vw 5vw 6vw;
       font-size: calc-size(13);
@@ -1731,6 +1809,9 @@ a {
     font-size: 2.5rem;
     border-radius: 10px;
     background: #fff;
+    @include mq(max, lg) {
+      font-size: 2rem;
+    }
     @include mq(max, md) {
       margin-bottom: 2vw;
       padding: 1vw 0 1vw 4vw;
@@ -1742,6 +1823,9 @@ a {
     margin-left: 76px;
     font-size: 2.5rem;
     line-height: 2;
+    @include mq(max, lg) {
+      font-size: 2rem;
+    }
     @include mq(max, md) {
       margin-left: 4vw;
       font-size: calc-size(12);
@@ -1818,6 +1902,11 @@ a {
     margin-right: 150px;
     padding-left: 136px;
 
+    @include mq(max, lg) {
+      margin-right: 0;
+      padding-left: 110px;
+    }
+
     @include mq(max, md) {
       margin-right: 0;
       padding-left: 11%;
@@ -1872,6 +1961,9 @@ a {
   .studio__process-ttl {
     font-size: 3rem;
     font-weight: bold;
+    @include mq(max, lg) {
+      font-size: 2.5rem;
+    }
     @include mq(max, md) {
       margin-bottom: 1vw;
       font-size: calc-size(15);
@@ -1881,6 +1973,9 @@ a {
     padding-bottom: 32px;
     font-size: 2.5rem;
     border-bottom: solid 1px $col-pink;
+    @include mq(max, lg) {
+      font-size: 2rem;
+    }
     @include mq(max, md) {
       padding-bottom: 4vw;
       font-size: calc-size(12);
