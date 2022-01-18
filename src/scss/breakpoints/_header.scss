@@ -11,7 +11,6 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  // padding: 0 0 0 178px;
   transition: all 0.5s ease-out;
   z-index: 999;
   @include mq(max, md) {
@@ -22,13 +21,19 @@
 
   &.fix {
     position: fixed;
-    background: #D6AB8C;
+    background: #d6ab8c;
     .nav__accordion-item {
       a {
-        color: #D6AB8C;
+        color: #d6ab8c;
         @include mq(max, md) {
-         color: $col-black ;
+          color: $col-black;
         }
+      }
+    }
+
+    .header__contact  {
+      &:before {
+        background: #bf906e;
       }
     }
   }
@@ -67,6 +72,10 @@
       margin: 0 auto 5.5vw;
     }
 
+    @include mq(max, lg) {
+     margin-right: 2vw;
+    }
+
     &:last-of-type {
       margin-right: 0;
       @include mq(max, md) {
@@ -89,13 +98,38 @@
   }
 
   .header__contact {
+    position: relative;
     width: 167px;
     text-align: center;
     line-height: 2;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.25);
+    overflow: hidden;
     @include mq(max, md) {
       width: 100%;
+    }
+
+    &::before {
+      content: "";
+      /*絶対配置で位置を指定*/
+      position: absolute;
+      top: 0;
+      left: -130%;
+      /*色や形状*/
+      background: #333;
+      width: 120%;
+      height: 100%;
+      transform: skewX(-25deg);
+    }
+    &:hover {
+      &::before {
+        animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+      }
+    }
+
+    a {
+      position: relative;
+      z-index: 3;
     }
   }
   //SP用ハンバーガーメニュー
@@ -147,7 +181,7 @@
       }
     }
   }
-  
+
   .header__nav-list--inst {
     width: 11vw;
     height: 11vw;
@@ -212,10 +246,10 @@
         transform: translateX(-50%);
         width: 100%;
         padding-bottom: 0;
-        font-size: calc-size(25)!important;
+        font-size: calc-size(25) !important;
         color: #e0d9d9 !important;
         z-index: 2;
-        pointer-events:none;
+        pointer-events: none;
       }
       &:before {
         content: "";
@@ -256,7 +290,7 @@
         }
       }
     }
-  
+
     .nav__accordion-item {
       width: 73px;
       height: 0;
@@ -278,7 +312,7 @@
         }
       }
     }
-  
+
     .nav__accordion-list {
       position: absolute;
       top: 44px;
@@ -310,6 +344,6 @@
 }
 
 #drawer_input:checked ~ .header__nav {
-  overflow-x:unset;
+  overflow-x: unset;
   left: 0; /* メニューを画面に入れる */
 }
