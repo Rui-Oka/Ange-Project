@@ -255,7 +255,10 @@ a {
   .fv__ttl {
     top: 40%;
     font-size: 0.73vw;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
+    -webkit-text-orientation: upright;
     text-orientation: upright;
     @include mq(max, md) {
       font-size: 10px;
