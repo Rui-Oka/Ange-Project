@@ -2494,35 +2494,6 @@ a {
     width: 10vw;
   }
 }
-.header .nav__accordion:active .nav__accordion-item {
-  height: auto;
-  padding: 6px 0 0;
-}
-@media screen and (max-width: 767px) {
-  .header .nav__accordion:active .nav__accordion-item {
-    padding: 0;
-  }
-}
-.header .nav__accordion:active .header__nav-txt:before {
-  left: 12%;
-  width: 25px;
-  transform: rotate(0);
-}
-@media screen and (max-width: 767px) {
-  .header .nav__accordion:active .header__nav-txt:before {
-    width: 10vw;
-    left: 0;
-  }
-}
-.header .nav__accordion:active .header__nav-txt:after {
-  width: 25px;
-  transform: rotate(0);
-}
-@media screen and (max-width: 767px) {
-  .header .nav__accordion:active .header__nav-txt:after {
-    width: 10vw;
-  }
-}
 .header .nav__accordion .header__nav-txt {
   position: relative;
   padding-bottom: 16.5px;
