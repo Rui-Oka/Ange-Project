@@ -1869,7 +1869,7 @@ a {
   font-size: 2rem;
   line-height: 3.5;
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .studio .studio__item-txt {
     font-size: 1.5rem;
   }
@@ -2543,6 +2543,35 @@ a {
     font-size: calc( 25 * (100vw / 428)) !important;
     color: #e0d9d9 !important;
     z-index: 2;
+  }
+}
+.header .nav__accordion .header__nav-txt:active + .nav__accordion-list .nav__accordion-item {
+  height: auto;
+  padding: 6px 0 0;
+}
+@media screen and (max-width: 767px) {
+  .header .nav__accordion .header__nav-txt:active + .nav__accordion-list .nav__accordion-item {
+    padding: 0;
+  }
+}
+.header .nav__accordion .header__nav-txt:active:before {
+  left: 12%;
+  width: 25px;
+  transform: rotate(0);
+}
+@media screen and (max-width: 767px) {
+  .header .nav__accordion .header__nav-txt:active:before {
+    width: 10vw;
+    left: 0;
+  }
+}
+.header .nav__accordion .header__nav-txt:active:after {
+  width: 25px;
+  transform: rotate(0);
+}
+@media screen and (max-width: 767px) {
+  .header .nav__accordion .header__nav-txt:active:after {
+    width: 10vw;
   }
 }
 .header .nav__accordion .header__nav-txt:before {
