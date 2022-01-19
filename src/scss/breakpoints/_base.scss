@@ -411,7 +411,7 @@ a {
         opacity: 1;
       }
 
-      @include mq(max, lg) {
+      @include mq(bw, md,lg) {
         bottom: 5%;
         opacity: 1;
       }
@@ -493,7 +493,7 @@ a {
     line-height: 3.25;
   }
 
-  @include mq(max, lg) {
+  @include mq(bw, md,lg) {
     font-size: 2rem;
   }
 }
@@ -578,7 +578,7 @@ a {
       background: url(/dist/img/top_address_sp.png) no-repeat center;
     }
 
-    @include mq(max, lg) {
+    @include mq(bw, md,lg) {
       padding: 20px 0;
       font-size: 2.5rem;
     }
@@ -616,7 +616,7 @@ a {
       font-size: calc-size(13);
     }
 
-    @include mq(max, lg) {
+    @include mq(bw, md,lg) {
       font-size: 2rem;
     }
   }
@@ -1273,6 +1273,22 @@ a {
       padding: 2vw 0;
       font-size: calc-size(28);
       font-weight:bold;
+      outline: none;
+    }
+
+    &:before {
+      @include mq(max, lg) {
+        content: "";
+        position: absolute;
+        top: 1.5vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16vw;
+        height: 16vw;
+        border-radius: 50%;
+        border: solid 1px #fff;
+      }
+
     }
     span {
       font-size: 2rem;
@@ -1490,7 +1506,6 @@ a {
     width: 338px;
     margin: 0 auto 76px;
     font-size: 3rem;
-    font-family: $font-family-eb;
     text-align: center;
     letter-spacing: 0.15em;
     background: rgb(235, 214, 204);

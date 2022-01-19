@@ -487,7 +487,7 @@ a {
     opacity: 1;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .top__info .top__info-item .top__info-ttl {
     bottom: 5%;
     opacity: 1;
@@ -571,7 +571,7 @@ a {
     line-height: 3.25;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .top__info-txt {
     font-size: 2rem;
   }
@@ -658,7 +658,7 @@ a {
     background: url(/dist/img/top_address_sp.png) no-repeat center;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .top__studio .top__studio-address {
     padding: 20px 0;
     font-size: 2.5rem;
@@ -702,7 +702,7 @@ a {
     font-size: calc( 13 * (100vw / 428));
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .top__contact .top__contact-txt {
     font-size: 2rem;
   }
@@ -1409,6 +1409,20 @@ a {
     padding: 2vw 0;
     font-size: calc( 28 * (100vw / 428));
     font-weight: bold;
+    outline: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .plan .plan__ttl:before {
+    content: "";
+    position: absolute;
+    top: 1.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50%;
+    border: solid 1px #fff;
   }
 }
 .plan .plan__ttl span {
@@ -1650,7 +1664,6 @@ a {
   width: 338px;
   margin: 0 auto 76px;
   font-size: 3rem;
-  font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   text-align: center;
   letter-spacing: 0.15em;
   background: #ebd6cc;
@@ -2306,6 +2319,7 @@ a {
     z-index: 99;
     background: rgba(255, 255, 255, 0.9);
     transition: 0.5s;
+    overflow: scroll;
   }
 }
 .header .header__nav-list {
