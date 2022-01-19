@@ -1696,7 +1696,7 @@ a {
     width: 526px;
     font-size: 2rem;
     line-height: 3.5;
-    @include mq(max, lg) {
+    @include mq(bw, md,lg) {
       font-size: 1.5rem;
     }
     @include mq(max, md) {
