@@ -268,6 +268,7 @@
       font-size: 2rem;
       font-family: $font-family-eb;
       color: #fff;
+      pointer-events: none;
       transition: all 0.5s ease-out;
       @include mq(max, md) {
         position: absolute;
@@ -279,7 +280,6 @@
         font-size: calc-size(25) !important;
         color: #e0d9d9 !important;
         z-index: 2;
-        pointer-events: none;
       }
       &:before {
         content: "";

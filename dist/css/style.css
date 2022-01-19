@@ -106,7 +106,6 @@ a {
 @media screen and (max-width: 767px) {
   .fv {
     height: 100vh;
-    overflow: hidden;
   }
 }
 .fv:before {
@@ -122,10 +121,10 @@ a {
 }
 @media screen and (max-width: 767px) {
   .fv:before {
-    bottom: 27%;
+    bottom: -3%;
     left: 50%;
     width: 0.5vw;
-    height: 25vw;
+    height: 15vw;
   }
 }
 .fv:after {
@@ -1457,11 +1456,6 @@ a {
     padding: 15vw 0 0;
   }
 }
-@media screen and (max-width: 767px) {
-  .plan .plan__list {
-    padding: 8vw 0 0;
-  }
-}
 .plan .plan__info-list {
   height: 506px;
   margin: 146px 0 38px;
@@ -2535,6 +2529,7 @@ a {
   font-size: 2rem;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
+  pointer-events: none;
   transition: all 0.5s ease-out;
 }
 @media screen and (max-width: 767px) {
@@ -2548,7 +2543,6 @@ a {
     font-size: calc( 25 * (100vw / 428)) !important;
     color: #e0d9d9 !important;
     z-index: 2;
-    pointer-events: none;
   }
 }
 .header .nav__accordion .header__nav-txt:before {

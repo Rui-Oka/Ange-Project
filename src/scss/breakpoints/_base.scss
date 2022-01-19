@@ -43,7 +43,6 @@ a {
   line-height: 0;
   @include mq(max, md) {
     height: 100vh;
-    overflow: hidden;
   }
   &:before {
     content: "";
@@ -56,10 +55,10 @@ a {
     background: #fff;
     z-index: 2;
     @include mq(max, md) {
-      bottom: 27%;
+      bottom: -3%;
       left: 50%;
       width: 0.5vw;
-      height: 25vw;
+      height: 15vw;
     }
   }
   &:after {
@@ -1316,10 +1315,7 @@ a {
       width: 85%;
       margin: 0 auto 9vw;
       padding: 15vw 0 0;
-    } 
-    @include mq(max, md) {
-      padding: 8vw 0 0;
-    } 
+    }
   }
   .plan__info-list {
     height: 506px;

@@ -18,7 +18,7 @@ $(function () {
   var fotterHeight = footer.offset().top;
   var windowH = $(window).height();
 
-  $(window).scroll(function () {
+  $(window).on('load scroll resize',function () {
     var windowS = $(window).scrollTop();
     if (windowS > fotterHeight - windowH + (windowH / 2) ) { // フッター付近まで来たら
       $('.linearbg').css({
