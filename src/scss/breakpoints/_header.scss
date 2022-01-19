@@ -282,35 +282,6 @@
         z-index: 2;
       }
 
-      &:active {
-        &+ .nav__accordion-list {
-          .nav__accordion-item {
-            height: auto;
-            padding: 6px 0 0;
-            @include mq(max, md) {
-              padding: 0;
-            }
-          }
-        }
-    
-        &:before {
-          left: 12%;
-          width: 25px;
-          transform: rotate(0);
-          @include mq(max, md) {
-            width: 10vw;
-            left: 0;
-          }
-        }
-        &:after {
-          width: 25px;
-          transform: rotate(0);
-          @include mq(max, md) {
-            width: 10vw;
-          }
-        }
-      }
-
       &:before {
         content: "";
         position: absolute;
