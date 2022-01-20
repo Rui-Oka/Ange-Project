@@ -232,6 +232,7 @@ a {
   letter-spacing: 0.15em;
   border: solid 1px #707070;
   transition: all 0.5s ease-out;
+  z-index: 1;
 }
 @media screen and (max-width: 767px) {
   .common-btn {
@@ -971,17 +972,30 @@ a {
   width: 316px;
   margin: auto;
   padding: 20px 0;
-  background: url(/dist/img/gallery_btn-tag.png) no-repeat;
-  background-position: 14% 50%;
-  background-size: 20px;
 }
 @media screen and (max-width: 767px) {
   .gallery .gallery__inst .gallery__inst-btn {
     width: 46vw;
     margin: 0 0 0 26vw;
     padding: 2vw 0;
-    background-position: 10% 50%;
-    background-size: 3.5vw;
+  }
+}
+.gallery .gallery__inst .gallery__inst-btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(/dist/img/gallery_btn-tag.png) no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 767px) {
+  .gallery .gallery__inst .gallery__inst-btn:after {
+    width: 3.5vw;
+    height: 3.5vw;
+    left: 4vw;
   }
 }
 
