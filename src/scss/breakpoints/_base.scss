@@ -1931,7 +1931,7 @@ a {
 
     @include mq(max, md) {
       margin-right: 0;
-      padding-left: 11%;
+      padding-left: 15%;
     }
     &:not(:last-of-type) {
       margin-bottom: 65px;
@@ -1994,6 +1994,7 @@ a {
   .studio__process-txt {
     padding-bottom: 32px;
     font-size: 2.5rem;
+    letter-spacing: 0;
     border-bottom: solid 1px $col-pink;
     @include mq(max, lg) {
       font-size: 2rem;
