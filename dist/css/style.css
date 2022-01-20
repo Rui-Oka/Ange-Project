@@ -160,6 +160,13 @@ a {
     font-size: calc( 30 * (100vw / 428));
   }
 }
+@media screen and (max-width: 767px) {
+  .fv .fv__img {
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
 .fv .fv__txt {
   position: absolute;
   top: 60%;

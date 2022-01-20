@@ -91,6 +91,13 @@ a {
     }
   }
 
+  .fv__img {
+    @include mq(max, md) {
+      display: block;
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
   .fv__txt {
     position: absolute;
     top: 60%;
