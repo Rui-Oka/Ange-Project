@@ -1666,6 +1666,7 @@ a {
     text-align: center;
     @include mq(max, md) {
       margin-bottom: 10vw;
+      font-size: calc-size(11);
     }
   }
 

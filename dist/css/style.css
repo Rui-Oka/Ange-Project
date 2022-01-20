@@ -1836,6 +1836,7 @@ a {
 @media screen and (max-width: 767px) {
   .studio .studio__ttl-sub {
     margin-bottom: 10vw;
+    font-size: calc( 11 * (100vw / 428));
   }
 }
 .studio .studio__list {
