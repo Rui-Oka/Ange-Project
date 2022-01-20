@@ -336,7 +336,7 @@ a {
 
 .top__about {
   padding: 517px 0 324px 262px;
-  background: url(/dist/img/top_about_bg.png) no-repeat center;
+  background: url(/dist/img/top_about_bg.jpg) no-repeat center;
   background-size: cover;
 }
 @media screen and (max-width: 767px) {
@@ -411,7 +411,7 @@ a {
   position: relative;
   width: 50%;
   overflow: hidden;
-  background: url(/dist/img/top_gallery_bg.png) no-repeat center;
+  background: url(/dist/img/top_gallery_bg.jpg) no-repeat center;
   background-size: cover;
 }
 @media screen and (max-width: 767px) {
@@ -421,7 +421,7 @@ a {
   }
 }
 .top__info .top__info-item:last-of-type {
-  background: url(/dist/img/top_priceplan_bg.png) no-repeat center;
+  background: url(/dist/img/top_priceplan_bg.jpg) no-repeat center;
   background-size: cover;
 }
 .top__info .top__info-item a {
@@ -584,11 +584,11 @@ a {
   text-align: center;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
-  background: url(/dist/img/top_tokyo_bg.png) no-repeat center;
+  background: url(/dist/img/top_tokyo_bg.jpg) no-repeat center;
   background-size: cover;
 }
 .top__studio .top__studio-item:last-of-type {
-  background: url(/dist/img/top_okinawa_bg.png) no-repeat center;
+  background: url(/dist/img/top_okinawa_bg.jpg) no-repeat center;
   background-size: cover;
 }
 .top__studio .top__studio-link {

@@ -266,7 +266,7 @@ a {
 }
 .top__about {
   padding: 517px 0 324px 262px;
-  background: url(/dist/img/top_about_bg.png) no-repeat center;
+  background: url(/dist/img/top_about_bg.jpg) no-repeat center;
   background-size: cover;
   @include mq(max, md) {
     padding: 59vw 0 59vw 13.5vw;
@@ -337,14 +337,14 @@ a {
     position: relative;
     width: 50%;
     overflow: hidden;
-    background: url(/dist/img/top_gallery_bg.png) no-repeat center;
+    background: url(/dist/img/top_gallery_bg.jpg) no-repeat center;
     background-size: cover;
     @include mq(max, md) {
       width: 70%;
       overflow: unset;
     }
     &:last-of-type {
-      background: url(/dist/img/top_priceplan_bg.png) no-repeat center;
+      background: url(/dist/img/top_priceplan_bg.jpg) no-repeat center;
       background-size: cover;
     }
     a {
@@ -506,10 +506,10 @@ a {
     text-align: center;
     font-family: $font-family-eb;
     color: #fff;
-    background: url(/dist/img/top_tokyo_bg.png) no-repeat center;
+    background: url(/dist/img/top_tokyo_bg.jpg) no-repeat center;
     background-size: cover;
     &:last-of-type {
-      background: url(/dist/img/top_okinawa_bg.png) no-repeat center;
+      background: url(/dist/img/top_okinawa_bg.jpg) no-repeat center;
       background-size: cover;
     }
   }
