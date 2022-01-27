@@ -185,9 +185,9 @@ a {
   &:hover {
     &:before {
       right: -15%;
-    }
-    &:after {
-      right: -14%;
+      @include mq(max, md) {
+        right: -7%;
+      }
     }
     span {
       &:before {
@@ -208,6 +208,9 @@ a {
       background-color: $col-pink;
       z-index: -1;
       transition: all 0.5s ease-out;
+      @include mq(max, md) {
+        background: none;
+      }
     }
   }
 }
@@ -649,10 +652,12 @@ a {
     max-width: 629px;
     margin: auto;
     @include mq(max, md) {
-      margin-left: 14vw;
+      width: 83%;
+      margin: auto;
      }
   }
   .about__txt {
+    margin-bottom: 110px;
     font-size: 1.75rem;
     line-height: 3.5;
     &:last-of-type {
@@ -1536,9 +1541,9 @@ a {
       rgba(255, 255, 255, 0) 100%
     );
     @include mq(max, md) {
-      width: 33%;
+      width: 40%;
       margin: 0 auto 5vw;
-      font-size: calc-size(10);
+      font-size: calc-size(13);
     }
   }
 

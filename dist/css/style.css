@@ -263,8 +263,10 @@ a {
 .common-btn:hover:before {
   right: -15%;
 }
-.common-btn:hover:after {
-  right: -14%;
+@media screen and (max-width: 767px) {
+  .common-btn:hover:before {
+    right: -7%;
+  }
 }
 .common-btn:hover span:before {
   width: 100%;
@@ -280,6 +282,11 @@ a {
   background-color: #EBD6CC;
   z-index: -1;
   transition: all 0.5s ease-out;
+}
+@media screen and (max-width: 767px) {
+  .common-btn span:before {
+    background: none;
+  }
 }
 
 .bg {
@@ -736,10 +743,12 @@ a {
 }
 @media screen and (max-width: 767px) {
   .about .about__group {
-    margin-left: 14vw;
+    width: 83%;
+    margin: auto;
   }
 }
 .about .about__txt {
+  margin-bottom: 110px;
   font-size: 1.75rem;
   line-height: 3.5;
 }
@@ -1691,9 +1700,9 @@ a {
 }
 @media screen and (max-width: 767px) {
   .plan .cancel__ttl {
-    width: 33%;
+    width: 40%;
     margin: 0 auto 5vw;
-    font-size: calc( 10 * (100vw / 428));
+    font-size: calc( 13 * (100vw / 428));
   }
 }
 .plan .cancel__txt {
@@ -2294,6 +2303,7 @@ a {
     position: fixed;
     justify-content: space-between;
     width: 100%;
+    padding: 2vw 0;
   }
 }
 .header.fix {
