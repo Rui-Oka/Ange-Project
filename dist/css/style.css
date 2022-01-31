@@ -2296,6 +2296,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  padding: 0.5vw 0;
   z-index: 999;
 }
 @media screen and (max-width: 767px) {
@@ -2322,7 +2323,7 @@ a {
   background: #bf906e;
 }
 .header .header__logo {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-family: Prata, "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
   color: #fff;
 }
@@ -2330,6 +2331,7 @@ a {
   .header .header__logo {
     width: 24vw;
     margin-left: 5vw;
+    font-size: calc( 24 * (100vw / 428));
   }
 }
 .header .header__nav {
@@ -2377,7 +2379,7 @@ a {
 }
 .header .header__nav-list a {
   display: block;
-  font-size: 2rem;
+  font-size: 1.2rem;
   letter-spacing: 0.15em;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
@@ -2392,7 +2394,8 @@ a {
 }
 .header .header__contact {
   position: relative;
-  width: 167px;
+  width: 140px;
+  padding: 5px 0;
   text-align: center;
   line-height: 2;
   border-radius: 5px;
@@ -2402,6 +2405,7 @@ a {
 @media screen and (max-width: 767px) {
   .header .header__contact {
     width: 100%;
+    padding: 0;
   }
 }
 .header .header__contact::before {
@@ -2499,7 +2503,7 @@ a {
 }
 .header .nav__accordion:hover .nav__accordion-item {
   height: auto;
-  padding: 6px 0 0;
+  padding: 3px 0 2px;
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion:hover .nav__accordion-item {
@@ -2507,8 +2511,8 @@ a {
   }
 }
 .header .nav__accordion:hover .header__nav-txt:before {
-  left: 12%;
-  width: 25px;
+  left: 6%;
+  width: 16px;
   transform: rotate(0);
 }
 @media screen and (max-width: 767px) {
@@ -2518,7 +2522,7 @@ a {
   }
 }
 .header .nav__accordion:hover .header__nav-txt:after {
-  width: 25px;
+  width: 16px;
   transform: rotate(0);
 }
 @media screen and (max-width: 767px) {
@@ -2528,8 +2532,8 @@ a {
 }
 .header .nav__accordion .header__nav-txt {
   position: relative;
-  padding-bottom: 16.5px;
-  font-size: 2rem;
+  padding-bottom: 20.5px;
+  font-size: 1.1rem;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
   pointer-events: none;
@@ -2554,7 +2558,7 @@ a {
   bottom: 10.5px;
   left: 30%;
   transform: rotate(45deg);
-  width: 14px;
+  width: 9px;
   height: 1px;
   background: #fff;
   transition: all 0.3s ease-in-out;
@@ -2573,8 +2577,8 @@ a {
   content: "";
   position: absolute;
   bottom: 10.5px;
-  left: 43%;
-  width: 14px;
+  left: 44%;
+  width: 9px;
   height: 1px;
   background: #fff;
   transform: rotate(-45deg);
@@ -2615,16 +2619,21 @@ a {
     margin-bottom: 6vw;
   }
 }
+.header .nav__accordion .nav__accordion-item:hover a {
+  color: #434343;
+}
 .header .nav__accordion .nav__accordion-list {
   position: absolute;
-  top: 44px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
+  padding: 30px 0 0;
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion .nav__accordion-list {
     position: unset;
     transform: none;
+    padding: 0;
   }
 }
 @media screen and (max-width: 767px) {

@@ -11,6 +11,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  padding: 0.5vw 0;
   z-index: 999;
   @include mq(max, md) {
     position: fixed;
@@ -38,12 +39,13 @@
     }
   }
   .header__logo {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-family: $font-family-Prata;
     color: #fff;
     @include mq(max, md) {
       width: 24vw;
       margin-left: 5vw;
+      font-size: calc-size(24);
     }
   }
 
@@ -85,7 +87,7 @@
     }
     a {
       display: block;
-      font-size: 2rem;
+      font-size: 1.2rem;
       letter-spacing: 0.15em;
       font-family: $font-family-eb;
       color: #fff;
@@ -100,7 +102,8 @@
 
   .header__contact {
     position: relative;
-    width: 167px;
+    width: 140px;
+    padding: 5px 0;
     text-align: center;
     line-height: 2;
     border-radius: 5px;
@@ -108,6 +111,7 @@
     overflow: hidden;
     @include mq(max, md) {
       width: 100%;
+      padding: 0;
     }
 
     &::before {
@@ -209,15 +213,15 @@
     &:hover {
       .nav__accordion-item {
         height: auto;
-        padding: 6px 0 0;
+        padding: 3px 0 2px;
         @include mq(max, md) {
           padding: 0;
         }
       }
       .header__nav-txt {
         &:before {
-          left: 12%;
-          width: 25px;
+          left: 6%;
+          width: 16px;
           transform: rotate(0);
           @include mq(max, md) {
             width: 10vw;
@@ -225,7 +229,7 @@
           }
         }
         &:after {
-          width: 25px;
+          width: 16px;
           transform: rotate(0);
           @include mq(max, md) {
             width: 10vw;
@@ -236,8 +240,8 @@
     
     .header__nav-txt {
       position: relative;
-      padding-bottom: 16.5px;
-      font-size: 2rem;
+      padding-bottom: 20.5px;
+      font-size: 1.1rem;
       font-family: $font-family-eb;
       color: #fff;
       pointer-events: none;
@@ -260,7 +264,7 @@
         bottom: 10.5px;
         left: 30%;
         transform: rotate(45deg);
-        width: 14px;
+        width: 9px;
         height: 1px;
         background: #fff;
         transition: all 0.3s ease-in-out;
@@ -277,8 +281,8 @@
         content: "";
         position: absolute;
         bottom: 10.5px;
-        left: 43%;
-        width: 14px;
+        left: 44%;
+        width: 9px;
         height: 1px;
         background: #fff;
         transform: rotate(-45deg);
@@ -314,16 +318,24 @@
           margin-bottom: 6vw;
         }
       }
+
+      &:hover {
+        a {
+          color: $col-black;
+        }
+      }
     }
 
     .nav__accordion-list {
       position: absolute;
-      top: 44px;
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
+      padding: 30px 0 0;
       @include mq(max, md) {
         position: unset;
         transform: none;
+        padding: 0;
       }
       a {
         @include mq(max, md) {
