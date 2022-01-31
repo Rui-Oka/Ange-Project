@@ -57,12 +57,16 @@
   
     .footer__noren {
       position: absolute;
-      top: -15px;
+      top: -35px;
       left: 50%;
       transform: translateX(-50%);
-      width: 100%;
+      width: 300px;
+      padding: 20px 0;
+      z-index: 2;
       @include mq(max, md) {
        top: -9vw;
+       width: auto;
+       padding: 0;
       }
     }
   }
