@@ -2728,16 +2728,16 @@ a {
 }
 .footer__group .footer__noren {
   position: absolute;
-  top: -35px;
+  top: -97px;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 250px;
   padding: 20px 0;
   z-index: 2;
 }
 @media screen and (max-width: 767px) {
   .footer__group .footer__noren {
-    top: -9vw;
+    top: -26vw;
     width: auto;
     padding: 0;
   }
@@ -2801,28 +2801,6 @@ a {
     width: 8vw;
     height: 8vw;
     padding: 2vw;
-  }
-}
-
-.footer__ange {
-  height: 176px;
-  font-size: 4.5rem;
-  letter-spacing: 0.15em;
-  font-family: Prata, "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
-  color: #fff;
-}
-@media screen and (max-width: 767px) {
-  .footer__ange {
-    height: 19.5vw;
-    font-size: calc( 20 * (100vw / 428));
-  }
-}
-.footer__ange a {
-  line-height: 176px;
-}
-@media screen and (max-width: 767px) {
-  .footer__ange a {
-    line-height: 19.5vw;
   }
 }
 
