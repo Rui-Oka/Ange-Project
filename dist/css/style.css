@@ -2390,7 +2390,7 @@ a {
 }
 .header .header__nav-list a {
   display: block;
-  font-size: 1.2rem;
+  font-size: 0.73vw;
   letter-spacing: 0.15em;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
@@ -2544,7 +2544,7 @@ a {
 .header .nav__accordion .header__nav-txt {
   position: relative;
   padding-bottom: 20.5px;
-  font-size: 1.1rem;
+  font-size: 0.73vw;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   color: #fff;
   pointer-events: none;
