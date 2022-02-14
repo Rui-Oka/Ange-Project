@@ -39,13 +39,13 @@
     }
   }
   .header__logo {
-    font-size: 2rem;
-    font-family: $font-family-Prata;
-    color: #fff;
+    height: 4.1vw;
     @include mq(max, md) {
-      width: 24vw;
+      height: 10vw;
       margin-left: 5vw;
-      font-size: calc-size(24);
+    }
+    img {
+      height: 100%;
     }
   }
 

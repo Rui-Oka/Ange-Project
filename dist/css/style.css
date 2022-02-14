@@ -2334,16 +2334,16 @@ a {
   background: #bf906e;
 }
 .header .header__logo {
-  font-size: 2rem;
-  font-family: Prata, "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
-  color: #fff;
+  height: 4.1vw;
 }
 @media screen and (max-width: 767px) {
   .header .header__logo {
-    width: 24vw;
+    height: 10vw;
     margin-left: 5vw;
-    font-size: calc( 24 * (100vw / 428));
   }
+}
+.header .header__logo img {
+  height: 100%;
 }
 .header .header__nav {
   display: flex;
