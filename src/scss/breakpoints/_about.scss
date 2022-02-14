@@ -1,0 +1,64 @@
+.about {
+    padding: 343px 0 300px;
+    @include mq(max, md) {
+      padding: 34vw 0 30vw;
+    }
+    .about__group {
+      width: 80%;
+      max-width: 629px;
+      margin: auto;
+      @include mq(max, md) {
+        width: 83%;
+        margin: auto;
+       }
+    }
+    .about__txt {
+      margin-bottom: 110px;
+      font-size: 1.75rem;
+      line-height: 3.5;
+      &:last-of-type {
+        margin-bottom: 455px;
+        @include mq(max, md) {
+          margin-bottom: 26vw;
+        }
+      }
+      @include mq(max, md) {
+        margin-bottom: 14vw;
+        font-size: calc-size(13);
+        letter-spacing: 0;
+        line-height: 3.25;
+      }
+    }
+  
+    .about__btn {
+      display: flex;
+      justify-content: center;
+      @include mq(max, md) {
+        display: block;
+        text-align: center;
+      }
+      .about__btn-item {
+        padding: 20px 0;
+        @include mq(max, md) {
+          padding: 0;
+        }
+        &:not(:last-of-type) {
+          margin-right: 61px;
+          @include mq(max, md) {
+            margin: 0 0 12vw 0;
+          }
+        }
+      }
+      .about__btn-link {
+        position: relative;
+        padding: 20px 107px;
+        @include mq(max, md) {
+          display: block;
+          width: 41vw;
+          margin-left:28vw;
+          padding: 1.5vw 0;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }

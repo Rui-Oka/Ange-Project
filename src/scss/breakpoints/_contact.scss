@@ -1,0 +1,258 @@
+.contact {
+    padding: 348px 0 300px;
+    @include mq(max, md) {
+      padding: 0 0 30vw;
+    }
+    .contact__group {
+      margin-bottom: 367px;
+      text-align: center;
+      background: url(/dist/img/contact_bg.png) no-repeat center;
+      background-size: 100%;
+      @include mq(max, md) {
+        padding-top: 30vw;
+        margin-bottom: 0;
+        background: url(/dist/img/contact_bg_sp.png) no-repeat;
+        background-position: center 30%;
+      }
+      .contact__line-ttl {
+        width: 433px;
+        margin: 0 auto 125px;
+        font-size: 3rem;
+        background: rgb(235, 214, 204);
+        background:linear-gradient(transparent 70%, #ebd6cc 70%);
+        @include mq(max, md) {
+          width: 31%;
+          margin-bottom: 8vw;
+          font-size: calc-size(25);
+        }
+      }
+  
+      .contact__line-txt {
+        margin-bottom: 110px;
+        font-size: 2.2rem;
+        line-height: 3.5;
+        @include mq(max, md) {
+          margin-bottom: 7vw;
+          font-size: calc-size(13);
+        }
+      }
+      .contact__line-btn {
+        padding-bottom: 178px;
+        background: url(/dist/img/common_tag.png) no-repeat center bottom;
+        @include mq(max, md) {
+          padding-bottom: 40vw;
+          background-size: 1vw;
+          background-position: center 69%;
+        }
+      }
+    }
+  
+    .faq__ttl {
+      padding: 29.7px 0;
+      text-align: center;
+      font-size: 3.0rem;
+      background: #fff;
+      @include mq(max, md) {
+        padding: 2vw 0;
+        font-size: calc-size(16);
+      }
+    }
+  
+    .faq__inquiry {
+      padding-top: 80px;
+      @include mq(max, md) {
+        padding-top: 18vw;
+      }
+      &:not(:first-of-type) {
+        padding-top: 71.5px;
+        @include mq(max, md) {
+          padding-top: 12vw;
+        }
+      }
+    }
+  
+    .faq__inquiry-ttl {
+      margin-bottom: 47.6px;
+      font-size: 2.5rem;
+      text-align: center;
+      @include mq(max, md) {
+        margin-bottom: 3vw;
+        font-size: calc-size(13);
+      }
+    }
+  
+    .faq__inquiry-list {
+      width: 80%;
+      max-width: 1026px;
+      margin: auto;
+      @include mq(max, md) {
+        width: 90%;
+      }
+    }
+  
+    .faq__inquiry-item {
+      &:not(:last-of-type) {
+        margin-bottom: 35px;
+        @include mq(max, md) {
+          margin-bottom: 3vw;
+        }
+      }
+    }
+  
+    .faq__inquiry-query {
+      position: relative;
+      display: block;
+      padding: 30px 65px 30px 135px;
+      font-size: 2rem;
+      line-height: 1.7;
+      border-radius: 15px;
+      background: #fff;
+      cursor: pointer;
+  
+      @include mq(max, lg) {
+        padding-right: 90px;
+      }
+      @include mq(max, md) {
+        padding: 1vw 16vw 1vw 19vw;
+        font-size: calc-size(11);
+        border-radius: 5vw;
+      }
+  
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100%;
+        font-size: 4.2rem;
+        line-height: 2.1;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 15px 35px 35px 15px;
+        color: #fff;
+        background: $col-pink;
+        @include mq(max, lg) {
+          line-height: 3;
+        }
+  
+        @include mq(max, md) {
+          width: 14vw;
+          font-size: calc-size(23);
+          border-radius: 2vw 4vw 4vw 2vw;
+          line-height: 2;
+        }
+      }
+  
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 27px;
+        transform: translateY(-50%);
+        margin: auto;
+        width: 39px;
+        height: 5px;
+        background-color:$col-pink;
+        transition: 0.2s;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        @include mq(max, md) {
+          width: 4vw;
+          height: 0.5vw;
+        }
+      }
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 27px;
+        transform: translateY(-50%);
+        margin: auto;
+        width: 39px;
+        height: 5px;
+        background-color: $col-pink;
+        transition: 0.3s;
+        @include mq(max, md) {
+          width: 4vw;
+          height: 0.5vw;
+        }
+      }
+  
+      &.active {
+        &:before {
+          transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+        }
+  
+        &:after {
+          background-color: transparent;
+        }
+      }
+    }
+  
+    .faq__inquiry-answer {
+      position: relative;
+      height: 0;
+      overflow: hidden;
+      border: solid 1px transparent;
+      border-radius: 0 0 15px 15px;
+      span {
+        position: absolute;
+        top: 25px;
+        left: 3%;
+        font-size: 4.2rem;
+        line-height: 1;
+        font-weight: 500;
+        color: $col-pink;
+        @include mq(max, md) {
+          top: 3vw;
+          left: 5vw;
+          font-size: calc-size(23);
+        }
+      }
+    }
+    .faq__inquiry-answer-txt {
+      padding: 0 25px 0 135px;
+      font-size: 2rem;
+      font-feature-settings: "palt";
+      @include mq(max, md) {
+        padding: 0 16vw 0 19vw;
+        font-size: calc-size(11);
+      }
+      a {
+        color: #fff;
+      }
+    }
+    .faq__inquiry-check {
+      display: none;
+      &:checked {
+        + .faq__inquiry-query {
+          border-radius: 15px 15px 0 0;
+          background: $col-pink;
+        }
+        + .faq__inquiry-query:after {
+          background: #fff;
+        }
+        + .faq__inquiry-query:before {
+          transform: translateY(-50%) rotate(0);
+          background: #fff;
+        }
+        + .faq__inquiry-query:before {
+          transform: translateY(-50%) rotate(0);
+          background: #fff;
+        }
+        ~ .faq__inquiry-answer {
+          height: auto;
+          padding: 30px 0 30px;
+          opacity: 1;
+          border: solid 1px $col-pink;
+          @include mq(max, md) {
+            padding: 3vw 0;
+          }
+        }
+      }
+    }
+  }
+  
