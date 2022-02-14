@@ -785,14 +785,15 @@ a {
       height: 100%;
       background: #fff;
       @include mq(max, md) {
-        top: 5vw;
+        top: 0;
         right: 13vw;
         width: 60vw;
         height: 44vw;
       }
     }
-    img {
+    video {
       position: relative;
+      width: 100%;
     }
   }
 
@@ -808,7 +809,16 @@ a {
       @include mq(max, md) {
         margin-bottom: 1vw;
         font-size: calc-size(13);
-        line-height: 1;
+        line-height: 1.25;
+      }
+
+      span {
+        font-size: 1.25rem;
+        @include mq(max, md) {
+          margin-top: 0.25vw;
+          font-size: calc-size(10);
+          letter-spacing: -0.01em;
+        }
       }
     }
     .gallery__tag {

@@ -896,14 +896,15 @@ a {
 }
 @media screen and (max-width: 767px) {
   .gallery .gallery__img:before {
-    top: 5vw;
+    top: 0;
     right: 13vw;
     width: 60vw;
     height: 44vw;
   }
 }
-.gallery .gallery__img img {
+.gallery .gallery__img video {
   position: relative;
+  width: 100%;
 }
 .gallery .gallery__txt {
   margin-left: 42px;
@@ -922,7 +923,17 @@ a {
   .gallery .gallery__txt .gallery__plan {
     margin-bottom: 1vw;
     font-size: calc( 13 * (100vw / 428));
-    line-height: 1;
+    line-height: 1.25;
+  }
+}
+.gallery .gallery__txt .gallery__plan span {
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 767px) {
+  .gallery .gallery__txt .gallery__plan span {
+    margin-top: 0.25vw;
+    font-size: calc( 10 * (100vw / 428));
+    letter-spacing: -0.01em;
   }
 }
 .gallery .gallery__txt .gallery__tag {

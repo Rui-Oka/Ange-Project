@@ -31,6 +31,32 @@ $(function () {
     }
   });
 });
+
+function playVideos(videos) {
+  let scroll = $(window).scrollTop();
+	let wHeight = $(window).height();
+ 
+  videos.each(function(index) {
+    let position = $(this).offset().top;
+    let thisHeight = $(this).height();
+    let margin = wHeight - 100;
+      if (scroll > position - margin && scroll < position + thisHeight){
+          $(this).get(0).play();
+      } else {
+          $(this).get(0).pause();
+      }
+  });
+}
+$(window).on('load', function() {
+  const videos = $('.gallery__img > video');
+  if(videos.length) {
+      playVideos(videos);
+      $(window).on('scroll', function() {
+          playVideos(videos);
+      });
+  }
+});
+
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map
