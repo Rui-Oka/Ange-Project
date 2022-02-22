@@ -603,7 +603,7 @@ a {
   background-size: cover;
 }
 .top__studio .top__studio-item:last-of-type {
-  background: url(/dist/img/top_okinawa_coming_soon.png) no-repeat center;
+  background: url(/dist/img/top_okinawa.png) no-repeat center;
   background-size: cover;
 }
 .top__studio .top__studio-link {
@@ -680,6 +680,23 @@ a {
     padding: 20px 0;
     font-size: 2.5rem;
   }
+}
+.top__studio .top__studio-comming {
+  margin-top: 10px;
+  font-size: 1.7rem;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width: 767px) {
+  .top__studio .top__studio-comming {
+    font-size: calc( 10 * (100vw / 428));
+  }
+}
+
+.comming-soon .top__studio-group:before {
+  content: none;
+}
+.comming-soon .top__studio-group {
+  padding-bottom: 0;
 }
 
 .top__contact {
@@ -963,7 +980,7 @@ a {
 }
 .header .nav__accordion:hover .header__nav-txt:before {
   left: 6%;
-  width: 16px;
+  width: 1.2vw;
   transform: rotate(0);
 }
 @media screen and (max-width: 767px) {
@@ -973,7 +990,7 @@ a {
   }
 }
 .header .nav__accordion:hover .header__nav-txt:after {
-  width: 16px;
+  width: 1vw;
   transform: rotate(0);
 }
 @media screen and (max-width: 767px) {
@@ -1072,6 +1089,13 @@ a {
 }
 .header .nav__accordion .nav__accordion-item:hover a {
   color: #434343;
+}
+.header .nav__accordion .nav__accordion-item.comming-soon {
+  background: transparent;
+}
+.header .nav__accordion .nav__accordion-item.comming-soon a {
+  color: #e0d9d9;
+  pointer-events: none;
 }
 .header .nav__accordion .nav__accordion-list {
   position: absolute;

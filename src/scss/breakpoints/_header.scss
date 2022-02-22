@@ -221,7 +221,7 @@
       .header__nav-txt {
         &:before {
           left: 6%;
-          width: 16px;
+          width: 1.2vw;
           transform: rotate(0);
           @include mq(max, md) {
             width: 10vw;
@@ -229,7 +229,7 @@
           }
         }
         &:after {
-          width: 16px;
+          width: 1vw;
           transform: rotate(0);
           @include mq(max, md) {
             width: 10vw;
@@ -322,6 +322,14 @@
       &:hover {
         a {
           color: $col-black;
+        }
+      }
+
+      &.comming-soon {
+        background: transparent;
+        a {
+          color: #e0d9d9;
+          pointer-events: none;
         }
       }
     }
