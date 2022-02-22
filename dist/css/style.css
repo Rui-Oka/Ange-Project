@@ -1026,7 +1026,7 @@ a {
   bottom: 10.5px;
   left: 30%;
   transform: rotate(45deg);
-  width: 9px;
+  width: 0.5vw;
   height: 1px;
   background: #fff;
   transition: all 0.3s ease-in-out;
@@ -1046,7 +1046,7 @@ a {
   position: absolute;
   bottom: 10.5px;
   left: 44%;
-  width: 9px;
+  width: 0.5vw;
   height: 1px;
   background: #fff;
   transform: rotate(-45deg);
