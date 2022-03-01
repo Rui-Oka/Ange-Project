@@ -1999,6 +1999,9 @@ a {
 
 .plan {
   padding-top: 150px;
+  background: url(/dist/img/price_bg.png) no-repeat;
+  background-size: 100%;
+  background-position: center 15%;
 }
 @media screen and (max-width: 767px) {
   .plan {
@@ -2151,9 +2154,6 @@ a {
   max-width: 1329px;
   width: 85%;
   margin: 0 auto 55px;
-  background: url(/dist/img/price_bg.png) no-repeat;
-  background-size: 100%;
-  background-position: center 10%;
 }
 @media screen and (max-width: 991px) {
   .plan .plan__list {
