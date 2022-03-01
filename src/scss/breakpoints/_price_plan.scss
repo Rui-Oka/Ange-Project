@@ -235,7 +235,7 @@
         @include mq(max, md) {
           top: 21.25vw;
           right: 103.5%;
-          width: 0.4vw;
+          width: 0.5vw;
           height: 4vw;
         }
       }
@@ -253,6 +253,7 @@
         }
       }
     }
+
   }
 
   .plan__info-item-another {
@@ -280,7 +281,7 @@
         top: 37.25vw;
         left: 50%;
         transform: translateY(-50%);
-        width: 0.5vw;
+        width: 0.75vw;
         height: 4vw;
       }
     }
@@ -321,6 +322,12 @@
       @include mq(max, md) {
         width: 3vw;
         height: 3vw;
+      }
+    }
+    &.item-center {
+      @include mq(max, md) {
+        width: 60%;
+        margin: auto;
       }
     }
   }

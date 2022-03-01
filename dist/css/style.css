@@ -2256,7 +2256,7 @@ a {
   .plan .plan__info-item.plan__info-plus::after {
     top: 21.25vw;
     right: 103.5%;
-    width: 0.4vw;
+    width: 0.5vw;
     height: 4vw;
   }
 }
@@ -2296,7 +2296,7 @@ a {
     top: 37.25vw;
     left: 50%;
     transform: translateY(-50%);
-    width: 0.5vw;
+    width: 0.75vw;
     height: 4vw;
   }
 }
@@ -2342,6 +2342,12 @@ a {
   .plan .plan__terms-item:before {
     width: 3vw;
     height: 3vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .plan .plan__terms-item.item-center {
+    width: 60%;
+    margin: auto;
   }
 }
 .plan .plan__info-arrow {
