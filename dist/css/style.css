@@ -2236,7 +2236,7 @@ a {
 @media screen and (max-width: 767px) {
   .plan .plan__info-item.plan__info-plus::before {
     top: 21vw;
-    right: 96%;
+    right: 98.65%;
     transform: none;
     width: 4vw;
     height: 0.5vw;
@@ -2255,7 +2255,7 @@ a {
 @media screen and (max-width: 767px) {
   .plan .plan__info-item.plan__info-plus::after {
     top: 21.25vw;
-    right: 100.5%;
+    right: 103.5%;
     width: 0.4vw;
     height: 4vw;
   }
@@ -2296,7 +2296,7 @@ a {
     top: 37.25vw;
     left: 50%;
     transform: translateY(-50%);
-    width: 0.4vw;
+    width: 0.5vw;
     height: 4vw;
   }
 }
@@ -2365,7 +2365,7 @@ a {
     width: 45%;
     margin: 0 auto;
     padding: 2vw 0;
-    font-size: calc( 17 * (100vw / 428));
+    font-size: calc( 14 * (100vw / 428));
     text-align: center;
     border-radius: 50px;
     background: #EBD6CC;
@@ -2415,7 +2415,7 @@ a {
 @media screen and (max-width: 767px) {
   .plan .plan__announce {
     width: 90%;
-    margin: 0 auto 14vw;
+    margin: 0 auto 20vw;
     font-size: calc( 11 * (100vw / 428));
   }
 }
