@@ -1,349 +1,530 @@
 .plan {
-    .plan__item {
-      position: relative;
-      max-width: 430px;
-      width: 32%;
-      margin-top: 90px;
-      padding-bottom: 55px;
-      border: solid 1px $col-pink;
-      border-radius: 15px;
-      background: #fff;
-      @include mq(max, lg) {
-        width: 100%;
-        max-width: none;
-        margin: 8vw auto 13vw;
-        padding-bottom: 10vw;
-        border-radius: 9vw;
-      }
-  
-      &:last-of-type {
-        @include mq(max, md) {
-          margin-bottom: 0;
-        }
-      }
+  padding-top: 150px;
+  @include mq(max, md) {
+    padding-top: 30vw;
+  }
+  .plan__box {
+    margin-bottom: 230px;
+    @include mq(max, md) {
+      margin-bottom: 19vw;
     }
-  
-    .plan__ttl {
-      position: absolute;
-      top: -90px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 180px;
-      height: 180px;
-      font-size: 7rem;
-      line-height: 1;
-      text-align: center;
-      border-radius: 50%;
-      color: #fff;
-      background: $col-pink;
-      box-sizing: border-box;
-  
-      @include mq(max, lg) {
-        top: -7vw;
-        width: 19vw;
-        height: 19vw;
-        padding: 2vw 0;
-        font-size: calc-size(28);
-        font-weight:bold;
-      }
-  
-      &:before {
-        content: "";
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        border: solid 1px #fff;
-  
-        @include mq(max, lg) {
-          top: 1.5vw;
-          width: 16vw;
-          height: 16vw;
-        }
-      }
-      span {
-        font-size: 2rem;
-        @include mq(max, lg) {
-          font-size: calc-size(10);
-        }
-      }
+  }
+  .plan__about {
+    width: 346px;
+    margin: 0 auto 30px;
+    font-size: 4.0rem;
+    line-height: 1.25;
+    text-align: center;
+    background: rgb(235, 214, 204);
+    background: linear-gradient(0deg, #d6d6d6 0%, #d6d6d6 20%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 100%);
+    
+    @include mq(max, md) {
+      width: 30vw;
+      margin: 0 auto 3vw;
+      font-size: calc-size(14);
     }
-  
-    .plan__list {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1329px;
-      width: 80%;
-      margin: 0 auto 74px;
-      padding: 279px 0 0;
-      background: url(/dist/img/price_bg.png) no-repeat;
-      background-size: 100%;
-      background-position: center 10%;
-      @include mq(max, lg) {
-        display: block;
-        width: 85%;
-        margin: 0 auto 9vw;
-        padding: 15vw 0 0;
-      }
+  }
+
+  .plan__about-txt {
+    margin-bottom: 45px;
+    font-size: 2.0rem;
+    text-align: center;
+    @include mq(max, md) {
+      margin-bottom: 0;
+      font-size: calc-size(9);
     }
-    .plan__info-list {
-      height: 506px;
-      margin: 146px 0 38px;
-      @include mq(max, lg) {
-        display: flex;
-        flex-wrap: wrap;
-        width: 90%;
-        height: auto;
-        margin: 16vw auto 3vw;
-      }
+  }
+
+  .plan__item {
+    position: relative;
+    width:fit-content;
+    margin-bottom: 37px;
+    padding: 24px 60px 10px 130px;
+    border: solid 3px $col-pink;
+    border-radius: 50px;
+    background: #fff;
+    box-sizing: border-box;
+    @include mq(max, md) {
+      width: 100%;
+      max-width: none;
+      margin: 8vw auto 18vw;
+      padding:0 0 5vw 0;
+      border: solid 0.5vw $col-pink;
+      border-radius: 9vw;
     }
-  
-    .plan__info-item {
-      max-width: 345px;
-      width: 85%;
-      margin: 0 auto 24px;
-      padding: 18px 0;
-      font-size: 2.5rem;
-      line-height: 1;
-      text-align: center;
-      border: solid 1px $col-pink;
-      border-radius: 15px;
-  
-      @include mq(max, lg) {
-        width: 46%;
-        margin: 0 auto;
-        padding: 2.5vw 0;
-        line-height: 1.75;
-        font-size: calc-size(15);
-      }
-      &:not(:first-of-type) {
-        margin-bottom: 52px;
-        @include mq(max, lg) {
-          margin-bottom: 0;
-        }
-      }
-      &:nth-child( n+3 ) {
-        @include mq(max, lg) {
-          width: 95%;
-          margin-top: 7vw;
-          line-height: 1.25;
-        }
-      }
-      span {
-        font-size: 1.5rem;
-        @include mq(max, lg) {
-          font-size: calc-size(11);
-        }
-      }
-  
-      &.plan__info-plus {
-        position: relative;
-  
-        &::before {
-          content: "";
-          position: absolute;
-          top: -30px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 30px;
-          height: 4px;
-          background: $col-black;
-          @include mq(max, lg) {
-            top: -4.25vw;
-            width: 4vw;
-            height: 0.4vw;
-          }
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          top: -42px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 4px;
-          height: 30px;
-          background: $col-black;
-          @include mq(max, lg) {
-            top: -6vw;
-            width: 0.4vw;
-            height: 4vw;
-          }
-        }
-      }
-    }
-  
-    .plan__info-arrow {
-      position: relative;
-      margin-bottom: 52px;
-      height: 90px;
+
+    &:last-of-type {
       @include mq(max, md) {
-        display: none;
-      }
-      picture {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-      }
-    }
-    .plan__price {
-      width: 85%;
-      max-width: 313px;
-      margin: 0 auto 54px;
-      padding: 30px 0;
-      font-size: 2.5rem;
-      text-align: center;
-      border-radius: 50px;
-      background: $col-pink;
-      @include mq(max, md) {
-        width: 50%;
-        margin: 0 auto 4vw;
-        padding: 2vw 0;
-        font-size: calc-size(17);
-      }
-    }
-  
-    .plan__img {
-      width: 90%;
-      margin: auto;
-      text-align: center;
-  
-      @include mq(max, lg) {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        margin: auto;
-      }
-      picture {
-        display: block;
-        @include mq(max, lg) {
-          width: 32%;
-        }
-        &:not(:last-of-type) {
-          margin-bottom: 20px;
-          @include mq(max, md) {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  
-    .plan__announce {
-      position: relative;
-      width: 80%;
-      max-width: 1271px;
-      margin: 0 auto 176px;
-      font-size: 2rem;
-      @include mq(max, md) {
-        width: 90%;
-        margin: 0 auto 14vw ;
-        font-size: calc-size(11);
-      }
-    }
-  
-    .plan__announce-txt {
-      margin-bottom: 25px;
-      @include mq(max, md) {
-        margin-bottom: 6vw;
-        line-height: 1.8;
-        letter-spacing: -0.01em;
-      }
-      .plan__announce-tag {
-        margin-left: -2rem;
-        @include mq(max, md) {
-          margin-left: 0;
-        }
-      }
-    }
-  
-    .cancel__box {
-      max-width: 1030px;
-      width: 80%;
-      margin:0 auto 108px;
-      padding: 68px 0 71px;
-      border-radius: 15px;
-      background: #fff;
-      @include mq(max, md) {
-        width: 88%;
-        margin: 0 auto 5vw;
-        padding: 5vw 0 ;
-      }
-    }
-  
-    .cancel__ttl {
-      width: 338px;
-      margin: 0 auto 76px;
-      font-size: 3rem;
-      text-align: center;
-      letter-spacing: 0.15em;
-      background: rgb(235, 214, 204);
-      background: linear-gradient(
-        0deg,
-        #D6D6D6 0%,
-        #D6D6D6 35%,
-        rgba(255, 255, 255, 0) 35%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      @include mq(max, md) {
-        width: 40%;
-        margin: 0 auto 5vw;
-        font-size: calc-size(13);
-      }
-    }
-  
-    .cancel__txt {
-      margin-bottom: 25px;
-      font-size: 2.3rem;
-      line-height: 2;
-      text-align: center;
-      @include mq(max, md) {
-        margin-bottom: 4vw;
-        font-size: calc-size(12);
-        letter-spacing: 0;
-      }
-    }
-  
-    .cancel__sub-txt {
-      font-size: 1.8rem;
-      text-align: center;
-      @include mq(max, md) {
-        font-size: calc-size(10);
-        letter-spacing: 0;
-      }
-    }
-  
-    .plan__btn-box {
-      padding: 153px 0 300px;
-      background: url(/dist/img/common_tag.png) no-repeat center top;
-      @include mq(max, md) {
-        padding: 56vw 0 30vw;
-        background-size: 1%;
-        background-position: center 23%;
-      }
-    }
-  
-    .plan__btn-txt {
-      margin-bottom: 5px;
-      font-size: 2rem;
-      text-align: center;
-      @include mq(max, md) {
-        margin-bottom: 2vw;
-        font-size: calc-size(12);
-      }
-    }
-  
-    .plan__btn {
-      display: block;
-      width: 316px;
-      margin: auto;
-      padding: 20px 0;
-      text-align: center;
-      @include mq(max, md) {
-        width: 41%;
-        padding: 2vw 0;
+        margin-bottom: 0;
       }
     }
   }
+
+  .plan__ttl-box {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    color: #fff;
+    background: $col-pink;
+    box-sizing: border-box;
+
+    @include mq(max, md) {
+      top: -10vw;
+      left: 50%;
+      transform: translate(-50%,0);
+      width: 20vw;
+      height: 20vw;
+      padding: 2vw 0;
+      font-size: calc-size(28);
+      font-weight: bold;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: solid 1px #fff;
+      background: linear-gradient(0deg, #fff 0%, #fff 35%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 100%);
+      @include mq(max, md) {
+        top: 1.5vw;
+        width: 17vw;
+        height: 17vw;
+        background: none;
+      }
+    }
+    span {
+      font-size: 2rem;
+      @include mq(max, md) {
+        font-size: calc-size(10);
+      }
+    }
+  }
+
+  .plan__ttl {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 7rem;
+    line-height: 0.9;
+    text-align: center;
+    @include mq(max, md) {
+      top: 2vw;
+      font-size: calc-size(28);
+      font-weight: bold;
+      line-height: 1;
+    }
+  }
+
+  .plan__ttl-price {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.8rem;
+    line-height: 0.5;
+    text-align: center;
+    color: $col-black;
+    small {
+      font-size: 0.8rem;
+    }
+  }
+  .plan__list {
+    max-width: 1329px;
+    width: 85%;
+    margin: 0 auto 55px;
+    background: url(/dist/img/price_bg.png) no-repeat;
+    background-size: 100%;
+    background-position: center 10%;
+    @include mq(max, lg) {
+      display: block;
+      width: 90%;
+      margin: 0 auto 9vw;
+      padding: 4vw 0 0;
+    }
+  }
+  .plan__info-list {
+    display: flex;
+    @include mq(max, md) {
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 16vw auto 3vw;
+    }
+  }
+
+  .plan__info-item {
+    max-width: 325px;
+    width: 21.25vw;
+    min-height: 97px;
+    margin-right: 35px;
+    padding: 10px 5px;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: center;
+    border: solid 1px $col-pink;
+    border-radius: 15px;
+
+    @include mq(max, md) {
+      max-width:none;
+      width: 46%;
+      min-height: unset;
+      margin: 0 auto;
+      padding: 2.5vw 0;
+      line-height: 1.75;
+      font-size: calc-size(15);
+      white-space: nowrap;
+    }
+    &:nth-child(n + 3) {
+      margin-right: 0;
+      @include mq(max, md) {
+        width: 100%;
+        margin-top: 7vw;
+        line-height: 1.25;
+      }
+      span {
+        vertical-align: baseline;
+      }
+    }
+    span {
+      vertical-align: sub;
+      font-size: 1.3rem;
+      letter-spacing: -0.01em;
+      @include mq(max, md) {
+        font-size: calc-size(9);
+      }
+    }
+
+    &.plan__info-plus {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -32px;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 3px;
+        background: $col-black;
+        @include mq(max, md) {
+          top: 21vw;
+          right: 96%;
+          transform: none;
+          width: 4vw;
+          height: 0.5vw;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -21px;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 25px;
+        background: $col-black;
+        @include mq(max, md) {
+          top: 21.25vw;
+          right: 100.5%;
+          width: 0.4vw;
+          height: 4vw;
+        }
+      }
+
+      &:first-of-type {
+        &:before {
+          @include mq(max, md) {
+            display:none;
+          }
+        }
+        &:after {
+          @include mq(max, md) {
+            display:none;
+          }
+        }
+      }
+    }
+  }
+
+  .plan__info-item-another {
+    @include mq(max, md) {
+      width: 100%;
+      margin-top: 7vw;
+    }
+    &::before {
+      @include mq(max, lg) {
+        content: "";
+        position: absolute;
+        background: $col-black;
+        top: 37vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4vw;
+        height: 0.5vw;
+      }
+    }
+    &::after {
+      @include mq(max, lg) {
+        content: "";
+        position: absolute;
+        background: $col-black;
+        top: 37.25vw;
+        left: 50%;
+        transform: translateY(-50%);
+        width: 0.4vw;
+        height: 4vw;
+      }
+    }
+    span {
+      vertical-align: baseline;
+    }
+  }
+  
+  .plan__terms {
+    display: flex;
+    margin-top: 10px;
+    @include mq(max, md) {
+      display: block;
+      width: 78%;
+      margin: 0 auto 7vw;
+    }
+  }
+  .plan__terms-item {
+    position: relative;
+    margin-right: 20px;
+    padding-left: 20px;
+    font-size: 2.1rem;
+    @include mq(max, md) {
+      margin-right: 0;
+      padding-left: 4vw;
+      font-size: calc-size(9);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: url(/dist/img/plan__term_tag.png) no-repeat;
+      background-size: contain;
+      @include mq(max, md) {
+        width: 3vw;
+        height: 3vw;
+      }
+    }
+  }
+  .plan__info-arrow {
+    position: relative;
+    margin-bottom: 52px;
+    height: 90px;
+    @include mq(max, md) {
+      display: none;
+    }
+    picture {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .plan__price {
+    @include mq(max, md) {
+      width: 45%;
+      margin: 0 auto;
+      padding: 2vw 0;
+      font-size: calc-size(17);
+      text-align: center;
+      border-radius: 50px;
+      background: $col-pink;
+
+    }
+    small {
+      @include mq(max, md) {
+        font-size: calc-size(5);
+      }
+    }
+  }
+
+  .plan__img {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1329px;
+    margin: auto;
+    text-align: center;
+
+    @include mq(max, lg) {
+      width: 85%;
+      margin: auto;
+    }
+    picture {
+      display: block;
+      @include mq(max, lg) {
+        width: 32%;
+      }
+      &:not(:last-of-type) {
+        margin-right: 20px;
+        @include mq(max, md) {
+          margin-right: 1vw;
+        }
+      }
+    }
+  }
+
+  .plan__announce {
+    position: relative;
+    width: 80%;
+    max-width: 1271px;
+    margin: 0 auto 340px;
+    @include mq(max, md) {
+      width: 90%;
+      margin: 0 auto 14vw;
+      font-size: calc-size(11);
+    }
+  }
+
+  .plan__announce-box {
+    margin-bottom: 43px;
+  }
+
+  .plan__announce-ttl {
+    position: relative;
+    margin-bottom: 14px;
+    padding-left: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    @include mq(max, md) {
+      margin-bottom: 2vw;
+      padding-left: 6vw;
+      font-size: calc-size(10);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left:0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: url(/dist/img/plan_announce_tag.png) no-repeat;
+      background-size: contain;
+      @include mq(max, md) {
+        width: 4vw;
+        height: 4vw;
+      }
+    }
+  }
+
+  .plan__announce-sub-ttl {
+    font-size: 2rem;
+    @include mq(max, md) {
+      font-size: calc-size(8);
+    }
+  }
+  .plan__announce-txt {
+    margin-left: 25px;
+    font-size: 2rem;
+    @include mq(max, md) {
+      margin-left: 3vw;
+      font-size: calc-size(8);
+      line-height: 1.8;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  .plan__announce-item {
+    margin-bottom: 20px;
+  }
+  .cancel__box {
+    max-width: 1030px;
+    width: 80%;
+    margin: 0 auto 108px;
+    padding: 68px 0 71px;
+    border-radius: 15px;
+    background: #fff;
+    @include mq(max, md) {
+      width: 88%;
+      margin: 0 auto 5vw;
+      padding: 5vw 0;
+    }
+  }
+
+  .cancel__ttl {
+    width: 338px;
+    margin: 0 auto 76px;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.15em;
+    background: rgb(235, 214, 204);
+    background: linear-gradient(0deg, #d6d6d6 0%, #d6d6d6 35%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 100%);
+    @include mq(max, md) {
+      width: 40%;
+      margin: 0 auto 5vw;
+      font-size: calc-size(13);
+    }
+  }
+
+  .cancel__txt {
+    margin-bottom: 25px;
+    font-size: 2.3rem;
+    line-height: 2;
+    text-align: center;
+    @include mq(max, md) {
+      margin-bottom: 4vw;
+      font-size: calc-size(12);
+      letter-spacing: 0;
+    }
+  }
+
+  .cancel__sub-txt {
+    font-size: 1.8rem;
+    text-align: center;
+    @include mq(max, md) {
+      font-size: calc-size(10);
+      letter-spacing: 0;
+    }
+  }
+
+  .plan__btn-box {
+    padding: 153px 0 300px;
+    background: url(/dist/img/common_tag.png) no-repeat center top;
+    @include mq(max, md) {
+      padding: 56vw 0 30vw;
+      background-size: 1%;
+      background-position: center 23%;
+    }
+  }
+
+  .plan__btn-txt {
+    margin-bottom: 5px;
+    font-size: 2rem;
+    text-align: center;
+    @include mq(max, md) {
+      margin-bottom: 2vw;
+      font-size: calc-size(12);
+    }
+  }
+
+  .plan__btn {
+    display: block;
+    width: 316px;
+    margin: auto;
+    padding: 20px 0;
+    text-align: center;
+    @include mq(max, md) {
+      width: 41%;
+      padding: 2vw 0;
+    }
+  }
+}

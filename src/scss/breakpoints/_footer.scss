@@ -19,7 +19,7 @@
     margin: auto;
     text-align: center;
     @include mq(max, md) {
-      padding: 37vw 0 22vw;
+      padding: 25vw 0 22vw;
     }
     .footer__group-wrap {
       position: relative;
@@ -57,14 +57,14 @@
   
     .footer__noren {
       position: absolute;
-      top: -97px;
+      top: -37px;
       left: 50%;
       transform: translateX(-50%);
       width: 250px;
       padding: 20px 0;
       z-index: 2;
       @include mq(max, md) {
-       top: -26vw;
+       top: -9vw;
        width: auto;
        padding: 0;
       }

@@ -28,7 +28,7 @@ a {
 // -------------------------------------
 .v-pc {
   @include mq(max, md) {
-      display: none;
+      display: none !important;
   }
 }
 .v-sp {
