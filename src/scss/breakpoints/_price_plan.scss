@@ -234,8 +234,8 @@
         background: $col-black;
         @include mq(max, md) {
           top: 21.25vw;
-          right: 103.5%;
-          width: 0.5vw;
+          right: 103.25%;
+          width: 0.6vw;
           height: 4vw;
         }
       }
@@ -279,9 +279,9 @@
         position: absolute;
         background: $col-black;
         top: 37.25vw;
-        left: 50%;
+        left: 49.75%;
         transform: translateY(-50%);
-        width: 0.75vw;
+        width: 0.5vw;
         height: 4vw;
       }
     }
