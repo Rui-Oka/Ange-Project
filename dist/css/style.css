@@ -2046,10 +2046,10 @@ a {
 .plan .plan__item {
   position: relative;
   width: fit-content;
-  margin-bottom: 37px;
-  padding: 24px 60px 10px 130px;
+  margin: 0 0 37px 0;
+  padding: 24px 30px 10px 195px;
   border: solid 3px #EBD6CC;
-  border-radius: 50px;
+  border-radius: 100px 50px 50px 100px;
   background: #fff;
   box-sizing: border-box;
 }
@@ -2071,7 +2071,7 @@ a {
 .plan .plan__ttl-box {
   position: absolute;
   top: 50%;
-  left: -60px;
+  left: 0;
   transform: translateY(-50%);
   width: 180px;
   height: 180px;
@@ -2151,7 +2151,7 @@ a {
   font-size: 0.8rem;
 }
 .plan .plan__list {
-  max-width: 1329px;
+  max-width: 1150px;
   width: 85%;
   margin: 0 auto 55px;
 }
@@ -2174,8 +2174,8 @@ a {
   }
 }
 .plan .plan__info-item {
-  max-width: 325px;
-  width: 21.25vw;
+  max-width: 285px;
+  width: 20vw;
   min-height: 97px;
   margin-right: 35px;
   padding: 10px 5px;
@@ -2385,8 +2385,8 @@ a {
 .plan .plan__img {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  max-width: 1329px;
+  width: 85%;
+  max-width: 1150px;
   margin: auto;
   text-align: center;
 }
