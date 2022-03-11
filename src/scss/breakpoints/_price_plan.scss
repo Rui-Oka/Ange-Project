@@ -5,6 +5,7 @@
   background-position: center 15%;
   @include mq(max, md) {
     padding-top: 30vw;
+    background: none;
   }
   .plan__box {
     margin-bottom: 230px;

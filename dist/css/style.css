@@ -2006,6 +2006,7 @@ a {
 @media screen and (max-width: 767px) {
   .plan {
     padding-top: 30vw;
+    background: none;
   }
 }
 .plan .plan__box {
