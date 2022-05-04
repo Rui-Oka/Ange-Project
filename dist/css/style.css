@@ -963,7 +963,7 @@ a {
   .header .nav__accordion {
     width: 76%;
     margin: 8vw auto 10vw;
-    padding: 10vw 0 6vw;
+    padding: 7vw 0 6vw;
     border-left: solid 0.25vw #e0d9d9;
     border-bottom: solid 0.25vw #e0d9d9;
     border-right: solid 0.25vw #e0d9d9;
@@ -1034,9 +1034,9 @@ a {
 @media screen and (max-width: 767px) {
   .header .nav__accordion .header__nav-txt:before {
     left: 0;
-    bottom: 3vw;
+    bottom: 3.2vw;
     width: 10vw;
-    height: 0.25vw;
+    height: 0.2vw;
     transform: rotate(0);
     background: #e0d9d9;
   }
@@ -1054,10 +1054,10 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion .header__nav-txt:after {
-    bottom: 3vw;
+    bottom: 3.2vw;
     left: 87%;
     width: 10vw;
-    height: 0.25vw;
+    height: 0.2vw;
     transform: rotate(0);
     background: #e0d9d9;
   }
