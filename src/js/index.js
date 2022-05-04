@@ -1,5 +1,5 @@
 $(function () {
-  var pos = $('#contents').offset().top;
+  let pos = $('#contents').offset().top;
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > pos) {
@@ -9,12 +9,12 @@ $(function () {
     }
   });
 
-  var footer = $(".footer");
-  var fotterHeight = footer.offset().top;
-  var windowH = $(window).height();
-
   $(window).on('load scroll resize',function () {
-    var windowS = $(window).scrollTop();
+    let footer = $(".footer");
+    let fotterHeight = footer.offset().top;
+    let windowH = $(window).height();
+    let windowS = $(window).scrollTop();
+
     if (windowS > fotterHeight - windowH + (windowH / 2) ) { // フッター付近まで来たら
       $('.linearbg').css({
         'opacity':'1',

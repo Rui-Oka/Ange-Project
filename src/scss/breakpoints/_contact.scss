@@ -115,7 +115,7 @@
       @include mq(max, md) {
         padding: 3vw 16vw 3vw 19vw;
         font-size: calc-size(11);
-        border-radius: 5vw;
+        border-radius: 3vw;
       }
   
       span {
@@ -228,6 +228,9 @@
       }
       a {
         text-decoration: underline;
+        @include mq(max, md) {
+          font-size: calc-size(10);
+        }
       }
     }
     .faq__inquiry-check {
