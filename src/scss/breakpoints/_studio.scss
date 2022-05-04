@@ -93,7 +93,9 @@
     }
   
     .studio__item-img {
+      width: 50%;
       @include mq(max, md) {
+        width: 100%;
         margin-bottom: 2vw;
       }
     }
@@ -115,14 +117,43 @@
   
     .studio__item-txt {
       width: 526px;
-      font-size: 2rem;
-      line-height: 3.5;
+      margin-left: 20px;
+      font-size: 1.75rem;
+      line-height: 2.5;
       @include mq(bw, md,lg) {
         font-size: 1.5rem;
       }
       @include mq(max, md) {
+        margin-left: 0;
         font-size: calc-size(12);
         line-height: 2;
+      }
+    }
+
+    .studio__item-lists {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      @include mq(bw, md,lg) {
+        font-size: 1.5rem;
+      }
+      @include mq(max, md) {
+        margin-top: 3vw;
+        font-size: calc-size(12);
+        line-height: 2;
+      }
+
+      li{
+        margin-right: 10px;
+        &:first-of-type {
+          width: 100%;
+          font-size: 1.75rem;
+          @include mq(max, md) {
+            font-size: calc-size(13);
+          }
+        }
       }
     }
   

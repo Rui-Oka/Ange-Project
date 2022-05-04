@@ -1,7 +1,7 @@
 .plan {
   padding-top: 150px;
   background: url(/dist/img/price_bg.png) no-repeat;
-  background-size: 100%;
+  background-size: contain;
   background-position: center 15%;
   @include mq(max, md) {
     padding-top: 30vw;

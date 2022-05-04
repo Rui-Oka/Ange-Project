@@ -102,7 +102,7 @@
     .faq__inquiry-query {
       position: relative;
       display: block;
-      padding: 30px 65px 30px 135px;
+      padding: 30px 70px 30px 135px;
       font-size: 2rem;
       line-height: 1.7;
       border-radius: 15px;
@@ -113,7 +113,7 @@
         padding-right: 90px;
       }
       @include mq(max, md) {
-        padding: 1vw 16vw 1vw 19vw;
+        padding: 3vw 16vw 3vw 19vw;
         font-size: calc-size(11);
         border-radius: 5vw;
       }
@@ -132,7 +132,7 @@
         color: #fff;
         background: $col-pink;
         @include mq(max, lg) {
-          line-height: 3;
+          line-height: 2.5;
         }
   
         @include mq(max, md) {
@@ -198,10 +198,10 @@
       overflow: hidden;
       border: solid 1px transparent;
       border-radius: 0 0 15px 15px;
-      span {
+      .faq__inquiry-answer-icon {
         position: absolute;
         top: 25px;
-        left: 3%;
+        left: 35px;
         font-size: 4.2rem;
         line-height: 1;
         font-weight: 500;
@@ -212,17 +212,22 @@
           font-size: calc-size(23);
         }
       }
+
+      .faq__inquiry-answer-txtBold {
+        font-weight: bold;
+        color: $col-black;
+      }
     }
     .faq__inquiry-answer-txt {
       padding: 0 25px 0 135px;
       font-size: 2rem;
       font-feature-settings: "palt";
       @include mq(max, md) {
-        padding: 0 16vw 0 19vw;
+        padding: 0 13vw 0 19vw;
         font-size: calc-size(11);
       }
       a {
-        color: #fff;
+        text-decoration: underline;
       }
     }
     .faq__inquiry-check {
