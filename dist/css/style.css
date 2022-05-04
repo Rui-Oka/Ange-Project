@@ -1034,7 +1034,7 @@ a {
 @media screen and (max-width: 767px) {
   .header .nav__accordion .header__nav-txt:before {
     left: 0;
-    bottom: 3.2vw;
+    bottom: 3.5vw;
     width: 10vw;
     height: 0.2vw;
     transform: rotate(0);
@@ -1054,7 +1054,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion .header__nav-txt:after {
-    bottom: 3.2vw;
+    bottom: 3.5vw;
     left: 87%;
     width: 10vw;
     height: 0.2vw;
