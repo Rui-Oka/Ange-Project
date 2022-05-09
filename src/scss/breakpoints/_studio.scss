@@ -27,6 +27,8 @@
       font-size: 6.5rem;
       text-align: center;
       font-family: $font-family-dancing;
+      letter-spacing: -0.01em;
+      line-height: 1;
       @include mq(max, md) {
         width: 70%;
         font-size: calc-size(23);

@@ -1,11 +1,36 @@
 .plan {
+  position: relative;
   padding-top: 150px;
-  background: url(/dist/img/price_bg.png) no-repeat;
-  background-size: contain;
-  background-position: center 15%;
   @include mq(max, md) {
     padding-top: 30vw;
     background: none;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 24%;
+    left: 11%;
+    width: 20vw;
+    height: 22vw;
+    background: url(/dist/img/price_bg_01.png) no-repeat;
+    background-size: contain;
+    @include mq(max, md) {
+     content: none;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 20vw;
+    height: 22vw;
+    background: url(/dist/img/price_bg_02.png) no-repeat;
+    background-size: contain;
+    @include mq(max, md) {
+     content: none;
+    }
   }
   .plan__box {
     margin-bottom: 230px;
@@ -350,7 +375,7 @@
     @include mq(max, md) {
       width: 45%;
       margin: 0 auto;
-      padding: 2vw 0;
+      padding: 2vw 0 2vw 2vw;
       font-size: calc-size(14);
       text-align: center;
       border-radius: 50px;
