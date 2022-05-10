@@ -2752,7 +2752,7 @@ a {
   width: 526px;
   margin-left: 20px;
   font-size: 1.75rem;
-  line-height: 2.5;
+  line-height: 2;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .studio .studio__item-txt {
@@ -2769,7 +2769,7 @@ a {
 .studio .studio__item-lists {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: -68px;
   font-size: 1.5rem;
   line-height: 1.5;
 }
@@ -2780,7 +2780,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .studio .studio__item-lists {
-    margin-top: 3vw;
+    margin-top: -8vw;
     font-size: calc( 12 * (100vw / 428));
     line-height: 2;
   }
