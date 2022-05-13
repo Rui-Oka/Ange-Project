@@ -589,7 +589,7 @@ img {
     letter-spacing: 0.15em;
     color: #fff;
     @include mq(max, md) {
-      margin-bottom: 0;
+      margin-bottom: 1.25vw;
       font-size: calc-size(13);
     }
   }
@@ -603,7 +603,7 @@ img {
     background-size: contain;
     @include mq(max, md) {
       width: 75vw;
-      padding: 4vw 0;
+      padding: 4.75vw 0;
       font-size: calc-size(20);
       background: url(/dist/img/top_address_sp.png) no-repeat center;
     }

@@ -207,7 +207,7 @@
         font-weight: 500;
         color: $col-pink;
         @include mq(max, md) {
-          top: 3vw;
+          top: 2.25vw;
           left: 5vw;
           font-size: calc-size(23);
         }

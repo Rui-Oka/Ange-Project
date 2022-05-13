@@ -739,7 +739,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .top__studio .top__studio-txt {
-    margin-bottom: 0;
+    margin-bottom: 1.25vw;
     font-size: calc( 13 * (100vw / 428));
   }
 }
@@ -755,7 +755,7 @@ img {
 @media screen and (max-width: 767px) {
   .top__studio .top__studio-address {
     width: 75vw;
-    padding: 4vw 0;
+    padding: 4.75vw 0;
     font-size: calc( 20 * (100vw / 428));
     background: url(/dist/img/top_address_sp.png) no-repeat center;
   }
@@ -886,6 +886,7 @@ img {
   }
 }
 .header .header__logo img {
+  width: auto;
   height: 100%;
 }
 .header .header__nav {
@@ -1123,7 +1124,7 @@ img {
 @media screen and (max-width: 767px) {
   .header .nav__accordion .header__nav-txt:before {
     left: 0;
-    bottom: 3.5vw;
+    bottom: 1.5vw;
     width: 10vw;
     height: 0.2vw;
     transform: rotate(0);
@@ -1143,7 +1144,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion .header__nav-txt:after {
-    bottom: 3.5vw;
+    bottom: 1.5vw;
     left: 87%;
     width: 10vw;
     height: 0.2vw;
@@ -1946,7 +1947,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .contact .faq__inquiry-answer .faq__inquiry-answer-icon {
-    top: 3vw;
+    top: 2.25vw;
     left: 5vw;
     font-size: calc( 23 * (100vw / 428));
   }
