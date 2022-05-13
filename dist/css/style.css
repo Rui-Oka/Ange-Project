@@ -1499,7 +1499,7 @@ img {
     display: block;
     width: 41vw;
     margin-left: 28vw;
-    padding: 1.5vw 0;
+    padding: 3vw 0;
     box-sizing: border-box;
   }
 }
@@ -1695,7 +1695,7 @@ img {
   .gallery .gallery__inst .gallery__inst-btn {
     width: 46vw;
     margin: 0 0 0 26vw;
-    padding: 2vw 0;
+    padding: 3vw 0;
   }
 }
 .gallery .gallery__inst .gallery__inst-btn:after {
@@ -2714,7 +2714,7 @@ img {
 @media screen and (max-width: 767px) {
   .plan .plan__btn {
     width: 41%;
-    padding: 2vw 0;
+    padding: 3vw 0;
   }
 }
 
@@ -3269,7 +3269,7 @@ img {
 @media screen and (max-width: 767px) {
   .studio .studio__btn {
     width: 43%;
-    padding: 2vw 0;
+    padding: 3vw 0;
   }
 }
 
