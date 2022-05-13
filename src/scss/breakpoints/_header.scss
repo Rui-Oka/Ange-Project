@@ -87,12 +87,15 @@
     }
     a {
       display: block;
+      padding: 3px 0;
       font-size: 0.73vw;
       letter-spacing: 0.15em;
       font-family: $font-family-eb;
+      text-decoration: none;
       color: #fff;
       @include mq(max, md) {
         display: inline-block;
+        padding: 0;
         font-size: calc-size(30);
         letter-spacing: 0;
         color: $col-black;
@@ -339,7 +342,7 @@
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      padding: 30px 0 0;
+      padding: 25px 0 0;
       @include mq(max, md) {
         position: unset;
         transform: none;

@@ -27,29 +27,97 @@
   \**************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /* A Modern CSS Reset */
-*:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)) {
-  all: unset;
-  display: revert;
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 ol, ul {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: 700;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 table {
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
-textarea {
-  white-space: revert;
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+img {
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -98,6 +166,14 @@ a {
   .v-sp {
     display: block;
   }
+}
+
+a {
+  color: #434343;
+}
+
+img {
+  width: 100%;
 }
 
 .fv {
@@ -152,6 +228,7 @@ a {
   font-size: 50px;
   letter-spacing: 0.1em;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
+  font-weight: 400;
   color: #fff;
   z-index: 2;
 }
@@ -216,6 +293,7 @@ a {
   border-radius: 15px;
   color: #fff;
   background: #53b535;
+  text-decoration: none;
 }
 @media screen and (max-width: 767px) {
   .line-btn {
@@ -397,6 +475,7 @@ a {
   font-size: 1.7rem;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
   letter-spacing: 0.15em;
+  text-decoration: none;
 }
 .top__about .top__about-link a:before {
   content: "";
@@ -492,7 +571,9 @@ a {
   letter-spacing: 0.125em;
   text-align: center;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
+  font-weight: 400;
   opacity: 0;
+  color: #434343;
   transition: all 1.5s ease;
 }
 @media screen and (max-width: 767px) {
@@ -514,6 +595,7 @@ a {
 .top__info .top__info-item .top__info-ttl .top__info-ttl-small {
   font-size: 1.5rem;
   font-family: "YuMincho", "游明朝体", "Yu Mincho", "游明朝", "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
 }
 @media screen and (max-width: 767px) {
   .top__info .top__info-item .top__info-ttl .top__info-ttl-small {
@@ -653,6 +735,7 @@ a {
   margin-bottom: 13px;
   font-size: 2rem;
   letter-spacing: 0.15em;
+  color: #fff;
 }
 @media screen and (max-width: 767px) {
   .top__studio .top__studio-txt {
@@ -665,6 +748,7 @@ a {
   padding: 32px 0;
   font-size: 4.5rem;
   letter-spacing: 0.15em;
+  color: #fff;
   background: url(/dist/img/top_address.png) no-repeat center;
   background-size: contain;
 }
@@ -716,6 +800,7 @@ a {
   margin: 0 auto 135px;
   font-size: 4.5rem;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
+  font-weight: 400;
   letter-spacing: 0.15em;
   background: linear-gradient(transparent 70%, #ebd6cc 70%);
 }
@@ -848,14 +933,17 @@ a {
 }
 .header .header__nav-list a {
   display: block;
+  padding: 3px 0;
   font-size: 0.73vw;
   letter-spacing: 0.15em;
   font-family: "EB Garamond", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", serif;
+  text-decoration: none;
   color: #fff;
 }
 @media screen and (max-width: 767px) {
   .header .header__nav-list a {
     display: inline-block;
+    padding: 0;
     font-size: calc( 30 * (100vw / 428));
     letter-spacing: 0;
     color: #434343;
@@ -1103,7 +1191,7 @@ a {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 30px 0 0;
+  padding: 25px 0 0;
 }
 @media screen and (max-width: 767px) {
   .header .nav__accordion .nav__accordion-list {
@@ -1263,6 +1351,17 @@ a {
     margin: 20vw 0 17vw;
   }
 }
+.footer__contact .footer__contact-item img {
+  width: 100%;
+}
+.footer__contact .footer__contact-item:last-of-type img {
+  width: 95%;
+}
+@media screen and (max-width: 767px) {
+  .footer__contact .footer__contact-item:last-of-type img {
+    width: 100%;
+  }
+}
 .footer__contact .footer__contact-icon {
   display: block;
   width: 67px;
@@ -1319,6 +1418,10 @@ a {
     margin-right: 0;
     margin-bottom: 5vw;
   }
+}
+.footer__policy li a {
+  line-height: 1.5;
+  color: #F4AE88;
 }
 
 .about {
@@ -2059,6 +2162,7 @@ a {
   width: 346px;
   margin: 0 auto 30px;
   font-size: 4rem;
+  font-weight: 400;
   line-height: 1.25;
   text-align: center;
   background: #ebd6cc;
@@ -2086,7 +2190,7 @@ a {
   position: relative;
   width: fit-content;
   margin: 0 0 37px 0;
-  padding: 24px 30px 10px 195px;
+  padding: 24px 4% 10px 195px;
   border: solid 3px #EBD6CC;
   border-radius: 100px 50px 50px 100px;
   background: #fff;
@@ -2214,10 +2318,10 @@ a {
 }
 .plan .plan__info-item {
   max-width: 285px;
-  width: 20vw;
+  width: 40%;
   min-height: 97px;
   margin-right: 35px;
-  padding: 10px 5px;
+  padding: 10px;
   font-size: 2.5rem;
   line-height: 1;
   text-align: center;
@@ -2451,6 +2555,9 @@ a {
     margin-right: 1vw;
   }
 }
+.plan .plan__img img {
+  width: 100%;
+}
 .plan .plan__announce {
   position: relative;
   width: 80%;
@@ -2645,8 +2752,9 @@ a {
   font-size: 6.5rem;
   text-align: center;
   font-family: "Dancing Script", "YuMincho", "游明朝体", "Yu Mincho", "游明朝", cursive;
+  font-weight: 400;
   letter-spacing: -0.01em;
-  line-height: 1;
+  line-height: 1.25;
 }
 @media screen and (max-width: 767px) {
   .studio .studio__ttl {
@@ -3102,6 +3210,7 @@ a {
   border-bottom: none;
 }
 .studio .studio__process-ttl {
+  margin-bottom: 15px;
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -3119,6 +3228,7 @@ a {
 .studio .studio__process-txt {
   padding-bottom: 32px;
   font-size: 2rem;
+  line-height: 1.25;
   letter-spacing: 0;
   border-bottom: solid 1px #EBD6CC;
 }
@@ -3161,14 +3271,6 @@ a {
     width: 43%;
     padding: 2vw 0;
   }
-}
-
-@media print {
-  /******************************************************************
-
-  Stylesheet: プリンタのみに適用
-
-  ******************************************************************/
 }
 
 /*# sourceMappingURL=style.css.map*/

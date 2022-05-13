@@ -27,8 +27,9 @@
       font-size: 6.5rem;
       text-align: center;
       font-family: $font-family-dancing;
+      font-weight: 400;
       letter-spacing: -0.01em;
-      line-height: 1;
+      line-height: 1.25;
       @include mq(max, md) {
         width: 70%;
         font-size: calc-size(23);
@@ -382,9 +383,9 @@
       &:not(:last-of-type) {
         margin-bottom: 65px;
         
-      @include mq(max, md) {
-       margin-bottom: 5vw;
-      }
+        @include mq(max, md) {
+        margin-bottom: 5vw;
+        }
       }
       
       &.one {
@@ -427,6 +428,7 @@
     }
   
     .studio__process-ttl {
+      margin-bottom: 15px;
       font-size: 2.5rem;
       font-weight: bold;
       @include mq(max, lg) {
@@ -440,6 +442,7 @@
     .studio__process-txt {
       padding-bottom: 32px;
       font-size: 2rem;
+      line-height: 1.25;
       letter-spacing: 0;
       border-bottom: solid 1px $col-pink;
       @include mq(max, lg) {

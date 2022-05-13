@@ -108,6 +108,18 @@
         width: 35%;
         margin: 20vw 0 17vw;
       }
+      img {
+        width: 100%;
+      }
+
+      &:last-of-type {
+        img {
+          width: 95%;
+          @include mq(max, md) {
+            width: 100%;
+          }
+        }
+      }
     }
     .footer__contact-icon {
       display: block;
@@ -124,24 +136,6 @@
       }
     }
   }
-  
-  // .footer__ange {
-  //   height: 176px;
-  //   font-size: 4.5rem;
-  //   letter-spacing: 0.15em;
-  //   font-family: $font-family-Prata;
-  //   color: #fff;
-  //   @include mq(max, md) {
-  //     height: 19.5vw;
-  //     font-size: calc-size(20);
-  //   }
-  //   a {
-  //     line-height: 176px;
-  //     @include mq(max, md) {
-  //      line-height: 19.5vw;
-  //     }
-  //   }
-  // }
 
   .footer__policy {
     position: relative;
@@ -176,6 +170,11 @@
           margin-right: 0;
           margin-bottom: 5vw;
         }
+      }
+
+      a {
+        line-height: 1.5;
+        color: #F4AE88;
       }
     }
   }
