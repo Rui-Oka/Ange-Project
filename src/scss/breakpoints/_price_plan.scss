@@ -482,12 +482,16 @@
 
   .plan__announce-item {
     margin-bottom: 20px;
+    line-height: 1.25;
+    @include mq(max, md) {
+      margin-bottom: 4.5vw;
+    }
   }
   .cancel__box {
     max-width: 1030px;
     width: 80%;
     margin: 0 auto 108px;
-    padding: 68px 0 71px;
+    padding: 68px 15px 71px;
     border-radius: 15px;
     background: #fff;
     @include mq(max, md) {
@@ -527,6 +531,7 @@
   .cancel__sub-txt {
     font-size: 1.8rem;
     text-align: center;
+    line-height: 1.25;
     @include mq(max, md) {
       font-size: calc-size(10);
       letter-spacing: 0;

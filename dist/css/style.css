@@ -1960,6 +1960,7 @@ img {
   padding: 0 25px 0 135px;
   font-size: 2rem;
   font-feature-settings: "palt";
+  line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
   .contact .faq__inquiry-answer-txt {
@@ -2628,12 +2629,18 @@ img {
 }
 .plan .plan__announce-item {
   margin-bottom: 20px;
+  line-height: 1.25;
+}
+@media screen and (max-width: 767px) {
+  .plan .plan__announce-item {
+    margin-bottom: 4.5vw;
+  }
 }
 .plan .cancel__box {
   max-width: 1030px;
   width: 80%;
   margin: 0 auto 108px;
-  padding: 68px 0 71px;
+  padding: 68px 15px 71px;
   border-radius: 15px;
   background: #fff;
 }
@@ -2676,6 +2683,7 @@ img {
 .plan .cancel__sub-txt {
   font-size: 1.8rem;
   text-align: center;
+  line-height: 1.25;
 }
 @media screen and (max-width: 767px) {
   .plan .cancel__sub-txt {
