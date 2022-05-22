@@ -2471,7 +2471,7 @@ img {
     margin-top: 7vw;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .plan .plan__info-item-another::before {
     content: "";
     position: absolute;
@@ -2483,7 +2483,7 @@ img {
     height: 0.5vw;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .plan .plan__info-item-another::after {
     content: "";
     position: absolute;

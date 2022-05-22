@@ -323,7 +323,7 @@
       margin-top: 7vw;
     }
     &::before {
-      @include mq(max, lg) {
+      @include mq(max, md) {
         content: "";
         position: absolute;
         background: $col-black;
@@ -335,7 +335,7 @@
       }
     }
     &::after {
-      @include mq(max, lg) {
+      @include mq(max, md) {
         content: "";
         position: absolute;
         background: $col-black;
