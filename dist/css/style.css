@@ -2541,7 +2541,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .plan .plan__terms-item.item-center {
-    width: 60%;
+    width: 57%;
     margin: auto;
   }
 }
