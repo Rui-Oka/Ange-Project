@@ -25,6 +25,14 @@ $(function () {
     });
     }
   });
+
+  // iPad判別
+  var ua = window.navigator.userAgent.toLowerCase();
+  if (ua.indexOf("ipad") > -1 || (ua.indexOf("macintosh") > -1 && "ontouchend" in document)) {
+    // iPadでの処理
+    $("body").addClass("ipad");
+    console.log("ipadだよ！")
+  }
 });
 
 function playVideos(videos) {

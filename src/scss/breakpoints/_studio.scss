@@ -389,9 +389,18 @@
       }
       
       &.one {
+        padding-top: 20px;
         background: url(/dist/img/process_1.png) no-repeat center left;
         @include mq(max, md) {
-        background: url(/dist/img/process_1_sp.png) no-repeat center left;
+          padding-top: 0;
+          background: url(/dist/img/process_1_sp.png) no-repeat center left;
+        }
+
+        .studio__process-txt {
+          padding-bottom: 40px;
+          @include mq(max, md) {
+            padding-bottom: 4vw;
+          }
         }
       }
       
@@ -417,8 +426,10 @@
       }
       
       &.five {
+        padding: 20px 0 20px 136px;
         background: url(/dist/img/process_5.png) no-repeat center left;
         @include mq(max, md) {
+          padding:0 0 0 15%;
           background: url(/dist/img/process_5_sp.png) no-repeat center left;
           }
         .studio__process-txt {

@@ -510,6 +510,20 @@ img {
   }
 }
 
+.ipad {
+
+  .top__info-item {
+    a:before {
+      opacity: 1;
+    }
+  }
+
+  .top__info {
+    .top__info-ttl {
+      opacity: 1;
+    }
+  }
+}
 .top__info-txt {
   padding: 146px 0 87px;
   font-size: 2.5rem;
