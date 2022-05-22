@@ -76,7 +76,7 @@
     box-sizing: border-box;
 
     @include mq(max, lg) {
-      padding: 24px 2% 14px 160px;
+      padding: 24px 2% 14px 170px;
     }
 
     @include mq(max, md) {
@@ -108,8 +108,8 @@
     box-sizing: border-box;
 
     @include mq(max, lg) {
-      width: 150px;
-      height: 150px;
+      width: 155px;
+      height: 155px;
     }
 
     @include mq(max, md) {
@@ -135,8 +135,8 @@
       border: solid 1px #fff;
       background: linear-gradient(0deg, #fff 0%, #fff 35%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 100%);
       @include mq(max, lg) {
-        width: 130px;
-        height: 130px;
+        width: 135px;
+        height: 135px;
       }
 
       @include mq(max, md) {
@@ -181,7 +181,7 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 2.25rem;
-    line-height: 0.6;
+    line-height: 0.7;
     text-align: center;
     color: $col-black;
     @include mq(max, lg) {
@@ -224,7 +224,7 @@
     border: solid 1px $col-pink;
     border-radius: 15px;
     @include mq(max, lg) {
-      width: 18.5vw;
+      width: 19.5vw;
       min-height: 83px;
     }
     @include mq(max, md) {
@@ -504,11 +504,11 @@
     }
   }
   .plan__announce-txt {
-    margin-left: 25px;
+    margin-left: 22px;
     font-size: 2rem;
     @include mq(max, md) {
-      margin-left: 3vw;
-      font-size: calc-size(8);
+      margin-left: calc-size(10);
+      font-size: calc-size(9);
       line-height: 1.8;
       letter-spacing: -0.01em;
     }
@@ -569,6 +569,7 @@
     @include mq(max, md) {
       font-size: calc-size(10);
       letter-spacing: 0;
+      line-height: 1.5;
     }
   }
 

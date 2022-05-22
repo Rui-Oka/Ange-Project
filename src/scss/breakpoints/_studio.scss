@@ -231,7 +231,7 @@
       }
       @include mq(max, md) {
         margin-bottom: 0;
-        padding: 2vw 0vw 0 6vw;
+        padding: 2vw 0vw 2vw 6vw;
         font-size: calc-size(12);
       }
       &:before {
@@ -243,8 +243,8 @@
         height: 100%;
         background: $col-pink;
         @include mq(max, md) {
-          top: 2.5vw;
-           left: 5vw;
+          top: 1.75vw;
+          left: 4vw;
           width: 0.5vw;
           height: 50%;
         }
@@ -256,6 +256,7 @@
       font-size: 2.5rem;
       @include mq(max, lg) {
         font-size: 2rem;
+        line-height: 1.5;
       }
       @include mq(max, md) {
         margin: 0 0vw 5vw 6vw;

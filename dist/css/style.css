@@ -2207,7 +2207,7 @@ img {
 }
 @media screen and (max-width: 991px) {
   .plan .plan__item {
-    padding: 24px 2% 14px 160px;
+    padding: 24px 2% 14px 170px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2239,8 +2239,8 @@ img {
 }
 @media screen and (max-width: 991px) {
   .plan .plan__ttl-box {
-    width: 150px;
-    height: 150px;
+    width: 155px;
+    height: 155px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2269,8 +2269,8 @@ img {
 }
 @media screen and (max-width: 991px) {
   .plan .plan__ttl-box:before {
-    width: 130px;
-    height: 130px;
+    width: 135px;
+    height: 135px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2318,7 +2318,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   font-size: 2.25rem;
-  line-height: 0.6;
+  line-height: 0.7;
   text-align: center;
   color: #434343;
 }
@@ -2367,7 +2367,7 @@ img {
 }
 @media screen and (max-width: 991px) {
   .plan .plan__info-item {
-    width: 18.5vw;
+    width: 19.5vw;
     min-height: 83px;
   }
 }
@@ -2666,13 +2666,13 @@ img {
   }
 }
 .plan .plan__announce-txt {
-  margin-left: 25px;
+  margin-left: 22px;
   font-size: 2rem;
 }
 @media screen and (max-width: 767px) {
   .plan .plan__announce-txt {
-    margin-left: 3vw;
-    font-size: calc( 8 * (100vw / 428));
+    margin-left: calc( 10 * (100vw / 428));
+    font-size: calc( 9 * (100vw / 428));
     line-height: 1.8;
     letter-spacing: -0.01em;
   }
@@ -2739,6 +2739,7 @@ img {
   .plan .cancel__sub-txt {
     font-size: calc( 10 * (100vw / 428));
     letter-spacing: 0;
+    line-height: 1.5;
   }
 }
 .plan .plan__btn-box {
@@ -3053,7 +3054,7 @@ img {
 @media screen and (max-width: 767px) {
   .studio .studio__address-ttl {
     margin-bottom: 0;
-    padding: 2vw 0vw 0 6vw;
+    padding: 2vw 0vw 2vw 6vw;
     font-size: calc( 12 * (100vw / 428));
   }
 }
@@ -3068,8 +3069,8 @@ img {
 }
 @media screen and (max-width: 767px) {
   .studio .studio__address-ttl:before {
-    top: 2.5vw;
-    left: 5vw;
+    top: 1.75vw;
+    left: 4vw;
     width: 0.5vw;
     height: 50%;
   }
@@ -3081,6 +3082,7 @@ img {
 @media screen and (max-width: 991px) {
   .studio .studio__address-txt {
     font-size: 2rem;
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 767px) {
