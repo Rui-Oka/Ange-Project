@@ -18,6 +18,7 @@
         width: 433px;
         margin: 0 auto 125px;
         font-size: 3rem;
+        font-weight: 400;
         background: rgb(235, 214, 204);
         background:linear-gradient(transparent 70%, #ebd6cc 70%);
         @include mq(max, md) {
@@ -75,6 +76,7 @@
       margin-bottom: 47.6px;
       font-size: 2.5rem;
       text-align: center;
+      font-weight: 400;
       @include mq(max, md) {
         margin-bottom: 3vw;
         font-size: calc-size(13);

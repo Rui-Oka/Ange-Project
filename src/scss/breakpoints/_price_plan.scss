@@ -213,6 +213,10 @@
   }
 
   .plan__info-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     max-width: 285px;
     width: 18vw;
     min-height: 97px;
