@@ -504,7 +504,7 @@
   .plan__announce-sub-ttl {
     font-size: 2rem;
     @include mq(max, md) {
-      font-size: calc-size(8);
+      font-size: calc-size(9.5);
     }
   }
   .plan__announce-txt {
