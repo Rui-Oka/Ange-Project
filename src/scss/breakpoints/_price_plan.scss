@@ -505,6 +505,7 @@
     font-size: 2rem;
     @include mq(max, md) {
       font-size: calc-size(9.5);
+      letter-spacing: -0.01em;
     }
   }
   .plan__announce-txt {

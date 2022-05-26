@@ -2670,6 +2670,7 @@ img {
 @media screen and (max-width: 767px) {
   .plan .plan__announce-sub-ttl {
     font-size: calc( 9.5 * (100vw / 428));
+    letter-spacing: -0.01em;
   }
 }
 .plan .plan__announce-txt {
